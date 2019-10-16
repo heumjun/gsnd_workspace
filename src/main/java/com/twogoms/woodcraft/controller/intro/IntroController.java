@@ -10,7 +10,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * 전수관 소개
+ * 전수관 소개 ... 소스변경 테스트
  */
 @Controller
 @RequestMapping("/intro")
