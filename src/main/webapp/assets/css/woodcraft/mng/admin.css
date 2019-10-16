@@ -1,0 +1,418 @@
+@charset "utf-8";
+/* 2013.12 ThinkCode :: JiHoon Goo hwlee@thinkcode.co.kr */
+.adm {
+	position: relative;
+	display: block;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	*zoom: 1;
+	color: #333;
+	-webkit-font-smoothing: antialiased; /* flickering bug solution : some jquery animation or slide brings, other sub text elements flickering */
+	font-family: 'NanumBarunGothic';
+	font-size: 13px;
+	color: #60646b;
+}
+.adm a {
+	color: #60646b; 
+}
+.adm a:focus,
+.adm a:hover {
+	color: #1f1f1f; 
+}
+.adm:after {display: block; clear: both; content: "";}
+/* admin layout */
+.adm header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 52px;
+	margin: 0;
+	padding: 0 20px 0 260px;
+	text-align: right;
+	line-height: 52px;
+	color: #fff;
+	overflow: hidden;
+	background-color: #39475d;
+}
+.adm header a {
+	color: #9ca3ae;
+}
+.adm header a:hover,
+.adm header a:focus {
+	color: #ffffff;
+}
+.adm aside {
+	position: absolute;
+	top: 52px;/* header size is aside top position */
+	bottom: 0;
+	left: 0;
+	width: 239px;
+	overflow: auto;
+	background-color: #e4e9f0;
+	border-right: 1px solid #c2cad5;
+}
+.adm article {
+	position: absolute;
+	top: 52px;/* header size is article top position */
+	bottom: 50px;
+	left: 240px;/* aside size is article left position */
+	right: 0;
+	margin: 0;
+	padding: 0;
+	overflow: auto;
+}
+/* admin header */
+header h1 {
+	position: absolute;
+	float: left;
+	margin: 0;
+	padding: 0;
+	height: 52px;
+	left: 0;
+	top: 0;	
+	line-height: 52px;
+	width: 240px;
+	overflow: hidden;
+	background: #2c394a;
+	font-size: 16px;
+	text-indent: 10px;
+	color: #fff;
+	font-weight: bold;
+	text-align: center;
+}
+header .right {
+	position: relative;
+	float: left;
+	margin: 0;
+	padding: 0 10px;
+	height: 52px;
+	line-height: 52px;
+	width: 240px;
+	overflow: hidden;
+	background: #2c394a;
+	font-size: 16px;
+	color: #fff;
+}
+/* admin aside */
+.adm aside .aside-search {
+	position: relative;
+	display: block;
+	margin: 0;
+	padding: 0 10px;
+	height: 44px;
+	line-height: 44px;
+	background: #c2cad5;
+	border-bottom: 1px solid #a9b3c0;
+}
+.adm aside .vNav {
+    position :relative;
+    display: block;
+    line-height :normal;
+    margin: 10px;
+}
+
+.adm aside .vNav ul {
+    margin :0;
+    padding :0;
+    list-style :none;
+
+}
+
+.adm aside .vNav li {
+    position :relative;
+    margin :0 0 10px 0;
+    vertical-align :top;
+    *zoom :1;
+
+}
+.adm aside .vNav li a {
+    display :block;
+    position :relative;
+    padding : 12px 20px;
+    text-decoration :none;
+    color :#59687e;
+    font-weight :bold;
+    background :#e4e9f0;
+    *zoom :1;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-o-border-radius: 4px;
+	-ms-border-radius: 4px;
+}
+
+.adm aside .vNav li a:hover,
+.adm aside .vNav li a:focus {
+	background: #f1f4f7;
+}
+
+.adm aside .vNav li a .i {
+    position :absolute;
+    top :50%;
+    left :100%;
+    margin :-4px 0 0 -16px;
+    width :8px;
+    height :8px;
+    color :#ccc;
+    background :url(iconSub.gif) no-repeat left top;
+
+}
+.adm aside .vNav li ul {
+    padding : 0;
+    background :#fff;
+
+}
+.adm aside .vNav li li {
+    margin :0;
+
+}
+.adm aside .vNav li li a {
+    font-weight :normal;
+    background :#fff;
+    padding :10px 20px;
+    border :0;
+}
+
+.adm aside .vNav li li a:focus,
+.adm aside .vNav li li a:hover {
+	color: #000;
+}
+.adm aside .vNav li li a span {
+    color : #696889;
+}
+.adm aside .vNav li.active {
+    z-index :2;
+
+}
+.adm aside .vNav li li.active {
+    border :0;
+
+}
+.adm aside .vNav li.active a {
+    color :#313b49;
+    border :0;
+    background: #fff;
+	font-size: 14px;
+	border-radius: 4px 4px 0 0;
+	-moz-border-radius: 4px 4px 0 0;
+	-webkit-border-radius: 4px 4px 0 0;
+	-o-border-radius: 4px 4px 0 0;
+	-ms-border-radius: 4px 4px 0 0;
+
+}
+.adm aside .vNav li.active .i {
+    background-position :0 -44px;
+
+}
+.adm aside .vNav li.active li a {
+    border :0;
+    background: #f1f4f7;
+    border-radius: 0;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+	-o-border-radius: 0;
+	-ms-border-radius: 0;
+	font-size: 13px;
+}
+.adm aside .vNav li.active li a:hover,
+.adm aside .vNav li.active li a:focus {
+	background: #fff;
+}
+.adm aside .vNav li.active ul {
+    display :block;
+    border-top :1px solid #eee;
+
+}
+.adm aside .vNav li.active li.active > a > span {
+    color : #000;
+    font-weight :bold;
+    letter-spacing :-1px;
+
+}
+
+.adm aside .vNav .submenu > a > span {
+    font-weight: bold;
+}
+
+/*.adm aside .vNav .submenu > ul li.active a span {*/
+    /*color : #000;*/
+    /*font-weight :bold;*/
+    /*letter-spacing :-1px;*/
+/*}*/
+
+
+/* admin article(content body) */
+/* curr nav */
+.adm article .article-header {
+	margin: 0;
+	padding: 0 10px;
+	height: 44px;
+	line-height: 44px;
+	background: #fafafa;
+	border-bottom: 1px solid #ddd;
+}
+.adm article .article-header .curr-nav {
+    position: absolute;
+    left: 20px;
+    top: 0px;
+    margin: 10px 0 0 0;
+    padding: 0 0 0 8px;
+    height: 28px;
+    background: url(../../../images/woodcraft/mng/sub/bg_sub_header_nav.png) no-repeat 0 0;
+}
+.adm article .article-header .curr-nav ul {
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 0 30px 0 0;
+    height: 28px;
+    *zoom: 1;
+    overflow: hidden;
+    background: url(../../../images/woodcraft/mng/sub/bg_sub_header_nav.png) no-repeat right -90px;
+}
+.adm article .article-header .curr-nav ul:after {display: block; clear: both; content: "";}
+.adm article .article-header .curr-nav ul li {
+    position: relative;
+    float: left;
+    margin: 0;
+    padding: 0;
+    background: url(../../../images/woodcraft/mng/sub/bg_sub_header_nav.png) 0 -30px repeat-x;
+}
+.adm article .article-header .curr-nav ul li a{
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 0 10px 0 28px;
+    height: 28px;
+    line-height: 28px;
+    background: url(../../../images/woodcraft/mng/sub/bg_sub_header_nav.png) 0 -60px no-repeat;
+    color: #606060;
+}
+.adm article .article-header .curr-nav ul li a:hover,
+.adm article .article-header .curr-nav ul li a:focus {
+    color: #909090;
+    cursor: pointer;
+}
+.adm article .article-header .curr-nav ul li a.home {
+    background: none;
+    padding-left: 14px;
+}
+.adm article .article-header .curr-nav ul li a.on {
+    color: #2471de;
+    font-weight: bold;
+    cursor: default;
+}
+/* //end curr nav */
+.adm article section.sub-body {
+	position: relative;
+	margin: 0;
+	padding: 20px;
+	text-align: left;
+	line-height: 160%;
+	overflow: hidden;
+	*zoom: 1;
+}
+.adm article section.sub-body:after { display: block; clear: both; content: "";}
+.adm h2.title-h2 {
+    margin: 0 !important;
+    padding: 2px 0 6px 17px !important;
+    font-size: 16px !important;
+    color: #303030 !important;
+    background: url(../../../images/woodcraft/mng/common_ico/bg_hx.png) no-repeat 0 -77px !important;
+}
+/* admin Login */
+body.admBg {
+    background: url(../../../images/woodcraft/mng/admin/bg_adm_lgi.jpg) repeat-x;
+}
+.adm .admLgn {
+    position: relative;
+    display: block;
+    margin: 120px auto 0 auto;
+    padding: 0;
+    width: 640px;
+    height: 476px;
+    *zoom: 1;
+    overflow: hidden;
+    background: url(../../../images/woodcraft/mng/admin/bg_adm_lgi_box.png) no-repeat 0 0;
+    z-index: 10000;
+}
+.adm .admLgn h1.ir {
+    position:absolute;
+    z-index:-1;
+    visibility:hidden;
+}
+.adm .admLgn ul {
+    position: relative;
+    display: block;
+    margin: 157px auto 0 auto;
+    padding: 0;
+    width: 270px;
+    *zoom: 1;
+    overflow: hidden;
+}
+.adm .admLgn ul:after {display: block; clear: both; content: "";}
+.adm .admLgn ul li {
+    position: relative;
+    display: block;
+    margin: 0 0 10px 0;
+    padding: 0;
+    width: 100%;
+}
+.adm .admLgn ul li.lgiIp {
+    background: url(../../../images/woodcraft/mng/admin/bg_adm_lgi_ip.png) no-repeat 0 0;
+    height: 42px;
+}
+.adm .admLgn ul li.lgiIp input {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    height: 42px;
+    line-height: 42px;
+    text-indent: 20px;
+    width: 100%;
+    font-size: 14px;
+    color: #666;
+    background: url(../../../images/woodcraft/mng/admin/bg_adm_lgi_ip.png) no-repeat 0 0;
+    border-radius: 4px; -moz-border-radius: 4px; -webkit-border-radius: 4px; -o-border-radius: 4px; -ms-border-radius: 4px;
+}
+.adm .admLgn ul li.rmb {
+    height: 19px;
+    font-size: 12px;
+    color: #999;
+}
+.adm .admLgn ul li.rmb input {
+    border: none;
+    width: 13px;
+    height: 13px;
+    vertical-align:text-top;
+    margin-top: 1px;
+}
+
+.adm .admLgn ul li.lgiBtn {
+    margin-top: 20px;
+}
+.adm .admLgn ul li.lgiBtn button {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 4px; -moz-border-radius: 4px; -webkit-border-radius: 4px; -o-border-radius: 4px; -ms-border-radius: 4px;
+    height: 48px;
+    line-height: 48px;
+    color: #fff;
+    font-family: 'NanumBarunGothicBold';
+    background: #4f5d73;
+    font-size: 18px;
+}
+.adm .admLgn ul li.lgiBtn button:hover,
+.adm .admLgn ul li.lgiBtn button:focus {
+    background: #538ce9;
+    cursor: pointer;
+    -webkit-transition: all .3s; -moz-transition: all .3s; -ms-transition: all .3s; -o-transition: all .3s; transition: all .3s;
+}
+

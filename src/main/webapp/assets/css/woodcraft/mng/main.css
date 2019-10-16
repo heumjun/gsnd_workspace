@@ -1,0 +1,434 @@
+@charset "utf-8";
+/* main(index.html)page container */
+.main-content {
+	position: relative;
+	display: block;
+	margin: 20px auto 30px auto;
+	padding: 0;
+	width: 978px;
+	border: 1px solid #ebebeb;
+	overflow: hidden;
+	*zoom: 1;
+}
+.main-content a:hover{
+	color: #2471de;
+}
+.main-content:after {display: block; clear: both; content: "";}
+/* main(index.html)page - content : movement */
+.main-content .movement {
+	position: relative;
+	margin: 0;
+	padding: 30px 0 10px 30px;
+	width: 459px;
+	height: 138px;
+	overflow: hidden;
+	border-right: 1px solid #ebebeb;
+}
+.main-content .movement h2 {
+	font-size: 14px;
+	color: #354053;
+    font-weight: normal;
+    font-family: 'NanumBarunGothicBold' !important;
+}
+.main-content .movement .more {
+    position: absolute;
+    display: block;
+    margin: 0;
+    padding: 0;
+    right: 20px;
+    top: 37px;
+    width: 42px;
+    height: 24px;
+    font-size: 11px;
+    color: #999;
+}
+.main-content .movement .more-icon {
+    display:-moz-inline-stack;     /*FF2*/
+    display:inline-block;
+    *zoom:1;
+    *display:inline;
+    width: 5px;
+    height: 8px;
+    background: url(../images/main/spr_main.png) no-repeat -10px -70px;
+}
+
+.main-content .movement ul {
+	position: relative;
+	display: block;
+	margin: 14px 0 0 0;
+	padding: 0;
+	overflow: hidden;
+	border: 0;
+	*zoom: 1;
+}
+.main-content .movement ul:after {display: block; clear: both; content: "";}
+.main-content .movement ul li {
+	position: relative;
+	float: left;
+	margin: 0;
+	padding: 0 0 0 20px;
+	overflow: hidden;
+}
+.main-content .movement ul li:first-child,
+.main-content .movement ul li.first {
+	padding-left: 0;
+}
+.main-content .movement ul li a {
+	position: relative;
+	display: block;
+	margin: 0;
+	padding: 0;
+	width: 130px;
+	height: 94px;
+}
+.main-content .movement ul li a img{
+	position: relative;
+	display: block;
+	margin: 0;
+	padding: 0;
+	width: 130px;
+	height: 94px;
+}
+.main-content .movement ul li a p {
+	position: absolute;
+	display: none;
+	margin: 0;
+	padding: 0;
+	top: 0;
+	left: 0;
+	width: 110px;
+	height: 74px;
+	padding: 10px;
+	color: #fff;
+	line-height: 140%;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	background: url(../images/main/bg_opacity60.png) repeat 0 0;
+    font-weight: normal;
+    font-family: 'NanumBarunGothicBold' !important;
+}
+.main-content .movement ul li a:hover p {
+	display: block;		
+}
+/*
+.main-content .movement ul li a p {
+	position: relative;
+	display: block;
+	left: 0;
+	top: 0;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	background: url(../images/main/bg_opacity60.png) repeat 0 0;
+}
+*/
+/* main(index.html)page - content : movement 
+.main-content .movement {
+	position: relative;
+	margin: 0;
+	padding: 20px 0 0 30px;
+	width: 459px;
+	height: 138px;
+	overflow: hidden;
+	border-right: 1px solid #ebebeb;
+}
+.main-content .movement h2 {
+	font-weight: bold;
+	font-size: 14px;
+	color: #2c59a4;
+}
+.main-content .movement ul {
+	position: relative;
+	display: block;
+	margin: 0 0 0 -13px;
+	padding: 0;
+	overflow: hidden;
+	border: 0;
+	*zoom: 1;
+}
+.main-content .movement ul:after {display: block; clear: both; content: "";}
+.main-content .movement ul li {
+	position: relative;
+	float: left;
+	width: 98px;
+	padding-left: 13px;
+}
+.main-content .movement ul li a {
+	position: relative;
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+.main-content .movement ul li a:hover {
+	color: #606060;
+}
+.main-content .movement ul li a img,
+.main-content .movement ul li a p {
+	position: relative;
+	display: block;
+	margin: 0;
+	padding: 2px 0;
+	width: 98px;
+}
+.main-content .movement ul li a img {
+	
+	height: 70px;
+	margin-top: 12px;
+}
+.main-content .movement ul li a p {
+	margin-top: 10px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow:ellipsis;
+}
+*/
+/* main(index.html)page - content : news */
+.main-content .news {
+	position: relative;
+	margin: 0;
+	padding: 26px 20px 0 24px;
+	width: 444px;
+	height: 138px;
+	overflow: hidden;
+}
+.news.list ul {
+    position:relative;
+    margin:0;
+    padding:0;
+    list-style:none;
+    border-bottom:1px solid #ccc;
+    font-family:Tahoma, Sans-serif;
+    font-size:13px;
+    *zoom:1
+}
+.news.list ul:after { content:""; display:block; clear:both}
+.news.list li {
+    float:left;
+    margin-bottom:-1px
+}
+.news.list li a {
+    position:relative;
+    float:left;
+    text-decoration:none;
+    border:1px solid #eee;
+    border-bottom-color:#ccc;
+    background:#fafafa;
+    color:#333;
+}
+.news.list li a span {
+    display:inline-block;
+    padding:6px 25px 6px 25px;
+    letter-spacing:-1px;
+    cursor:pointer;
+    font-weight: normal;
+    font-family: 'NanumBarunGothicBold' !important;
+    font-size:14px;
+    color: #999;
+
+}
+.news.list li ul {
+    width:100%;
+    position:absolute;
+    top:40px;
+    left:0;
+    list-style:none;
+    border:0;
+    margin:4px 0 0 0;
+    padding:0;
+    *zoom:1
+}
+.news.list li ul:after { content:""; display:block; clear:both}
+.news.list li li {
+    float:none;
+    position:relative;
+    margin:0 0 10px 0;
+    color:#333;
+    font-size: 13px !important;
+}
+.news.list li li a {
+    float:none;
+    padding:0;
+    margin:0;
+    border:0 !important;
+    color:#333 !important;
+    font-weight:normal;
+    background:transparent;
+    letter-spacing:normal;
+}
+.news.list li li a:hover,
+.news.list li li a:active,
+.news.list li li a:focus {
+    color:#2471de !important;
+    text-decoration: none;
+}
+.news.list li li .time,
+.news.list li li .time {
+    position:absolute;
+    top:0;
+    right:0;
+    color:#555;
+    font-size: 12px;
+}
+.news.list li li.more {
+    position:absolute;
+    top:-36px;
+    right:0;
+    border:0 !important;
+    background:transparent
+}
+.news.list li.active a {
+    border:1px solid #ccc;
+    border-bottom:1px solid #fff;
+    margin-top:-1px;
+    background:transparent;
+    color:#333
+}
+.news.list li.active a span {
+    padding-top:7px;
+    font-weight: normal;
+    font-family: 'NanumBarunGothicBold' !important;
+    color:#354053;
+}
+.news.list.jx {
+    height:auto
+}
+.news.list.jx ul {
+    border:0
+}
+.news.list.jx li {
+    float:none;
+    position:relative
+}
+.news.list.jx li a {
+    float:none;
+    display:block;
+    font-weight: normal;
+    font-family: 'NanumBarunGothicBold' !important;
+    color:#333;
+    border:1px solid #eee !important;
+    border-bottom-color:#ccc !important;
+    background:#fafafa !important
+}
+.news.list.jx li ul {
+    position:static;
+    display:block;
+    left:0;
+    top:0;
+    padding:5px 0
+}
+.news.list.jx li li a {
+    display:inline;
+    border:0 !important;
+    background:none !important;
+    font-weight:normal;
+    background: #ebebeb;
+}
+.news.list.jx li li.more {
+    top:4px;
+    right:15px;
+}
+.news.list li li a.more {
+    color: #999 !important;
+    font-size: 11px !important;
+}
+/* main(index.html) content 03. spot */
+.main-content .quick {
+	position: relative;
+	display: block;
+	margin: 0 auto;
+	padding: 10px 0 10px 0;
+	width: 978px;
+	overflow: hidden;
+	height: 106px;
+	border-top: 1px solid #ebebeb;
+	border-bottom: 1px solid #ebebeb;
+	*zoom: 1;
+}
+.main-content .quick:after {display: block; clear: both; content: "";}
+.main-content .quick ul {
+	position: relative;
+	display: block;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	*zoom: 1;
+}
+.main-content .quick ul {
+	position: relative;
+	display: block;
+	margin: 0;
+	padding: 0 0 0 18px;
+	overflow: hidden;
+	*zoom: 1;
+}
+.main-content .quick ul:after {display: block; clear: both; content: "";}
+.main-content .quick ul li {
+	position: relative;
+	float: left;
+	margin: 0;
+	padding: 0;
+	background: url(../images/main/separator_30px.gif) no-repeat right top;
+}
+.main-content .quick ul li.item-a {width: 140px; padding: 0 20px;}
+.main-content .quick ul li.item-b, .main-content .quick ul li.item-d, .main-content .quick ul li.item-e {width: 143px; padding: 0 20px;}
+.main-content .quick ul li.item-c {width: 169px; padding: 0 20px;}
+.main-content .quick ul li.item-e {background: none;}
+.main-content .quick ul li a {
+	position: relative;
+	display: block;
+	margin: 24px 0 0 0;
+	padding: 0;
+	height: 64px;
+	background: url(../images/main/spr_main.png) no-repeat 0 0;
+}
+.main-content .quick ul li.item-a a { width: 140px; background-position: 0 -130px;}
+.main-content .quick ul li.item-b a { width: 143px; background-position: -150px -130px;}
+.main-content .quick ul li.item-c a { width: 169px; background-position: -300px -130px;}
+.main-content .quick ul li.item-d a { width: 143px; background-position: -480px -130px;}
+.main-content .quick ul li.item-e a { width: 143px; background-position: -630px -130px;}
+/* main(index.html) content 04. spot */
+.main-content .spot {
+	position: relative;
+	display: block;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	height: 99px;
+	*zoom: 1;
+}
+.main-content .spot:after {display: block; clear: both; content: "";}
+.main-content .spot .spot-ul {
+	position: relative;
+	display: block;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	*zoom: 1;
+}
+.main-content .spot .spot-ul:after {display: block; clear: both; content: "";}
+.main-content .spot .spot-ul li {
+	position: relative;
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+.main-content .spot .spot-ul li.spot-item-a a {
+	margin: 0;
+	padding: 0;
+	display: block;
+	height: 99px;
+}
+
+.news.list span.news-more-icon {
+    display:-moz-inline-stack;     /*FF2*/
+    display:inline-block;
+    *zoom:1;
+    *display:inline;
+    width: 5px !important;
+    height: 8px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: url(../images/main/spr_main.png) no-repeat -10px -70px !important;
+}

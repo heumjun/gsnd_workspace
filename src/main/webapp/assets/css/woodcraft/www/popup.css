@@ -1,0 +1,84 @@
+@charset "utf-8";
+#popup{position:relative;font-size:16px;}
+#popup .container{margin:0 30px;}
+#popup .container_agree{margin:0 30px;}
+#popup_head{position:fixed;left:0;top:0;width:100%;background:#715242;padding:.92em 0;z-index:10;}
+#popup_body{position:relative;width:100%;padding:2em 0;margin-top:40px;}
+
+/* #popup_head */
+#popup h1{float:left;font-size:17px;font-weight:normal;color:#fff;}
+    #popup a.close{position:absolute;right:10px;top:50%;width:45px;height:45px;margin-top:-22px;}
+    #popup a.close>.ic1{position:absolute;left:50%;top:50%;width:40px;height:40px;margin:-20px;background:url(/assets/images/woodcraft/www/popup/icclose@2x.png) no-repeat;background-size:contain;}
+
+/* 로그인 */
+#popup .login2 {font-size:14px;}
+
+/* 약관 */
+#popup .container_agree .info1{color:#d00;font-weight:600;}
+
+/* 버튼 */
+#popup .container .button{font-size:15px;}
+
+/* 우편번호 검색 
+#popup .juso_search{position:relative;width:100%;margin-bottom:1.3em;}
+#popup .juso_search input{width:100%;height:60px;line-height:50px;border:2px solid #666666;padding-right:60px;padding-left:20px;font-size:17px;}
+#popup .juso_search button.submit {position:absolute;right:20px;top:13px;width:35px;height:35px;text-indent:-9999px;background: transparent url(/assets/images/woodcraft/www/popup/ic1search@2x.png) no-repeat;background-size:contain;border:none;}
+
+#popup .juso_note{max-width:450px;margin:0 auto;text-align:center;}
+#popup .juso_note h2{font-size:21px;color:#111;line-height:1.5;}
+#popup .juso_note p{line-height:1.5;padding:10px 0;}
+#popup .juso_note ul.bu{width:80%;margin:0 auto;}
+*/
+/* 우편번호 에러 
+#popup .juso_error{position: relative;width:90%;text-align:center;margin:0 auto;}
+#popup .juso_error i.ic1{display:block;width:63px;height:54px;background:url(/assets/images/woodcraft/www/lib/error@x2.png) 50% 50% no-repeat;background-size:contain;margin:20px auto;}
+#popup .juso_error h2{font-size:21px;color:#333;}
+#popup .juso_error p{padding:10px 0;line-height:1.333;}
+*/
+/* 우편번호 검색 결과
+#popup .juso_result{border-top:2px solid #333;margin-bottom:30px;}
+#popup .juso_result ul{}
+#popup .juso_result ul li{padding:1.5em 0;border-bottom:1px solid #ddd;}
+#popup .juso_result ul li a{display:block;color:#666;}
+#popup .juso_result .zipcode{display:block;color:#333;margin-bottom:.333em;}
+#popup .juso_result .info{display:block;line-height:2;}
+#popup .juso_result .info .tit{display:inline-block;width:80px;background-color:#6D6D6D;color:#fff;font-size:14px;text-align:center;margin-right:10px;}
+*/
+/* 페이징 
+#popup .pagination .pages .m a,
+#popup .pagination .control .m a{width:20px;height:36px;padding:0 6px;}
+#popup .pagination .pages .m a{font-size:15px;line-height:33px;}
+#popup .pagination .control .m a .ic{line-height:33px;}
+*/
+
+
+/* 모바일 (html.Mobile)*/
+html.Mobile #popup{font-size:13px;}
+html.Mobile #popup .container{margin:0 10px;}
+html.Mobile #popup .container_agree{margin:0 10px;}
+html.Mobile #popup_head{padding:1.1em 0;}
+html.Mobile #popup_body{padding:1em 0;margin-top:50px;}
+html.Mobile #popup h1{font-size:15px;font-weight:bold;}
+html.Mobile #popup .container .button{font-size:13px;}
+/*
+html.Mobile #popup .juso_search{margin-bottom:.666em;}
+html.Mobile #popup .juso_search input{height:35px;line-height:30px;padding-right:30px;padding-left:10px;font-size:13px;}
+html.Mobile #popup .juso_search button.submit {right:10px;top:8px;width:20px;height:20px;}
+
+html.Mobile #popup .juso_error i.ic1{width:45px;height:38px;margin-bottom:10px;}
+html.Mobile #popup .juso_error h2{font-size:16px;}
+html.Mobile #popup .juso_error p{font-size:13px;}
+
+html.Mobile #popup .juso_note h2{font-size:13px;}
+html.Mobile #popup .juso_note ul.bu{max-width:320px;margin:0 auto;}
+
+html.Mobile #popup .juso_result{margin-bottom:.666em;}
+html.Mobile #popup .juso_result ul li{padding:.5em 0;}
+html.Mobile #popup .juso_result ul li a{font-size:13px;}
+html.Mobile #popup .juso_result .info .tit{font-size:12px;}
+
+html.Mobile #popup .pagination .pages .m a,
+html.Mobile #popup .pagination .control .m a{width:13px;height:23px;padding:0 6px;}
+html.Mobile #popup .pagination .pages .m a{font-size:12px;line-height:21px;}
+html.Mobile #popup .pagination .control .m a .ic{line-height:21px;}
+*/

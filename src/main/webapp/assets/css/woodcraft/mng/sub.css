@@ -1,0 +1,526 @@
+@charset "utf-8";
+/* Subpage General Layout */
+section.sub {
+    position: relative;
+    display: block;
+    margin: 0px;
+    padding: 0;
+    width: 1050px;
+    *zoom: 1;
+    overflow: hidden;
+}
+section.sub:after {display: block; clear: both; content: "";}
+section.sub article.sub-content {
+    position: relative;
+    float: left;
+    margin: 0;
+    padding: 0 0 0 60px;
+    width: 724px;
+    min-height: 438px;
+    /*background: url(/assets/images/woodcraft/mng/sub/bg_sub.png) no-repeat top left;*/
+}
+/* Subpage Header */
+.sub-content .sub-header {
+    position: relative;
+    display: block;
+    margin: 0 0 40px 0;
+    padding: 0;
+    height: 128px;
+    border: 1px solid #d6d6d6;
+    overflow: hidden;
+    /*border-top: 3px solid #5083ea;*/
+    *zoom: 1;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+.sub-content .sub-header h1 {
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 40px 0 0 40px;
+    font-size: 36px;
+    font-weight: bold;
+    color: #fff;
+
+}
+/* Subpage Header - Background-image */
+.sub-content .sub-header.image-a {
+    background-image: url(../../../images/woodcraft/mng/sub/bg_sub_header_01.png);
+}
+/* Subpage Top Mini Navigation */
+.sub-header .curr-nav {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    margin: 10px 0 0 0;
+    padding: 0 0 0 8px;
+    height: 28px;
+    background: url(../../../images/woodcraft/mng/sub/bg_sub_header_nav.png) no-repeat 0 0;
+}
+.sub-header .curr-nav ul {
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 0 30px 0 0;
+    height: 28px;
+    *zoom: 1;
+    overflow: hidden;
+    background: url(../../../images/woodcraft/mng/sub/bg_sub_header_nav.png) no-repeat right -90px;
+}
+.sub-header .curr-nav ul:after {display: block; clear: both; content: "";}
+.sub-header .curr-nav ul li {
+    position: relative;
+    float: left;
+    margin: 0;
+    padding: 0;
+    background: url(../../../images/woodcraft/mng/sub/bg_sub_header_nav.png) 0 -30px repeat-x;
+}
+.sub-header .curr-nav ul li a{
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 0 10px 0 28px;
+    height: 28px;
+    line-height: 28px;
+    background: url(../../../images/woodcraft/mng/sub/bg_sub_header_nav.png) 0 -60px no-repeat;
+    color: #606060;
+}
+.sub-header .curr-nav ul li a:hover,
+.sub-header .curr-nav ul li a:focus {
+    color: #909090;
+    cursor: pointer;
+}
+.sub-header .curr-nav ul li a.home {
+    background: none;
+    padding-left: 14px;
+}
+.sub-header .curr-nav ul li a.on {
+    color: #2471de;
+    font-weight: bold;
+    cursor: default;
+}
+/* Subpage Body(Contents Container) */
+section.sub-body {
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    *zoom: 1;
+}
+section.sub-body{display: block; clear: both; content: "";}
+/* Program-List */
+.sub-body ul.program-list {
+    position: relative;
+    display: block;
+    margin: 10px auto 0 auto;
+    padding: 0;
+    overflow: hidden;
+    *zoom: 1;
+}
+.sub-body ul.program-list:after {display: block; clear: both; content: "";}
+.sub-body ul.program-list li {
+    position: relative;
+    float: left;
+    width: 144px;
+    margin: 0 0 10px 0;
+    padding: 10px 0 10px 0;
+    overflow: hidden;
+    height: 130px;
+}
+.sub-body ul.program-list li a {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    width: 100px;
+    *zoom: 1;
+}
+.sub-body ul.program-list li a img {
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    *zoom: 1;
+}
+.sub-body ul.program-list li a span {
+    display: block;
+    margin: 10px 0 0 0;
+    padding: 0;
+    text-align: center;
+    text-align: center;
+    line-height: 140%;
+    letter-spacing: -1px;
+    font-size: 100%;
+    *zoom: 1;
+}
+.sub-body ul.program-list li:hover a span {
+    color: #2372de;
+}
+
+/* List Search */
+.sub-body .list-search {
+    position: relative;
+    display: block;
+    margin: 0 0 6px 0;
+    padding: 2px 0 44px 0;
+    *zoom: 1;
+    overflow: hidden;
+    min-height: 24px;
+
+}
+.sub-body .list-search:after {display: block; clear: both; content: "";}
+.sub-body .list-search .search-form,
+.sub-body .list-search .info {
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+.sub-body .list-search .search-form {
+    padding: .6em 1em;
+    border: 1px solid #ddd;
+    text-align: left;
+    border-radius: 4px; -moz-border-radius: 4px; -webkit-border-radius: 4px; -o-border-radius: 4px; -ms-border-radius: 4px;
+}
+.sub-body .list-search .info {
+    position: absolute;
+    text-align: right;
+    bottom: 0;
+    right: 0;
+    z-index: 1000;
+}
+.sub-body .list-search .info p.page-paragraph {
+    text-align: right;
+    padding: .6em 0;
+    margin: 0 !important;
+    line-height: 22px !important;
+    vertical-align: middle;
+}
+.sub-body ul.calSlt {
+    position: absolute;
+    display: block;
+    margin: -14px 0 0 0;
+    padding: 0;
+    left: 0;
+    bottom: .4em;
+    width: 163px;
+    height: 24px;
+    overflow: hidden;
+    *zoom: 1;
+}
+.sub-body ul.calSlt > li {
+    position: relative;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+.sub-body ul.calSlt > li a {
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 24px;
+    line-height: 24px;
+    color: #666;
+    font-size: 12px;
+    text-align: center;
+    font-family: 'NanumBarunGothicBold';
+    background: url(../../../images/woodcraft/mng/calendar/btn_cal_view_select.png) no-repeat 0 0;
+}
+.sub-body ul.calSlt > li.left a {
+    width: 82px;
+}
+.sub-body ul.calSlt > li.right a{
+    width: 81px;
+    background-position: -82px 0;
+}
+.sub-body ul.calSlt > li a.on,
+.sub-body ul.calSlt > li a:hover,
+.sub-body ul.calSlt > li a:focus {
+    color: #fff;
+    background-position: 0 -74px;
+}
+.sub-body ul.calSlt > li.right a.on,
+.sub-body ul.calSlt > li.right a:hover,
+.sub-body ul.calSlt > li.right a:focus {
+    background-position: -82px -74px;
+}
+.sub-body .list-search .info .page-paragraph {
+    margin: 0 !important;
+    text-align: right !important;
+}
+.sub-body .list-search .search-form .input-text {
+    height: 15px
+}
+.sub-body .list-search .search-form a {
+    border: none !important;
+    margin: 0;
+    padding: 0 0 0 4px !important;
+    display:-moz-inline-stack;     /*FF2*/
+    display:inline-block;
+    *zoom:1;
+    *display:inline;
+    height: 21px;
+    vertical-align: text-top;
+    margin-top: -5px;
+}
+
+/* Slide content */
+.sub-body .slide-up-content {
+    position: relative;
+    display: block;
+    margin: 4px 0 20px 0;
+    padding: 0;
+    *zoom: 1;
+    overflow: hidden;
+    border: 3px solid #ddd;
+    padding: 10px;
+    color: #666;
+    background: #fefefe;
+    display: none;
+}
+.sub-body .slide-up-content:after {display: block; clear: both; content: "";}
+.sub-body .slide-up-content h3 {
+    position: relative;
+    display: block;
+    margin: 10px 0 0 0;
+    padding: 4px 2px 4px 6px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.sub-body .slide-up-content ul {
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 0;
+    *zoom: 1;
+    overflow: hidden;
+}
+.sub-body .slide-up-content ul:after {display: block; clear: both; content: "";}
+.sub-body .slide-up-content ul li {
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 4px 0;
+}
+/* tab-content */
+.sub-body .tab-content {
+    position: relative;
+    display: block;
+    margin: 0 0 10px 0;
+    width: 100%;
+    background: url(../../../images/woodcraft/mng/main/login_select_bg.png) repeat-x right bottom;
+    padding: 0;
+    *zoom: 1;
+    overflow: hidden;
+}
+.sub-body .tab-content:after { display: block; clear: both; content: "";}
+.sub-body .tab-content ul {
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 0;
+    *zoom: 1;
+    overflow: hidden;
+}
+.sub-body .tab-content ul:after { display: block; clear: both; content: "";}
+.sub-body .tab-content ul li {
+    position: relative;
+    float: left;
+    margin: 0;
+    padding: 0;
+    *zoom: 1;
+    overflow: hidden;
+}
+.sub-body .tab-content ul li a{
+    position: relative;
+    display: block;
+    margin: 0 0 0 -1px;
+    padding: 0;
+    height: 38px;
+    line-height: 38px;
+    border: 1px solid #afb2ba;
+    *zoom: 1;
+    overflow: hidden;
+    text-align: center;
+    width: 136px;
+    font-size: 15px;
+    font-weight: normal;
+    background-color: #e6e9ee;
+}
+.sub-body .tab-content ul li a.first {
+    margin-left: 0;
+}
+.sub-body .tab-content ul li a.on,
+.sub-body .tab-content ul li a:hover,
+.sub-body .tab-content ul li a:focus {
+    background-color: #fff;
+}
+.sub-body .tab-content ul li a.on {
+    border-bottom: 0;
+    height:39px;
+}
+.sub-body .tab-content ul li a img {
+    vertical-align: text-top;
+    margin: -1px 6px 0 0;
+    padding: 0;
+}
+/* db search tab */
+.sub-body .dbSearch.default {
+
+}
+.sub-body .dbSearch.extend {
+    display: none;
+}
+/* Program Introduce Page Added (2014.01.16) */
+.sub-body .prgrmInfo {
+    position: relative;
+    display: block;
+    margin: 0 0 40px 0;
+    padding: 0;
+    overflow: hidden;
+    *zoom: 1;
+}
+.sub-body .prgrmInfo:after {display: block; clear: both; content: "";}
+.sub-body .prgrmInfo .half {
+    position: relative;
+    float: left;
+    width: 330px;
+    margin: 0 60px 10px 0;
+    padding: 0 0 10px 0;
+}
+.sub-body .prgrmInfo .half.right {
+    position: relative;
+    width: 330px;
+    margin-right: 0;
+    padding-left: 0;
+}
+.sub-body .prgrmInfo .half .page-paragraph {
+    line-height: 140%;
+}
+.sub-body .prgrmInfo .half .title-h3,
+.sub-body .prgrmInfo .half .title-h4,
+.sub-body .prgrmInfo .half .title-h5 {
+    margin-top: 4px;
+}
+.sub-body .prgrmInfo .title-h3.first,
+.sub-body .prgrmInfo .title-h4.first {
+    margin-top: 4px;
+}
+.sub-body .prgrmInfo .half table.template-table {
+    background: transparent;
+}
+.sub-body .prgrmInfo .half table.template-table th,
+.sub-body .prgrmInfo .half table.template-table td {
+    background: transparent;
+}
+.sub-body .prgrmInfo .half.bg-b {
+    background: url(../../../images/woodcraft/mng/sub/img_prgrm_std_05.jpg) no-repeat right bottom;
+    padding-bottom: 60px;
+}
+.sub-body .prgrmInfo .three.bg-c {
+    background: url(../../../images/woodcraft/mng/sub/img_prgrm_cpn_04.jpg) no-repeat center bottom;
+    padding-bottom: 90px !important;
+}
+.sub-body .prgrmInfo .three.bg-d {
+    background: url(../../../images/woodcraft/mng/sub/img_prgrm_cpn_05.jpg) no-repeat center bottom;
+    padding-bottom: 82px;
+}
+.sub-body .prgrmInfo .three {
+    position: relative;
+    float: left;
+    width: 220px;
+    margin: 0 0 10px 0;
+    padding: 0;
+}
+.sub-body .prgrmInfo .three.center {
+    width: 220px;
+    padding: 0 30px 0 30px;
+}
+.sub-body .p-title {
+    line-height: 120% !important;
+    color: #a37f39 !important;
+    font-size: 14px !important;
+    letter-spacing: -.6px;
+    font-family: 'NanumBarunGothicBold';
+}
+
+.three ul.page-ul {
+    padding-left: 0 !important;
+}
+.three ul.page-ul ul.depth-b {
+    padding-left: 0px !important;
+    letter-spacing: -.4px;
+}
+
+
+/* 2018.07.04 추가 (관리자 디자인 정돈) */
+table.two_search1{width:100%;}
+table.two_search1 td{padding:3px;vertical-align:middle;}
+table.two_search1 td input{width:100%;}
+table.two_search1 td.btns1{padding-left:10px;}
+table.two_search1 td.btns1 button#btn_search{border-radius:3px;border:2px outset #111;color:#fff;background: #111 url("../../../images/woodcraft/mng/common_ico/ico_search.png") 10px 50% no-repeat;padding-left:25px;font-weight:bold;font-size:14px;}
+table.two_search1 td.btns1 button#btn_search.h_r2{height:78px;}
+table.two_search1 td label.two_label_ic1 {background:url("../../../images/woodcraft/mng/common_ico/li1bg.png") 0 50% no-repeat;padding-left:10px;margin-left:10px;}
+
+.pagination ul li,.pagination strong{display:inline-block;padding:3px 5px 1px 5px;border-radius:3px;margin: 0 5px;}
+.pagination strong{background:#7e8896;color:#fff;font-weight:bold;}
+textarea{font-family: 'NanumBarunGothicBold';}
+h3{color:#222;font-size:15px;font-weight:bold;background:url("../../../images/woodcraft/mng/common_ico/h3bg1.png") 3px 50% no-repeat;padding-left:10px;}
+
+.template-table th{font-weight:bold;}
+
+.btn-container .button.medium{height: 36px!important;line-height: 36px !important;background:#ebebeb !important;border:1px solid #a5a5a5 !important;padding:0 10px;border-radius:3px !important;}
+.btn-container .button.medium button{height: 36px!important;line-height: 36px !important;background:none !important;padding-left:20px !important;font-size:14px !important;font-weight:normal !important;color:#111 !important;letter-spacing:-1px !important;}
+.btn-container .button.medium #btn_banner_add{height: 36px!important;line-height: 36px !important;background:none !important;padding-left:20px !important;font-size:14px !important;font-weight:normal !important;color:#111 !important;}
+
+.btn-container .button.medium .check,
+.btn-container .button.medium .menu{line-height: 36px !important;vertical-align:middle;}
+.btn-container .button.medium .ico_save{background:url("../../../images/woodcraft/mng/common_ico/ico_save.png") 50% 50% no-repeat !important;}
+.btn-container .button.medium .ico_list{background:url("../../../images/woodcraft/mng/common_ico/ico_list.png") 50% 50% no-repeat !important;}
+.btn-container .button.medium .ico_del{background:url("../../../images/woodcraft/mng/common_ico/ico_del.png") 50% 50% no-repeat !important;}
+.btn-container .button.medium .ico_new{background:url("../../../images/woodcraft/mng/common_ico/ico_new.png") 50% 50% no-repeat !important;}
+
+/* 폰트 크기 기본 15로 변경 */
+.form label{font-size:15px !important;}
+input, textarea{font-size:15px !important;}
+
+.vNav {margin:0 15px !important;}
+.vNav ul li a{padding:15px 0px 8px 26px !important;}
+.vNav ul li#menu_0 a{background:url("../../../images/woodcraft/mng/common_ico/menu_ico_01.png") 3px 14px no-repeat;background-size:18px;}
+.vNav ul li#menu_1 a{background:url("../../../images/woodcraft/mng/common_ico/menu_ico_02.png") 3px 14px no-repeat;background-size:18px;}
+.vNav ul li#menu_2 a{background:url("../../../images/woodcraft/mng/common_ico/menu_ico_03.png") 3px 14px no-repeat;background-size:18px;}
+.vNav ul li#menu_3 a{background:url("../../../images/woodcraft/mng/common_ico/menu_ico_04.png") 3px 14px no-repeat;background-size:18px;}
+.vNav ul li#menu_4 a{background:url("../../../images/woodcraft/mng/common_ico/menu_ico_05.png") 3px 14px no-repeat;background-size:18px;}
+
+.vNav ul li.submenu a span {font-size:16px !important;color:#3a4c67;}
+.vNav ul li.submenu ul {border:1px solid #d0d5dc !important;border-radius:3px !important;}
+
+.vNav ul li.submenu ul {padding-top:5px;padding-bottom:5px;}
+.vNav ul li.submenu ul li {border-top:1px solid #d8dde4;}
+.vNav ul li.submenu ul li:first-child{border-top:none;}
+.vNav ul li.submenu ul li a{padding:10px 20px !important;background:none !important;color:#333;}
+.vNav ul li.submenu ul li a span{font-size:14px !important;color:#787878;}
+
+header h1{font-size:18px;}
+.aside-search{font-size:15px;padding:0 20px;text-align:center;}
+.aside-search b{font-weight:bold;color:#333;}
+
+
+.template-table th, .template-table td{font-size:14px;}
+table.two_search1 td label.two_label_ic1{font-size:14px !important;}
+.adm a.font-color-green{font-size:14px;}
+.font-size-s.font-color-light {font-size:14px !important;}
+.sub-body .list-search .info p.page-paragraph{font-size:14px;}
+.pagination *{font-size:14px;}
+.adm article .article-header .curr-nav ul li * {font-size:14px;}
+
+.k-input, .k-multiselect-wrap, .k-textbox > input, input.k-textbox, input.k-textbox:hover, textarea.k-textbox, textarea.k-textbox:hover{font-size:14px !important;}
+
+.adm article section.sub-body{padding:20px 25px !important; }
+.adm article .article-header .curr-nav{left:25px !important; }
+
+.ic_new_win_01{display:inline-block;width:11px;height:11px;background:url("../../../images/woodcraft/mng/common_ico/ic11newwindow.png") 0 0 no-repeat;vertical-align:middle;maring: 0 5px;}

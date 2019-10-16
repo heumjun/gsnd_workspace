@@ -1,0 +1,19 @@
+@charset "utf-8";
+/* 2013.12 ThinkCode :: JiHoon Goo hwlee@thinkcode.co.kr */
+/* root : The root element = Wrapping the contents(Most) */
+/* root : Whole element wrapper */
+.root {
+	position: relative;
+	display: block;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	*zoom: 1;
+	/*background: url(../images/header/bg_header.png) repeat-x 0 0;*/
+	font-size: 12px;
+	color: #333;
+    -webkit-font-smoothing: subpixel-antialiased; /* flickering bug solution : some jquery animation or slide brings, other sub text elements flickering - subpixel-antialiased : more bold and sharp, antialiased is default */
+}
+.root:after {display: block; clear: both; content: "";}
+.root a {color: #333;}
+.root a:hover {color: #606060;}

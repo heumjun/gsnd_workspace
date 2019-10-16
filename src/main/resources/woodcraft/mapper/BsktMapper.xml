@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.twogoms.woodcraft.repository.mypage.BsktRepository">
+    
+    <resultMap id="bsktMap" type="com.twogoms.woodcraft.dto.mypage.BsktDto">
+        <id property="bsktId" column="BSKT_ID" javaType="java.lang.String"/>
+        <result property="wcrfId" column="WCRF_ID" javaType="java.lang.String" />
+        <result property="mberId" column="MBER_ID" javaType="java.lang.String" />
+        <result property="qy" column="QY" javaType="java.lang.String" />
+        <result property="atchFileId" column="ATCH_FILE_ID" javaType="java.lang.String" />
+        <result property="wcrfDesc" column="WCRF_DESC" javaType="java.lang.String" />
+        <result property="wcrfNm" column="WCRF_NM" javaType="java.lang.String" />
+        <result property="wcrfAmt" column="WCRF_AMT" javaType="java.lang.String" />
+        <result property="wcrfCnt" column="WCRF_CNT" javaType="java.lang.String" />
+    </resultMap>
+
+    <resultMap id="wcrfMap" type="com.twogoms.woodcraft.dto.wcrf.WcrfDto">
+        <id property="wcrfId" column="WCRF_ID" javaType="java.lang.String"/>
+        <result property="wcrfNm" column="WCRF_NM" javaType="java.lang.String" />
+        <result property="wcrfDesc" column="WCRF_DESC" javaType="java.lang.String" />
+        <result property="wcrfAmt" column="WCRF_AMT" javaType="java.lang.String" />
+        <result property="artistNm" column="ARTIST_NM" javaType="java.lang.String" />
+        <result property="wcrfCnt" column="WCRF_CNT" javaType="java.lang.String" />
+        <result property="atchFileId" column="ATCH_FILE_ID" javaType="java.lang.String" />
+    </resultMap>
+
+    <resultMap id="wcrfBuyMap" type="com.twogoms.woodcraft.dto.wcrf.WcrfBuyDto">
+        <id property="purchsLstId" column="PURCHS_LST_ID" javaType="java.lang.String"/>
+        <result property="setleSe" column="SETLE_SE" javaType="java.lang.String" />
+        <result property="purchsAllAmt" column="PURCHS_ALL_AMT" javaType="java.lang.String" />
+        <result property="byerNm" column="BYER_NM" javaType="java.lang.String" />
+        <result property="purchsDt" column="PURCHS_DT" javaType="java.lang.String" />
+        <result property="orerAddr" column="ORER_ADDR" javaType="java.lang.String" />
+        <result property="orerAddrDtl" column="ORER_ADDR_DTL" javaType="java.lang.String" />
+        <result property="byerNm" column="BYER_NM" javaType="java.lang.String" />
+        <result property="orerNm" column="ORER_NM" javaType="java.lang.String" />
+        <result property="purchsDesc" column="PURCHS_DESC" javaType="java.lang.String" />
+        <result property="purchsProgrsSttus" column="PURCHS_PROGRS_STTUS" javaType="java.lang.String" />
+        <result property="purchsProgrsSttusNm" column="PURCHS_PROGRS_STTUS_NM" javaType="java.lang.String" />
+        <result property="setleSeNm" column="SETLE_SE_NM" javaType="java.lang.String" />
+        <result property="setleAmt" column="SETLE_AMT" javaType="java.lang.String" />
+        <result property="qy" column="QY" javaType="java.lang.String" />
+        <result property="exprnSeNm" column="EXPRN_SE_NM" javaType="java.lang.String" />
+        <result property="bgnDe" column="BGN_DE" javaType="java.lang.String" />
+        <result property="endDe" column="END_DE" javaType="java.lang.String" />
+        <result property="exprnDay" column="EXPRN_DAY" javaType="java.lang.String" />
+        <result property="exprnTime" column="EXPRN_TIME" javaType="java.lang.String" />
+        <result property="exprnTime2" column="EXPRN_TIME2" javaType="java.lang.String" />
+    </resultMap>
+
+    <select id="getBsktList"  parameterType="com.twogoms.woodcraft.dto.mypage.criteria.BsktCriteria" resultMap="bsktMap">
+        SELECT A.BSKT_ID
+        , A.WCRF_ID
+        , A.MBER_ID
+        , A.QY
+        , A.RGSTR_ID
+        , A.RGST_DT
+        , A.UPDTR_ID
+        , A.UPDT_DT
+        , B.WCRF_NM
+        , B.WCRF_DESC
+        , B.WCRF_AMT
+        , B.ATCH_FILE_ID
+        , B.WCRF_CNT
+        FROM TB_WCRF_BSKT A,
+              TB_WCRF_INFO B
+        WHERE  0 = 0
+        AND A.MBER_ID = #{mberId}
+        AND A.WCRF_ID = B.WCRF_ID
+        ORDER  BY
+        A.RGST_DT DESC
+    </select>
+
+    <select id="getBskt"  parameterType="com.twogoms.woodcraft.dto.mypage.BsktDto" resultMap="wcrfMap">
+        SELECT B.WCRF_ID
+        , B.WCRF_NM
+        , B.WCRF_DESC
+        , B.WCRF_AMT
+        , B.ARTIST_NM
+        , A.QY AS WCRF_CNT
+        , B.ATCH_FILE_ID
+        , B.RGSTR_ID
+        , B.RGST_DT
+        , B.UPDTR_ID
+        , B.UPDT_DT
+        FROM TB_WCRF_BSKT A,
+              TB_WCRF_INFO B
+        WHERE
+        0 = 0
+        <if test="bsktId != null and bsktId != ''">
+            AND A.BSKT_ID = #{bsktId}
+        </if>
+        <if test="wcrfId != null and wcrfId != ''">
+            AND B.WCRF_ID = #{wcrfId}
+        </if>
+        <if test="mberId != null and mberId != ''">
+            AND A.MBER_ID = #{mberId}
+        </if>
+        AND A.WCRF_ID = B.WCRF_ID
+    </select>
+
+    <insert id="insertBskt" parameterType="com.twogoms.woodcraft.dto.mypage.BsktDto">
+      INSERT INTO TB_WCRF_BSKT (
+        BSKT_ID
+      , WCRF_ID
+      , MBER_ID
+      , QY
+      , RGSTR_ID
+      , RGST_DT
+      , UPDTR_ID
+      , UPDT_DT
+      ) VALUES (
+        #{bsktId}
+      , #{wcrfId}
+      , #{mberId}
+      , #{qy}
+      , #{rgstrId}
+      , now()
+      , #{updtrId}
+      , now()
+      )
+    </insert>
+
+    <update id="updateBskt"  parameterType="com.twogoms.woodcraft.dto.mypage.BsktDto">
+        UPDATE TB_WCRF_BSKT SET
+                QY = #{qy}
+        ,       UPDTR_ID = #{updtrId}
+        ,       UPDT_DT = now()
+        WHERE   BSKT_ID = #{bsktId}
+    </update>
+
+    <delete id="deleteBskt" parameterType="com.twogoms.woodcraft.dto.mypage.BsktDto">
+       DELETE FROM TB_WCRF_BSKT WHERE BSKT_ID = #{bsktId}
+    </delete>
+
+    <select id="getWcrfBuyList"  parameterType="com.twogoms.woodcraft.dto.wcrf.criteria.WcrfBuyCriteria" resultMap="wcrfBuyMap">
+        select
+        A.PURCHS_LST_ID,
+        A.PURCHS_DT,
+        A.PURCHS_ALL_AMT,
+        A.PURCHS_PROGRS_STTUS,
+        GET_CODE_NM('WOD002',A.PURCHS_PROGRS_STTUS) AS PURCHS_PROGRS_STTUS_NM,
+        A.PURCHS_DESC,
+        B.BYER_NM,
+        B.ORER_NM,
+        GET_CODE_NM('WOD001',A.SETLE_SE) AS SETLE_SE_NM,
+        D.SETLE_AMT
+        from
+        TB_WCRF_BUY_TOT A,
+        TB_WCRF_BUY_ADDR B,
+        TB_WCRF_BUY_MST C,
+        TB_WCRF_PAY D
+        where
+        A.PURCHS_LST_ID = B.PURCHS_LST_ID
+        AND A.PURCHS_MST_ID = C.PURCHS_MST_ID
+        AND A.PURCHS_LST_ID = D.PURCHS_LST_ID
+        AND A.PURCHS_PROGRS_STTUS <![CDATA[ <> '01' ]]>
+        <if test="searchOption == '01'">
+            AND A.PURCHS_DESC LIKE CONCAT('%',#{searchKeyword},'%')
+        </if>
+        <if test="searchSetleSe != null and searchSetleSe != ''">
+            AND A.SETLE_SE = #{searchSetleSe}
+        </if>
+        <if test="searchPurchsProgrsSttus != null and searchPurchsProgrsSttus != ''">
+            AND A.PURCHS_PROGRS_STTUS = #{searchPurchsProgrsSttus}
+        </if>
+        <if test="searchByerNm != null and searchByerNm != ''">
+            AND B.BYER_NM LIKE CONCAT('%',#{searchByerNm},'%')
+        </if>
+        <if test="searchPurchsDt != null and searchPurchsDt != ''">
+            AND DATE_FORMAT(A.PURCHS_DT, '%Y/%m/%d') = #{searchPurchsDt}
+        </if>
+        <if test="rgstrId != null and rgstrId != ''">
+            AND C.MBER_ID = #{rgstrId}
+        </if>
+        ORDER  BY
+        A.RGST_DT DESC
+        LIMIT  #{recordCountPerPage} OFFSET #{firstIndex}
+    </select>
+
+    <select id="getWcrfBuyListCount" parameterType="com.twogoms.woodcraft.dto.wcrf.criteria.WcrfBuyCriteria" resultType="int">
+        SELECT COUNT(*) from
+        TB_WCRF_BUY_TOT A,
+        TB_WCRF_BUY_ADDR B,
+        TB_WCRF_BUY_MST C,
+        TB_WCRF_PAY D
+        where
+        A.PURCHS_LST_ID = B.PURCHS_LST_ID
+        AND A.PURCHS_MST_ID = C.PURCHS_MST_ID
+        AND A.PURCHS_LST_ID = D.PURCHS_LST_ID
+        AND A.PURCHS_PROGRS_STTUS <![CDATA[ <> '01' ]]>
+        <if test="searchOption == '01'">
+            AND A.PURCHS_DESC LIKE CONCAT('%',#{searchKeyword},'%')
+        </if>
+        <if test="searchSetleSe != null and searchSetleSe != ''">
+            AND A.SETLE_SE = #{searchSetleSe}
+        </if>
+        <if test="searchPurchsProgrsSttus != null and searchPurchsProgrsSttus != ''">
+            AND A.PURCHS_PROGRS_STTUS = #{searchPurchsProgrsSttus}
+        </if>
+        <if test="searchByerNm != null and searchByerNm != ''">
+            AND B.BYER_NM LIKE CONCAT('%',#{searchByerNm},'%')
+        </if>
+        <if test="searchPurchsDt != null and searchPurchsDt != ''">
+            AND DATE_FORMAT(A.PURCHS_DT, '%Y/%m/%d') = #{searchPurchsDt}
+        </if>
+        <if test="rgstrId != null and rgstrId != ''">
+            AND C.MBER_ID = #{rgstrId}
+        </if>
+
+    </select>
+
+    <select id="getExprnReqList"  parameterType="com.twogoms.woodcraft.dto.wcrf.criteria.WcrfBuyCriteria" resultMap="wcrfBuyMap">
+        select
+        A.EXPRN_REQST_ID AS PURCHS_LST_ID,
+        A.REQ_DT AS PURCHS_DT,
+        A.EXPRN_AMT AS PURCHS_ALL_AMT,
+        A.REQ_STTUS AS PURCHS_PROGRS_STTUS,
+        GET_CODE_NM('WOD008',A.REQ_STTUS) AS PURCHS_PROGRS_STTUS_NM,
+        C.EXPRN_NM AS PURCHS_DESC,
+        A.REQ_NM AS BYER_NM,
+        A.REQ_NM AS ORER_NM,
+        GET_CODE_NM('WOD001',B.SETLE_SE) AS SETLE_SE_NM,
+        B.SETLE_AMT,
+        A.EXPRN_NMPR AS QY,
+        GET_CODE_NM('WOD010',C.EXPRN_SE) AS EXPRN_SE_NM,
+        C.BGN_DE,
+        C.END_DE,
+        B.RCPMNY_NM,
+        GET_CODE_NM('WOD009',B.CASH_RECEIPTS_OPT) AS CASH_RECEIPTS_OPT_NM,
+        A.EXPRN_DAY,
+        A.EXPRN_TIME,
+        C.EXPRN_TIME AS EXPRN_TIME2
+        from
+        TB_EXPRN_REQ A,
+        TB_WCRF_PAY B,
+        TB_EXPRN_INFO C
+        where
+        A.EXPRN_REQST_ID = B.PURCHS_LST_ID
+        AND A.EXPRN_ID = C.EXPRN_ID
+        AND A.REQ_STTUS <![CDATA[ <> '01' ]]>
+        <if test="searchOption == '01'">
+            AND C.EXPRN_NM LIKE CONCAT('%',#{searchKeyword},'%')
+        </if>
+        <if test="rgstrId != null and rgstrId != ''">
+            AND A.MBER_ID = #{rgstrId}
+        </if>
+        <if test="typeCd != null and typeCd != ''">
+            AND C.TYPE_CD = #{typeCd}
+        </if>
+        <if test="searchByerNm != null and searchByerNm != ''">
+            AND A.REQ_NM LIKE CONCAT('%',#{searchByerNm},'%')
+        </if>
+        <if test="searchSetleSe != null and searchSetleSe != ''">
+            AND B.SETLE_SE = #{searchSetleSe}
+        </if>
+        <if test="searchPurchsDt != null and searchPurchsDt != ''">
+            AND A.EXPRN_DAY = REPLACE(#{searchPurchsDt}, '-', '')
+        </if>
+        <if test="searchBgnDe != null and searchBgnDe != ''">
+            <![CDATA[ AND DATE_FORMAT(A.REQ_DT, '%Y-%m-%d') >= #{searchBgnDe} ]]>
+        </if>
+        <if test="searchEndDe != null and searchEndDe != ''">
+            <![CDATA[ AND DATE_FORMAT(A.REQ_DT, '%Y-%m-%d') <= #{searchEndDe} ]]>
+        </if>
+        <if test="searchPurchsProgrsSttus != null and searchPurchsProgrsSttus != ''">
+            AND A.REQ_STTUS = #{searchPurchsProgrsSttus}
+        </if>
+        <if test="searchPurchsDesc != null and searchPurchsDesc != ''">
+           AND C.EXPRN_NM LIKE CONCAT('%',#{searchPurchsDesc},'%')
+        </if>
+        ORDER  BY
+        A.REGIST_DT DESC
+        LIMIT  #{recordCountPerPage} OFFSET #{firstIndex}
+    </select>
+
+    <select id="getExprnReqListCount" parameterType="com.twogoms.woodcraft.dto.wcrf.criteria.WcrfBuyCriteria" resultType="int">
+        SELECT COUNT(*) from
+        TB_EXPRN_REQ A,
+        TB_WCRF_PAY B,
+        TB_EXPRN_INFO C
+        where
+        A.EXPRN_REQST_ID = B.PURCHS_LST_ID
+        AND A.EXPRN_ID = C.EXPRN_ID
+        AND A.REQ_STTUS <![CDATA[ <> '01' ]]>
+        <if test="searchOption == '01'">
+            AND C.EXPRN_NM LIKE CONCAT('%',#{searchKeyword},'%')
+        </if>
+        <if test="rgstrId != null and rgstrId != ''">
+            AND A.MBER_ID = #{rgstrId}
+        </if>
+        <if test="typeCd != null and typeCd != ''">
+            AND C.TYPE_CD = #{typeCd}
+        </if>
+        <if test="searchByerNm != null and searchByerNm != ''">
+            AND A.REQ_NM LIKE CONCAT('%',#{searchByerNm},'%')
+        </if>
+        <if test="searchSetleSe != null and searchSetleSe != ''">
+            AND B.SETLE_SE = #{searchSetleSe}
+        </if>
+        <if test="searchPurchsDt != null and searchPurchsDt != ''">
+            AND A.EXPRN_DAY = REPLACE(#{searchPurchsDt}, '-', '')
+        </if>
+        <if test="searchBgnDe != null and searchBgnDe != ''">
+            <![CDATA[ AND DATE_FORMAT(A.REQ_DT, '%Y-%m-%d') >= #{searchBgnDe} ]]>
+        </if>
+        <if test="searchEndDe != null and searchEndDe != ''">
+            <![CDATA[ AND DATE_FORMAT(A.REQ_DT, '%Y-%m-%d') <= #{searchEndDe} ]]>
+        </if>
+        <if test="searchPurchsProgrsSttus != null and searchPurchsProgrsSttus != ''">
+            AND A.REQ_STTUS = #{searchPurchsProgrsSttus}
+        </if>
+        <if test="searchPurchsDesc != null and searchPurchsDesc != ''">
+            AND C.EXPRN_NM LIKE CONCAT('%',#{searchPurchsDesc},'%')
+        </if>
+    </select>
+
+</mapper>

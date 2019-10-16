@@ -1,0 +1,246 @@
+@charset "utf-8";
+/* Common Form Elements Styling */
+.form {
+    position: relative;
+    display: block;
+    margin: 4px 0 4px 0;
+    padding: 0;
+    *zoom: 1;
+    overflow: hidden;
+    font-size: 100%;
+    line-height: 220%;
+    letter-spacing: -.5px;
+}
+.form:after { display: block; clear: both; content: "";}
+.form form,
+.form fieldset,
+.form legend{
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+.form legend {
+    display: none;
+}
+.form label {
+    display:-moz-inline-stack;/* inline-block FF2 */
+    display:inline-block;
+    *zoom:1;/* inline-block ie */
+    *display:inline;/* inline-block ie */
+    vertical-align:-1px;
+}
+.form label.left {
+    margin-left: 2px;
+    margin-right: 10px;
+}
+.form label.right {
+    margin-left: 10px;
+    margin-right: 2px;
+}
+/* Common Form 'UL', LI */
+ul.form-ul {
+    border-top: 3px solid #2471ed;
+}
+ul.form-ul,
+ul.form-ul li.form-li {
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 0;
+    *zoom: 1;
+}
+ul.form-ul li.form-li {
+    padding: 6px 0;
+    border-bottom: 1px solid #d4d4d4;
+}
+/* Common Form Detail Label Style */
+.form .label-title,
+.form .form-element {
+    position: relative;
+    display:-moz-inline-stack;/* inline-block FF2 */
+    display:inline-block;
+    *zoom:1;/* inline-block ie */
+    *display:inline;/* inline-block ie */
+    margin: 0;
+}
+.form .label-title {
+    padding: 0 10px 0 20px;
+    text-align: left;
+    vertical-align: top;
+}
+.form .form-element {
+    padding: 0 20px 0 0;
+}
+/* Sizing */
+.form.form-sizing-xl .label-title {
+    width: 180px;
+}
+.form.form-sizing-xl .form-element {
+    width: 504px;
+}
+.form.form-sizing-l .label-title {
+    width: 140px;
+}
+.form.form-sizing-l .form-element {
+    width: 544px;
+}
+.form.form-sizing-m .label-title {
+    width: 110px;
+}
+.form.form-sizing-m .form-element {
+    width: 574px;
+}
+.form.form-sizing-s .label-title {
+    width: 80px;
+}
+.form.form-sizing-s .form-element {
+    width: 604px;
+}
+/* input Style */
+.form .input-text {
+    margin: 0;
+    padding: 0 10px;
+    height: 24px;
+    line-height: 24px;
+    border: 1px solid #c7c7c7;
+    background: #f8f8f8;
+    font-size: 100%;
+}
+.form .input-text:focus {
+    border-color: #3f6fd3;
+}
+.form .input-file {
+    margin: 0;
+    padding: 3px 0 0 0;
+    height: 24px;
+    line-height: 14px;
+    border: 0;
+    background: #fff;
+    font-size: 100%;
+}
+.form .text-area {
+    padding: 10px;
+    line-height: 140%;
+    color: #303030;
+    border: 1px solid #d4d4d4;
+    background: #f8f8f8;
+    font-size: 100%;
+}
+.form .text-area:focus {
+    border-color: #3f6fd3;
+}
+.form .input-radio-check {
+    border: none;
+    width: 13px;
+    height: 13px;
+    vertical-align:text-top;
+    margin-top: 1px;
+}
+.form .select-style {
+    margin: 0 0 -2px 0;
+    padding: 2px 4px;
+    vertical-align: middle;
+    font-size: 100%;
+}
+/* Form NEW */
+.form label {
+    display:-moz-inline-stack;/* inline-block FF2 */
+    display:inline-block;
+    *zoom:1;/* inline-block ie */
+    *display:inline;/* inline-block ie */
+    vertical-align:-1px;
+}
+/* attatch-style */
+.form .attach-style {
+    position: relative;
+    display: block;
+    margin: 0 4px 0 0;
+    padding: 0;
+    *zoom: 1;
+    overflow: hidden;
+    border: 1px solid #dbdbde;
+    background: #f7f7f8;
+}
+.form .attach-style:after { display: block; clear: both; content: ""; }
+.form .attach-style li {
+    position: relative;
+    display: block;
+    margin: 4px;
+    padding: 0px 10px;
+    border: 1px solid #dbdbde;
+    background: #f8f8f8;
+}
+.form .attach-style li.btn-container {
+
+}
+.form .attach-style li span {
+    display:-moz-inline-stack;     /*FF2*/
+    display:inline-block;
+    *zoom:1;
+    *display:inline;
+    position: relative;
+}
+.form .attach-style li span.k-filename {
+    display:-moz-inline-stack;     /*FF2*/
+    display:inline-block;
+    *zoom:1;
+    *display:inline;
+    position: relative;
+    margin: 4px 0 0 0;
+    padding: 0;
+}
+.form .attach-style li span.attach-btn-wrapper {
+    display: block;
+    float: right;
+    padding-top: 6px;
+}
+.form .attach-style li span.attach-btn-wrapper span.button {
+
+}
+/* attatch-style */
+.form .attatch-style {
+    position: relative;
+    display: block;
+    margin: 0 4px 0 0;
+    padding: 0;
+    *zoom: 1;
+    overflow: hidden;
+    border: 1px solid #dbdbde;
+    background: #f7f7f8;
+}
+.form .attatch-style:after { display: block; clear: both; content: ""; }
+.form .attatch-style li {
+    position: relative;
+    display: block;
+    margin: 4px;
+    padding: 0px 10px;
+    border: 1px solid #dbdbde;
+    background: #f8f8f8;
+}
+.form .attatch-style li.btn-container {
+
+}
+.form .attatch-style li span {
+    display:-moz-inline-stack;     /*FF2*/
+    display:inline-block;
+    *zoom:1;
+    *display:inline;
+    position: relative;
+}
+.form .attatch-style li span.k-filename {
+    display:-moz-inline-stack;     /*FF2*/
+    display:inline-block;
+    *zoom:1;
+    *display:inline;
+    position: relative;
+    margin: 4px 0 0 0;
+    padding: 0;
+}
+.form .attatch-style li span.attatch-btn-wrapper {
+    display: block;
+    float: right;
+    padding-top: 6px;
+}
+.form .attatch-style li span.attatch-btn-wrapper span.button {
+
+}

@@ -1,0 +1,119 @@
+@charset "utf-8";
+.header {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    *zoom: 1;
+}
+.header:after {display: block; clear: both; content: "";}
+.header .box {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    width: 980px;
+    overflow: hidden;
+    *zoom: 1;
+}
+.header .box {display: block; clear: both; content: "";}
+#skipNavi, #skipNavi2 {position: absolute; margin: 0 auto; width: 100%; font-size: 1.15em; top: -10.5em; left: 0; z-index: 100;} /* 본문으로 건너뛰기 링크 */
+#skipNavi a:active, #skipNavi a:focus, #skipNavi2 a:active, #skipNavi2 a:focus {position: absolute; padding-top: 0.5em; width: 100%;	height: 2em; top: 10.5em; /* left: 0; */ text-align: center; color: #fff; font-weight:bold;	/* text-decoration: underline;*/ background: #2a51a9; border: 1px solid #475470; outline: 0;}
+.header .logo {
+    position: relative;
+    float: left;
+    margin: 0;
+    padding: 11px 0 0 0;
+    width: 300px;
+    height: 53px;
+}
+.header .logo img {
+    width: 261px;
+    height: 44px;
+}
+.header .lnb, .header .search {
+    position: relative;
+    float: left;
+    margin: 0;
+    padding: 0;
+    height: 64px;
+    overflow: hidden;
+}
+.header .lnb {
+    width: 510px;
+    text-align: right;
+}
+.header .lnb ul {
+    position: relative;
+    float: right;
+    margin: 0;
+    padding: 22px 10px 0 0;
+    overflow: hidden;
+    height: 42px;
+    *zoom: 1;
+}
+.header .lnb ul:after {display: block; clear: both; content: "";}
+.header .lnb ul li {
+    float: left;
+    height: 20px;
+    margin: 0;
+    padding: 0 0 0 6px;
+}
+.header .lnb ul li span {
+    display:-moz-inline-stack;     /*FF2*/
+    display:inline-block;
+    *zoom:1;
+    *display:inline;
+    color: #606060;
+    padding: 0 4px;
+    height: 20px;
+    line-height: 20px;
+}
+.header .lnb ul li a {
+    position: relative;
+    /* edited */
+    margin: 0;
+    padding: 0 10px 0 6px;
+    height: 20px;
+    line-height: 20px;
+    color: #909090;
+    background: url(../images/header/lnb_separator.png) no-repeat right center;
+}
+.header .lnb ul li a.end {
+    padding-right: 6px;
+    background: none;
+}
+.header .lnb ul li .separator {
+    margin: 0;
+    color: #ccc;
+    font-weight: normal;
+}
+.header .search {
+    float: right;
+    height: 40px;
+    padding: 23px 0 0 0;
+}
+.header .search input.search-input {
+    position: relative;
+    background: #fff;
+    border: 1px solid #d4d4d4;
+    margin: 0;
+    padding: 0;
+    height: 18px;
+    line-height: 18px;
+    color: #303030;
+    vertical-align: middle;
+}
+.header .search button.search-button {
+    width: 30px;
+    height: 20px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    border: 0;
+    background: url(../images/main/spr_main.png) 8px -87px no-repeat #d4d4d4;
+    border-radius: 0 4px 4px 0; -webkit-border-radius: 0 4px 4px 0; -moz-border-radius: 0 4px 4px 0; -o-border-radius: 0 4px 4px 0;
+    color: #fff;
+    vertical-align: middle;
+}

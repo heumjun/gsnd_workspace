@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="author" content="진주목공예전수관" />
+<meta name="keywords" content="진주목공예전수관, 우편번호 조회" />
+<meta name="description" content="진주목공예전수관, 우편번호 조회" />
+<title>우편번호 찾기 | 진주목공예전수관</title>
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans" />
+<link rel="stylesheet" type="text/css" href="/assets/css/woodcraft/www/font.css" />
+<link rel="stylesheet" type="text/css" href="/assets/css/woodcraft/www/lib.css" />
+<link rel="stylesheet" type="text/css" href="/assets/css/woodcraft/www/layout.css" />
+<link rel="stylesheet" type="text/css" href="/assets/css/woodcraft/www/content.css" />
+<link rel="stylesheet" type="text/css" href="/assets/css/woodcraft/www/template.css" />
+<link rel="stylesheet" type="text/css" href="/assets/css/woodcraft/www/popup.css" />
+<script type="text/javascript" src="/assets/js/woodcraft/www/define/iscroll-min.js"></script>
+<script type="text/javascript" src="/assets/js/woodcraft/www/define/hammer.min.js"></script>
+<script type="text/javascript" src="/assets/js/woodcraft/www/define/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="/assets/js/woodcraft/www/define/jquery.easing.1.3.js"></script>
+<!--[if lt IE 9]>
+<script type="text/javascript" src="/assets/js/woodcraft/www/define/html5shiv.min.js"></script>
+<script type="text/javascript" src="/assets/js/woodcraft/www/define/selectivizr.js"></script>
+<script type="text/javascript" src="/assets/js/woodcraft/www/define/respond.min.js"></script>
+<script type="text/javascript" src="/assets/js/woodcraft/www/define/jquery.backgroundSize.js"></script>
+<![endif]-->
+<script type="text/javascript" src="/assets/js/woodcraft/www/lib_define.js"></script>
+<script type="text/javascript" src="/assets/js/woodcraft/www/lib_scroll.js"></script>
+<script type="text/javascript" src="/assets/js/woodcraft/www/lib.js"></script>
+</head>
+<body>
+
+<!-- #container -->    
+<div id="container">
+<noscript><p>JavaScript has been disabled. This site requires JavaScript for full functionality, please enable.</p></noscript>
+
+<!-- #popup -->
+<div id="popup" class="init">
+	<!-- #popup_head -->
+	<div id="popup_head" class="clearfix">
+	<a href="#?" onclick="window.close();return false;" class="close"><i class="ic1 bsContain"></i> <span class="blind">창 닫기</span></a>
+		<!-- .container -->
+		<div class="container">
+		<h1>우편번호 검색</h1>		
+		</div>
+		<!-- /.container -->	
+	</div>
+	<!-- /#popup_head -->
+
+	<!-- #popup_body -->
+	<div id="popup_body">
+		<!-- .container -->
+		<div class="container">
+
+			<!-- juso_search -->
+			<div class="juso_search">
+			<form action="?">
+			<fieldset><legend class="blind">우편번호 검색</legend>
+			<input type="text" value="" class="text text1" title="검색어" />
+			<button type="submit" value="" class="button bsContain submit">검색</button>
+			</fieldset>
+			</form>
+			</div>
+			<!-- /juso_search -->
+<!-- ◇◇◇ 1번화면(기본) ◇◇◇ -->
+			<!-- .juso_note -->
+			<div class="juso_note">
+			<h2>주소 검색 방법</h2>
+			<p>아래와 같은 조합으로 검색을 하시면 정확한 결과가 검색됩니다.</p>
+			<ul class="bu">
+			<li><em class="em0">도로명+건물번호</em> 예) 광제산로 367</li>
+			<li><em class="em0">지역명(동/리)</em> +번지 예) 관지리 767 </li>
+			<li><em class="em0">지역명(동/리)</em> + 건물명(아파트명) 예) 진주 시청</li>
+			<li><em class="em0">사서함명+번호</em> 예) 영등포우체국사서함 399</li>
+			</ul>
+			</div>
+			<!-- /.juso_note -->
+<!-- / ◇◇◇ 1번화면(기본) ◇◇◇ -->
+
+<!-- ◇◇◇ 2번화면(검색결과없음) ◇◇◇ -->
+			<div class="juso_error">
+			<i class="ic1 bsContain"></i>
+			<h2>검색 결과가 없습니다.</h2>
+			<p>행안부 도로명(지번)주소에 등록되지 않은 주소이거나 잘못입력한 경우입니다.</p>
+			</div>
+<!-- / ◇◇◇ 2번화면(검색결과없음) ◇◇◇ -->
+
+<!-- ◇◇◇ 3번화면(결과) ◇◇◇ -->
+			<!-- .juso_result -->
+			<div class="juso_result">
+				<h3 class="blind">검색결과</h3>
+				<ul>
+				<li><a href="#?">
+				<span class="zipcode">52024</span>
+				<span class="info"><span class="tit">지번</span> 
+				경남 함안군 칠원읍 202-9</span>
+				<span class="info"><span class="tit">도로명</span>
+				경남 함안군 칠원읍 경남대로 1817-1</span></a>
+				</li>
+				<li><a href="#?">
+				<span class="zipcode">52024</span>
+				<span class="info"><span class="tit">지번</span> 
+				경남 함안군 칠원읍 202-9</span>
+				<span class="info"><span class="tit">도로명</span>
+				경남 함안군 칠원읍 경남대로 1817-1</span></a>
+				</li>
+				<li><a href="#?">
+				<span class="zipcode">52024</span>
+				<span class="info"><span class="tit">지번</span> 
+				경남 함안군 칠원읍 202-9</span>
+				<span class="info"><span class="tit">도로명</span>
+				경남 함안군 칠원읍 경남대로 1817-1</span></a>
+				</li>
+				<li><a href="#?">
+				<span class="zipcode">52024</span>
+				<span class="info"><span class="tit">지번</span> 
+				경남 함안군 칠원읍 202-9</span>
+				<span class="info"><span class="tit">도로명</span>
+				경남 함안군 칠원읍 경남대로 1817-1</span></a>
+				</li>
+				<li><a href="#?">
+				<span class="zipcode">52024</span>
+				<span class="info"><span class="tit">지번</span> 
+				경남 함안군 칠원읍 202-9</span>
+				<span class="info"><span class="tit">도로명</span>
+				경남 함안군 칠원읍 경남대로 1817-1</span></a>
+				</li>
+				<li><a href="#?">
+				<span class="zipcode">52024</span>
+				<span class="info"><span class="tit">지번</span> 
+				경남 함안군 칠원읍 202-9</span>
+				<span class="info"><span class="tit">도로명</span>
+				경남 함안군 칠원읍 경남대로 1817-1</span></a>
+				</li>
+				</ul>
+			</div>
+			<!-- /.juso_result -->
+
+			<!-- infosection1 -->
+			<div class="infosection1">
+
+				<div class="pagination" title="페이지 수 매기기">
+				<span class="m control first"><a title="맨앞 페이지"><i class="ic">&laquo;</i></a></span>
+				<span class="m control prev"><a title="이전 페이지"><i class="ic">&lsaquo;</i></a></span>
+				<span class="m pages on"><a title="현재 1 페이지">1</a></span>
+				<span class="m pages"><a href="?" title="2 페이지">2</a></span>
+				<span class="m pages"><a href="?" title="3 페이지">3</a></span>
+				<span class="m pages"><a href="?" title="4 페이지">4</a></span>
+				<span class="m pages"><a href="?" title="5 페이지">5</a></span>
+				<span class="m pages"><a href="?" title="6 페이지">6</a></span>
+				<span class="m pages"><a href="?" title="7 페이지">7</a></span>
+				<span class="m pages"><a href="?" title="8 페이지">8</a></span>
+				<span class="m pages"><a href="?" title="9 페이지">9</a></span>
+				<span class="m pages"><a href="?" title="10 페이지">10</a></span>
+				<span class="m control next"><a href="?" title="다음 페이지"><i class="ic">&rsaquo;</i></a></span>
+				<span class="m control last"><a href="?" title="맨끝 페이지"><i class="ic">&raquo;</i></a></span>
+				</div>
+ 				
+			</div>
+			<!-- /infosection1 -->
+<!-- / ◇◇◇ 3번화면(결과) ◇◇◇ -->
+		</div>
+		<!-- /.container -->	
+	</div>
+	<!-- /#popup_body -->
+</div>
+<!-- /#popup -->
+
+
+</div>   
+<!--/#container-->
+
+</body>
+</html>

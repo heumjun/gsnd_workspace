@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.twogoms.woodcraft.repository.wcrf.WcrfBuyRepository">
+    
+    <resultMap id="wcrfMap" type="com.twogoms.woodcraft.dto.wcrf.WcrfDto">
+        <id property="wcrfId" column="WCRF_ID" javaType="java.lang.String"/>
+        <result property="wcrfNm" column="WCRF_NM" javaType="java.lang.String" />
+        <result property="wcrfDesc" column="WCRF_DESC" javaType="java.lang.String" />
+        <result property="wcrfAmt" column="WCRF_AMT" javaType="java.lang.String" />
+        <result property="artistNm" column="ARTIST_NM" javaType="java.lang.String" />
+        <result property="wcrfCnt" column="WCRF_CNT" javaType="java.lang.String" />
+        <result property="atchFileId" column="ATCH_FILE_ID" javaType="java.lang.String" />
+    </resultMap>
+
+    <resultMap id="wcrfBuyMap" type="com.twogoms.woodcraft.dto.wcrf.WcrfBuyDto">
+        <id property="purchsLstId" column="PURCHS_LST_ID" javaType="java.lang.String"/>
+        <result property="setleSe" column="SETLE_SE" javaType="java.lang.String" />
+        <result property="purchsAllAmt" column="PURCHS_ALL_AMT" javaType="java.lang.String" />
+        <result property="byerNm" column="BYER_NM" javaType="java.lang.String" />
+        <result property="purchsDt" column="PURCHS_DT" javaType="java.lang.String" />
+        <result property="orerAddr" column="ORER_ADDR" javaType="java.lang.String" />
+        <result property="orerAddrDtl" column="ORER_ADDR_DTL" javaType="java.lang.String" />
+        <result property="setleAmt" column="SETLE_AMT" javaType="java.lang.String" />
+        <result property="setleDt" column="SETLE_DT" javaType="java.lang.String" />
+        <result property="orerNm" column="ORER_NM" javaType="java.lang.String" />
+        <result property="orerTelNo" column="ORER_TEL_NO" javaType="java.lang.String" />
+        <result property="orerHp" column="ORER_HP" javaType="java.lang.String" />
+        <result property="orerZip" column="ORER_ZIP" javaType="java.lang.String" />
+        <result property="orderMessCn" column="ORDER_MESS_CN" javaType="java.lang.String" />
+        <result property="purchsProgrsSttus" column="PURCHS_PROGRS_STTUS" javaType="java.lang.String" />
+        <result property="invoiceNumber" column="INVOICE_NUMBER" javaType="java.lang.String" />
+        <result property="setleId" column="SETLE_ID" javaType="java.lang.String" />
+        <result property="byerTelNo" column="BYER_TEL_NO" javaType="java.lang.String" />
+        <result property="byerEmail" column="BYER_EMAIL" javaType="java.lang.String" />
+        <result property="rcpmnyAmt" column="RCPMNY_AMT" javaType="java.lang.String" />
+        <result property="rcpmnyNm" column="RCPMNY_NM" javaType="java.lang.String" />
+        <result property="cashReceiptsOptNm" column="CASH_RECEIPTS_OPT_NM" javaType="java.lang.String" />
+        <result property="storeDelngId" column="STORE_DELNG_ID" javaType="java.lang.String" />
+    </resultMap>
+
+    <insert id="insertWcrfBuyMst" parameterType="com.twogoms.woodcraft.dto.wcrf.WcrfBuyDto">
+      INSERT INTO TB_WCRF_BUY_MST (
+        PURCHS_MST_ID
+      , MBER_ID
+      , RGSTR_ID
+      , RGST_DT
+      , UPDTR_ID
+      , UPDT_DT
+      ) VALUES (
+        #{purchsMstId}
+      , #{mberId}
+      , #{rgstrId}
+      , now()
+      , #{updtrId}
+      , now()
+      )
+    </insert>
+
+    <insert id="insertWcrfBuy" parameterType="com.twogoms.woodcraft.dto.wcrf.WcrfBuyDto">
+      INSERT INTO TB_WCRF_BUY (
+        PURCHS_ID
+      , PURCHS_MST_ID
+      , WCRF_ID
+      , QY
+      , DSCNT_AMT
+      , PURCHS_AMT
+      , RGSTR_ID
+      , RGST_DT
+      , UPDTR_ID
+      , UPDT_DT
+      ) VALUES (
+      #{purchsId}
+      , #{purchsMstId}
+      , #{wcrfId}
+      , #{qy}
+      , #{dscntAmt}
+      , #{purchsAmt}
+      , #{rgstrId}
+      , now()
+      , #{updtrId}
+      , now()
+      )
+    </insert>
+
+    <insert id="insertWcrfBuyTot" parameterType="com.twogoms.woodcraft.dto.wcrf.WcrfBuyDto">
+      INSERT INTO TB_WCRF_BUY_TOT (
+        PURCHS_LST_ID
+      , PURCHS_MST_ID
+      , PURCHS_DT
+      , SETLE_SE
+      , PURCHS_ALL_AMT
+      , PURCHS_PROGRS_STTUS
+      , RGSTR_ID
+      , RGST_DT
+      , UPDTR_ID
+      , UPDT_DT
+      , PURCHS_DESC
+      ) VALUES (
+      #{purchsLstId}
+      , #{purchsMstId}
+      , now()
+      , #{setleSe}
+      , #{purchsAllAmt}
+      , #{purchsProgrsSttus}
+      , #{rgstrId}
+      , now()
+      , #{updtrId}
+      , now()
+      , #{purchsDesc}
+      )
+    </insert>
+
+    <insert id="insertWcrfBuyAddr" parameterType="com.twogoms.woodcraft.dto.wcrf.WcrfBuyDto">
+      INSERT INTO TB_WCRF_BUY_ADDR (
+        PURCHS_ADDR_ID
+      , PURCHS_LST_ID
+      , BYER_NM
+      , BYER_TEL_NO
+      , BYER_EMAIL
+      , ORER_NM
+      , ORER_TEL_NO
+      , ORER_HP
+      , ORER_ZIP
+      , ORER_ADDR
+      , ORER_ADDR_DTL
+      , ORDER_MESS_CN
+      , RGSTR_ID
+      , RGST_DT
+      , UPDTR_ID
+      , UPDT_DT
+      ) VALUES (
+      #{purchsAddrId}
+      , #{purchsLstId}
+      , #{byerNm}
+      , #{byerTelNo}
+      , #{byerEmail}
+      , #{orerNm}
+      , #{orerTelNo}
+      , #{orerHp}
+      , #{orerZip}
+      , #{orerAddr}
+      , #{orerAddrDtl}
+      , #{orderMessCn}
+      , #{rgstrId}
+      , now()
+      , #{updtrId}
+      , now()
+      )
+    </insert>
+
+    <insert id="insertWcrfPay" parameterType="com.twogoms.woodcraft.dto.wcrf.WcrfBuyDto">
+      INSERT INTO TB_WCRF_PAY (
+        SETLE_ID
+      , PURCHS_LST_ID
+      , SETLE_SE
+      , SETLE_DT
+      , STORE_DELNG_ID
+      , CARD_CONFM_NO
+      , SETLE_AMT
+      , VIR_ACC_NO
+      , RCPMNY_BANK
+      , RCPMNY_AMT
+      , RGSTR_ID
+      , RGST_DT
+      , UPDTR_ID
+      , UPDT_DT
+      , RCPMNY_NM
+      , CASH_RECEIPTS_OPT
+      ) VALUES (
+      #{setleId}
+      , #{purchsLstId}
+      , #{setleSe}
+      , #{setleDt}
+      , #{storeDelngId}
+      , #{cardConfmNo}
+      , #{setleAmt}
+      , #{virAccNo}
+      , #{rcpmnyBank}
+      , #{rcpmnyAmt}
+      , #{rgstrId}
+      , now()
+      , #{updtrId}
+      , now()
+      , #{rcpmnyNm}
+      , #{cashReceiptsOpt}
+      )
+    </insert>
+
+    <select id="getWcrfBuyTot" parameterType="com.twogoms.woodcraft.dto.wcrf.WcrfBuyDto" resultMap="wcrfBuyMap">
+        select
+        B.PURCHS_LST_ID,
+        B.SETLE_SE,
+        B.PURCHS_ALL_AMT,
+        B.PURCHS_DT,
+        C.ORER_ADDR,
+        C.ORER_ADDR_DTL,
+        C.BYER_NM,
+        A.SETLE_AMT,
+        A.SETLE_DT,
+        C.ORER_NM,
+        C.ORER_TEL_NO,
+        C.ORER_HP,
+        C.ORER_ZIP,
+        C.ORDER_MESS_CN,
+        B.PURCHS_PROGRS_STTUS,
+        B.INVOICE_NUMBER,
+        A.SETLE_ID,
+        C.BYER_TEL_NO,
+        C.BYER_EMAIL,
+        A.RCPMNY_AMT,
+        A.STORE_DELNG_ID,
+        A.SETLE_ID,
+        A.RCPMNY_NM,
+        GET_CODE_NM('WOD009',A.CASH_RECEIPTS_OPT) AS CASH_RECEIPTS_OPT_NM
+        from
+        TB_WCRF_PAY A,
+        TB_WCRF_BUY_TOT B,
+        TB_WCRF_BUY_ADDR C
+        where 0=0
+        <if test="storeDelngId != null and storeDelngId != ''">
+            AND A.STORE_DELNG_ID = #{storeDelngId}
+        </if>
+        <if test="purchsLstId != null and purchsLstId != ''">
+            AND A.PURCHS_LST_ID = #{purchsLstId}
+        </if>
+        AND A.PURCHS_LST_ID = B.PURCHS_LST_ID
+        AND B.PURCHS_LST_ID = C.PURCHS_LST_ID
+        order by A.RGST_DT desc
+        limit 1
+    </select>
+
+    <update id="updateWcrfBuyTot"  parameterType="com.twogoms.woodcraft.dto.wcrf.WcrfBuyDto">
+        UPDATE TB_WCRF_BUY_TOT SET
+                PURCHS_PROGRS_STTUS= #{purchsProgrsSttus}
+        ,       UPDTR_ID = #{updtrId}
+        ,       UPDT_DT = now()
+        <if test="invoiceNumber != null and invoiceNumber != ''">
+            ,       INVOICE_NUMBER= #{invoiceNumber}
+        </if>
+        WHERE   PURCHS_LST_ID = #{purchsLstId}
+    </update>
+
+    <update id="updateWcrfPay"  parameterType="com.twogoms.woodcraft.dto.wcrf.WcrfDto">
+        UPDATE TB_WCRF_PAY SET
+                SETLE_DT = now()
+        ,       CARD_CONFM_NO = #{cardConfmNo}
+        ,       SETLE_AMT= #{setleAmt}
+        ,       UPDTR_ID = #{updtrId}
+        ,       UPDT_DT = now()
+        <if test="rcpmnyAmt != null and rcpmnyAmt != ''">
+            ,       RCPMNY_AMT= #{rcpmnyAmt}
+        </if>
+        WHERE   STORE_DELNG_ID = #{storeDelngId}
+    </update>
+
+    <select id="getWcrfBuyList"  parameterType="com.twogoms.woodcraft.dto.wcrf.WcrfBuyDto" resultMap="wcrfMap">
+        SELECT A.WCRF_ID
+          , D.WCRF_NM
+          , A.QY AS WCRF_CNT
+          , A.PURCHS_AMT AS WCRF_AMT
+          , D.ATCH_FILE_ID
+        FROM TB_WCRF_BUY A,
+        TB_WCRF_BUY_MST B,
+        TB_WCRF_BUY_TOT C,
+        TB_WCRF_INFO D
+        WHERE  0 = 0
+        AND A.PURCHS_MST_ID = B.PURCHS_MST_ID
+        AND B.PURCHS_MST_ID = C.PURCHS_MST_ID
+        AND A.WCRF_ID = D.WCRF_ID
+        AND C.PURCHS_LST_ID = #{purchsLstId}
+        ORDER BY A.RGST_DT DESC
+    </select>
+
+</mapper>

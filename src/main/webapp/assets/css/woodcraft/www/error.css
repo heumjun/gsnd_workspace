@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+html{font-size:62.5%;overflow-y:scroll;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+*+html{overflow-x:hidden;}
+body{margin:0;background:#fff;font-size:13px;line-height:1.666;font-weight:400;overflow:hidden;color:#666;
+    font-family:'Open Sans',Helvetica,
+    'Apple SD Gothic Neo','Microsoft JhengHei',
+    'NanumSquareR','나눔고딕',NanumGothic,'Nanum Gothic','맑은 고딕','Malgun Gothic','돋움',Dotum,
+    Arial,sans-serif;
+}
+
+#errorPage {position:relative;margin:30px 0;text-align:center;}
+#errorPage .wrap1{}
+#errorPage h1{font-size:15px;padding:0;margin:0 0 5px 0;color:#333;line-height:1.333;}
+#errorPage p{font-size:13px;padding:0;margin:0 0 10px 0;color:#787878;line-height:1.333;}
+#errorPage .logo{width:160px;margin:0 auto;}
+#errorPage .logo img {width:100%;}
+
+@media all and (min-width:768px){
+    #errorPage {margin:50px 0;}
+    #errorPage h1{font-size:21px;}
+    #errorPage p{font-size:15px;;margin:0 0 20px 0;}
+    #errorPage .logo{width:210px;}
+
+}
+
+@media all and (min-width:1260px){
+    #errorPage {position:absolute;left:50%;top:50%;width:1200px;height:300px;margin-left:-600px;margin-top:-150px;}
+    #errorPage .wrap1{}
+    #errorPage h1{font-size:28px;}
+    #errorPage p{font-size:18px;padding:10px 0;}
+    #errorPage .logo{width:300px;}
+}

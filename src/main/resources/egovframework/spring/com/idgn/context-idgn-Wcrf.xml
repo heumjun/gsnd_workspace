@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+
+    <!-- 기본정보 Wcrf 생성 -->
+    <bean name="wcrfSeqGnrService" class="egovframework.rte.fdl.idgnr.impl.EgovTableIdGnrServiceImpl" destroy-method="destroy">
+        <property name="dataSource" ref="egov.dataSource" />
+        <property name="strategy" ref="wcrfSeqStrategy" />
+        <property name="blockSize" value="1" />
+        <property name="table" value="COMTECOPSEQ" />
+        <property name="tableName" value="WCRF_SEQ" />
+    </bean>
+    <bean name="wcrfSeqStrategy" class="egovframework.rte.fdl.idgnr.impl.strategy.EgovIdGnrStrategyImpl">
+        <property name="cipers" value="10" />
+    </bean>
+
+    <bean name="wcrfBuyMstSeqGnrService" class="egovframework.rte.fdl.idgnr.impl.EgovTableIdGnrServiceImpl" destroy-method="destroy">
+        <property name="dataSource" ref="egov.dataSource" />
+        <property name="strategy" ref="wcrfBuyMstSeqStrategy" />
+        <property name="blockSize" value="1" />
+        <property name="table" value="COMTECOPSEQ" />
+        <property name="tableName" value="WCRF_SEQ" />
+    </bean>
+    <bean name="wcrfBuyMstSeqStrategy" class="egovframework.rte.fdl.idgnr.impl.strategy.EgovIdGnrStrategyImpl">
+        <property name="cipers" value="10" />
+    </bean>
+
+    <bean name="wcrfBuySeqGnrService" class="egovframework.rte.fdl.idgnr.impl.EgovTableIdGnrServiceImpl" destroy-method="destroy">
+        <property name="dataSource" ref="egov.dataSource" />
+        <property name="strategy" ref="wcrfBuySeqStrategy" />
+        <property name="blockSize" value="1" />
+        <property name="table" value="COMTECOPSEQ" />
+        <property name="tableName" value="WCRF_SEQ" />
+    </bean>
+    <bean name="wcrfBuySeqStrategy" class="egovframework.rte.fdl.idgnr.impl.strategy.EgovIdGnrStrategyImpl">
+        <property name="cipers" value="10" />
+    </bean>
+
+    <bean name="wcrfBuyTotSeqGnrService" class="egovframework.rte.fdl.idgnr.impl.EgovTableIdGnrServiceImpl" destroy-method="destroy">
+        <property name="dataSource" ref="egov.dataSource" />
+        <property name="strategy" ref="wcrfBuyTotSeqStrategy" />
+        <property name="blockSize" value="1" />
+        <property name="table" value="COMTECOPSEQ" />
+        <property name="tableName" value="WCRF_SEQ" />
+    </bean>
+    <bean name="wcrfBuyTotSeqStrategy" class="egovframework.rte.fdl.idgnr.impl.strategy.EgovIdGnrStrategyImpl">
+        <property name="cipers" value="10" />
+    </bean>
+
+    <bean name="wcrfBuyAddrSeqGnrService" class="egovframework.rte.fdl.idgnr.impl.EgovTableIdGnrServiceImpl" destroy-method="destroy">
+        <property name="dataSource" ref="egov.dataSource" />
+        <property name="strategy" ref="wcrfBuyAddrSeqStrategy" />
+        <property name="blockSize" value="1" />
+        <property name="table" value="COMTECOPSEQ" />
+        <property name="tableName" value="WCRF_SEQ" />
+    </bean>
+    <bean name="wcrfBuyAddrSeqStrategy" class="egovframework.rte.fdl.idgnr.impl.strategy.EgovIdGnrStrategyImpl">
+        <property name="cipers" value="10" />
+    </bean>
+
+    <bean name="wcrfOrerSeqGnrService" class="egovframework.rte.fdl.idgnr.impl.EgovTableIdGnrServiceImpl" destroy-method="destroy">
+        <property name="dataSource" ref="egov.dataSource" />
+        <property name="strategy" ref="wcrfOrerSeqStrategy" />
+        <property name="blockSize" value="1" />
+        <property name="table" value="COMTECOPSEQ" />
+        <property name="tableName" value="WCRF_SEQ" />
+    </bean>
+    <bean name="wcrfOrerSeqStrategy" class="egovframework.rte.fdl.idgnr.impl.strategy.EgovIdGnrStrategyImpl">
+        <property name="cipers" value="10" />
+    </bean>
+
+    <bean name="wcrfPaySeqGnrService" class="egovframework.rte.fdl.idgnr.impl.EgovTableIdGnrServiceImpl" destroy-method="destroy">
+        <property name="dataSource" ref="egov.dataSource" />
+        <property name="strategy" ref="wcrfPaySeqStrategy" />
+        <property name="blockSize" value="1" />
+        <property name="table" value="COMTECOPSEQ" />
+        <property name="tableName" value="WCRF_SEQ" />
+    </bean>
+    <bean name="wcrfPaySeqStrategy" class="egovframework.rte.fdl.idgnr.impl.strategy.EgovIdGnrStrategyImpl">
+        <property name="cipers" value="10" />
+    </bean>
+
+    <bean name="wcrfRefdSeqGnrService" class="egovframework.rte.fdl.idgnr.impl.EgovTableIdGnrServiceImpl" destroy-method="destroy">
+        <property name="dataSource" ref="egov.dataSource" />
+        <property name="strategy" ref="wcrfRefdSeqStrategy" />
+        <property name="blockSize" value="1" />
+        <property name="table" value="COMTECOPSEQ" />
+        <property name="tableName" value="WCRF_SEQ" />
+    </bean>
+    <bean name="wcrfRefdSeqStrategy" class="egovframework.rte.fdl.idgnr.impl.strategy.EgovIdGnrStrategyImpl">
+        <property name="cipers" value="10" />
+    </bean>
+
+</beans>

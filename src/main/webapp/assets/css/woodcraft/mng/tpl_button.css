@@ -1,0 +1,256 @@
+@charset "utf-8";
+/* Button Styling */
+.btn-container {
+    position: relative;
+    display: block;
+    margin: 20px 0;
+    padding: 0 10px;
+    *zoom: 1;
+}
+.btn-container:after { display: block; clear: both; content: "";}
+.btn-container.narrow {
+    margin: 4px 0 20px 0;
+}
+/* Button Common */
+.btn-container .button,.btn-container .button * {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    display: -moz-inline-stack;
+    display: inline-block;
+    text-decoration: none !important;
+    border: 0;
+    font-size: 12px;
+    white-space: nowrap;
+    background: url(../../../images/woodcraft/mng/common_ico/btn.png) no-repeat;
+    vertical-align: top;
+    overflow: visible;
+    color: #333;
+}
+.btn-container .button {
+    margin-right: 4px;
+}
+.btn-container .button * {
+    left: 4px;
+    cursor: pointer;
+    _cursor: hand;
+}
+/* Button Size = medium | large | xLarge | small */
+.btn-container .button.medium, .btn-container .button.medium * {
+    height: 24px;
+    line-height: 22px;
+}
+.btn-container .button.large, .btn-container .button.large * {
+    height: 30px;
+    line-height: 26px;
+}
+.btn-container .button.xLarge, .btn-container .button.xLarge * {
+    height: 36px;
+    line-height: 32px !important;
+}
+.btn-container .button.small, .btn-container .button.small * {
+    height: 19px;
+    line-height: 18px;
+}
+.btn-container .button.medium {
+    background-position: left 0;
+}
+.btn-container .button.large {
+    background-position: left -30px;
+}
+.btn-container .button.xLarge {
+    background-position: left -65px;
+}
+.btn-container .button.small {
+    background-position: left -106px;
+}
+.btn-container .button.medium * {
+    padding: 0 10px 0 6px;
+    font-size: 12px;
+    background-position: right top;
+}
+.btn-container .button.large * {
+    padding: 0 10px 0 6px;
+    font-size: 16px;
+    background-position: right -30px;
+}
+.btn-container .button.xLarge * {
+    padding: 0 10px 0 6px;
+    font-size: 20px;
+    background-position: right -65px;
+}
+.btn-container .button.small * {
+    padding: 0 6px 0 2px;
+    font-size: 11px;
+    background-position: right -106px;
+}
+/* Button Hover */
+.btn-container .button *:hover,.btn-container .button *:active,.btn-container .button *:focus {
+    color: #2d59a4;
+}
+/* Button Strong */
+.btn-container .button.strong * {
+    font-weight: bold !important;
+}
+/* Button Icon Variation */
+.btn-container .button.icon * {
+    padding-left: 20px;
+}
+.btn-container .button.small.icon * {
+    padding-left: 16px;
+}
+.btn-container .attach-btn-wrapper button {
+    padding-left: 0 !important;
+}
+.btn-container .attach-btn-wrapper span.download {
+    margin-right: 0 !important;
+}
+.btn-container .attach-btn-wrapper span.cancel {
+    margin-right: 0px !important;
+}
+.sub-body article.bbs .bbs_view .view_head h4 span, .sub-body article.bbs .bbs_view .view_head ul li span, .sub-body article.bbs .bbs_view .attach ul li span.k-filename {
+    min-width: inherit !important;
+    margin-left: 0;
+    margin-top: 2px;
+}
+.btn-container .button.icon span {
+    width: 20px;
+    margin-right: -20px;
+    padding: 0 !important;
+}
+/* Icon */
+/* Icon : 01. search */
+.btn-container .button.small .search { background-position: 2px -153px;}
+.btn-container .button.medium .search { background-position: 2px -150px;}
+.btn-container .button.large .search { background-position: 2px -146px;}
+.btn-container .button.xLarge .search { background-position: 3px -144px;}
+/* Icon : 02. check */
+.btn-container .button.small .check { background-position: -22px -152px;}
+.btn-container .button.medium .check { background-position: -21px -150px;}
+.btn-container .button.large .check { background-position: -20px -146px;}
+.btn-container .button.xLarge .check { background-position: -19px -144px;}
+/* Icon : 03. plus */
+.btn-container .button.small .plus { background-position: -42px -152px;}
+.btn-container .button.medium .plus { background-position: -42px -150px;}
+.btn-container .button.large .plus { background-position: -42px -146px;}
+.btn-container .button.xLarge .plus { background-position: -40px -144px;}
+/* Icon : 04. minus */
+.btn-container .button.small .minus { background-position: -64px -153px;}
+.btn-container .button.medium .minus { background-position: -64px -150px;}
+.btn-container .button.large .minus { background-position: -63px -146px;}
+.btn-container .button.xLarge .minus { background-position: -62px -144px}
+/* Icon : 05. cancel */
+.btn-container .button.small .cancel { background-position: -86px -153px;}
+.btn-container .button.medium .cancel { background-position: -86px -150px;}
+.btn-container .button.large .cancel { background-position: -85px -146px;}
+.btn-container .button.xLarge .cancel { background-position: -84px -144px}
+/* Icon : 06. question */
+.btn-container .button.small .question { background-position: -106px -153px;}
+.btn-container .button.medium .question { background-position: -105px -150px;}
+.btn-container .button.large .question { background-position: -103px -146px;}
+.btn-container .button.xLarge .question { background-position: -103px -144px}
+/* Icon : 07. exclamation */
+.btn-container .button.small .exclamation { background-position: -128px -153px;}
+.btn-container .button.medium .exclamation { background-position: -125px -150px;}
+.btn-container .button.large .exclamation { background-position: -123px -146px;}
+.btn-container .button.xLarge .exclamation { background-position: -123px -144px}
+/* Icon : 08. setting */
+.btn-container .button.small .setting { background-position: -152px -153px;}
+.btn-container .button.medium .setting { background-position: -151px -150px;}
+.btn-container .button.large .setting { background-position: -149px -146px;}
+.btn-container .button.xLarge .setting { background-position: -149px -144px}
+/* Icon : 09. left */
+.btn-container .button.small .left { background-position: -173px -153px;}
+.btn-container .button.medium .left { background-position: -172px -150px;}
+.btn-container .button.large .left { background-position: -170px -146px;}
+.btn-container .button.xLarge .left { background-position: -170px -144px}
+/* Icon : 10. right */
+.btn-container .button.small .right { background-position: -194px -153px;}
+.btn-container .button.medium .right { background-position: -193px -150px;}
+.btn-container .button.large .right { background-position: -191px -146px;}
+.btn-container .button.xLarge .right { background-position: -191px -144px}
+/* Icon : 11. up */
+.btn-container .button.small .up { background-position: -218px -153px;}
+.btn-container .button.medium .up { background-position: -217px -150px;}
+.btn-container .button.large .up { background-position: -215px -146px;}
+.btn-container .button.xLarge .up { background-position: -215px -144px}
+/* Icon : 12. down */
+.btn-container .button.small .down { background-position: -240px -153px;}
+.btn-container .button.medium .down { background-position: -239px -150px;}
+.btn-container .button.large .down { background-position: -237px -146px;}
+.btn-container .button.xLarge .down { background-position: -237px -144px}
+/* Icon : 13. download */
+.btn-container .button.small .download { background-position: -262px -153px;}
+.btn-container .button.medium .download { background-position: -261px -150px;}
+.btn-container .button.large .download { background-position: -259px -146px;}
+.btn-container .button.xLarge .download { background-position: -259px -144px}
+/* Icon : 14. upload */
+.btn-container .button.small .upload { background-position: -284px -153px;}
+.btn-container .button.medium .upload { background-position: -283px -150px;}
+.btn-container .button.large .upload { background-position: -281px -146px;}
+.btn-container .button.xLarge .upload { background-position: -281px -144px}
+/* Icon : 15. chat */
+.btn-container .button.small .chat { background-position: -306px -153px;}
+.btn-container .button.medium .chat { background-position: -304px -150px;}
+.btn-container .button.large .chat { background-position: -303px -146px;}
+.btn-container .button.xLarge .chat { background-position: -303px -144px}
+/* Icon : 16. menu */
+.btn-container .button.small .menu { background-position: -328px -153px;}
+.btn-container .button.medium .menu { background-position: -328px -150px;}
+.btn-container .button.large .menu { background-position: -325px -146px;}
+.btn-container .button.xLarge .menu { background-position: -325px -144px}
+/* 
+
+	ADDED 
+
+*/
+/* Icon : 17. print */
+.btn-container .button.small .print { background-position: -350px -153px;}
+.btn-container .button.medium .print { background-position: -348px -150px;}
+.btn-container .button.large .print { background-position: -347px -147px;}
+.btn-container .button.xLarge .print { background-position: -347px -146px}
+/* Icon : 18. alarm */
+.btn-container .button.small .alarm { background-position: -372px -153px;}
+.btn-container .button.medium .alarm { background-position: -370px -150px;}
+.btn-container .button.large .alarm { background-position: -369px -147px;}
+.btn-container .button.xLarge .alarm { background-position: -369px -146px}
+/* Icon : 19. phone */
+.btn-container .button.small .phone { background-position: -394px -153px;}
+.btn-container .button.medium .phone { background-position: -392px -150px;}
+.btn-container .button.large .phone { background-position: -391px -146px;}
+.btn-container .button.xLarge .phone { background-position: -391px -144px}
+/* Icon : 20. camera */
+.btn-container .button.small .camera { background-position: -416px -153px;}
+.btn-container .button.medium .camera { background-position: -415px -151px;}
+.btn-container .button.large .camera { background-position: -414px -148px;}
+.btn-container .button.xLarge .camera { background-position: -414px -146px}
+/* Icon : 21. card */
+.btn-container .button.small .card { background-position: -438px -153px;}
+.btn-container .button.medium .card { background-position: -436px -150px;}
+.btn-container .button.large .card { background-position: -435px -146px;}
+.btn-container .button.xLarge .card { background-position: -435px -144px}
+/* Icon : 22. lock */
+.btn-container .button.small .lock { background-position: -458px -153px;}
+.btn-container .button.medium .lock { background-position: -456px -150px;}
+.btn-container .button.large .lock { background-position: -455px -146px;}
+.btn-container .button.xLarge .lock { background-position: -455px -144px}
+/* Icon : 23. loud */
+.btn-container .button.small .loud { background-position: -483px -153px;}
+.btn-container .button.medium .loud { background-position: -481px -151px;}
+.btn-container .button.large .loud { background-position: -480px -148px;}
+.btn-container .button.xLarge .loud { background-position: -480px -146px}
+/* Icon : 24. calendar */
+.btn-container .button.small .calendar { background-position: -504px -153px;}
+.btn-container .button.medium .calendar { background-position: -502px -151px;}
+.btn-container .button.large .calendar { background-position: -501px -147px;}
+.btn-container .button.xLarge .calendar { background-position: -501px -147px}
+/* Icon : 25. chart */
+.btn-container .button.small .chart { background-position: -527px -153px;}
+.btn-container .button.medium .chart { background-position: -525px -150px;}
+.btn-container .button.large .chart { background-position: -524px -146px;}
+.btn-container .button.xLarge .chart { background-position: -524px -145px}
+/* Icon : 26. home */
+.btn-container .button.small .home { background-position: -549px -153px;}
+.btn-container .button.medium .home { background-position: -547px -152px;}
+.btn-container .button.large .home { background-position: -546px -148px;}
+.btn-container .button.xLarge .home { background-position: -546px -146px}

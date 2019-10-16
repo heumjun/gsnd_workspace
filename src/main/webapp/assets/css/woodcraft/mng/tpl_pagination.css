@@ -1,0 +1,107 @@
+@charset "utf-8";
+.pagination {
+    position: relative;
+    display: block;
+    margin: 4px 0;
+    padding: 0;
+    *zoom: 1;
+    overflow: hidden;
+}
+.pagination:after { display: block; clear: both; content: "";}
+.pagination ul {
+    text-align:center;
+}
+.pagination ul li {
+    display:inline;
+    vertical-align:middle;
+}
+.pagination ul li a {
+    display:-moz-inline-stack;	/*FF2*/
+    display:inline-block;
+    *zoom:1;
+    *display:inline;
+    vertical-align:top;
+    padding: 0;
+    margin-right:3px;
+    width: 21px;
+    height: 21px;
+    border: 1px solid #ddd;
+    line-height: 24px;
+    color:#000;
+    text-align:center;
+    text-decoration:none;
+    background: #fff;
+    color: #303030;
+    font-size: 11px;
+    border-radius: 4px; -moz-border-radius: 4px; -webkit-border-radius: 4px; -o-border-radius: 4px; -ms-border-radius: 4px;
+
+}
+
+.pagination ul li a.on,
+.pagination ul li a:hover,
+.pagination ul li a:focus {
+    background-color: #538ce9;
+    border-color: #538ce9;
+    color: #fff;
+    cursor: pointer;
+    -webkit-transition: all .3s; -moz-transition: all .3s; -ms-transition: all .3s; -o-transition: all .3s; transition: all .3s;
+}
+.pagination ul li a:hover.on {
+    cursor: default !important;
+}
+.pagination ul li a.direction {
+    border-color: #ddd;
+    color: #666;
+    text-align: center;
+    background: url(../../../images/woodcraft/mng/common_ico/bg_pagination_arrow.png) no-repeat left -33px #fff;
+    width: auto !important;
+}
+.pagination ul li a.direction.prev {
+    padding-left: 20px;
+    padding-right: 10px;
+}
+.pagination ul li a.direction.next {
+    padding-left: 10px;
+    padding-right: 20px;
+    background-position: right -33px;
+}
+.pagination ul li a.direction:hover,
+.pagination ul li a.direction:focus {
+    border-color: #999;
+    color: #fff;
+    cursor: pointer;
+    background-color: #999;
+}
+
+.pagination ul li a.direction.prev:hover,
+.pagination ul li a.direction.prev:focus {
+    background-position: left 6px;
+}
+.pagination ul li a.direction.next:hover,
+.pagination ul li a.direction.next:focus {
+    background-position: right 6px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

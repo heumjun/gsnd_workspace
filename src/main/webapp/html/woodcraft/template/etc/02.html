@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="author" content="진주목공예전수관" />
+<meta name="keywords" content="진주목공예전수관, 우편번호 조회" />
+<meta name="description" content="진주목공예전수관, 우편번호 조회" />
+<title>우편번호 찾기 | 진주목공예전수관</title>
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans" />
+<link rel="stylesheet" type="text/css" href="/assets/css/woodcraft/www/font.css" />
+<link rel="stylesheet" type="text/css" href="/assets/css/woodcraft/www/lib.css" />
+<link rel="stylesheet" type="text/css" href="/assets/css/woodcraft/www/layout.css" />
+<link rel="stylesheet" type="text/css" href="/assets/css/woodcraft/www/content.css" />
+<link rel="stylesheet" type="text/css" href="/assets/css/woodcraft/www/template.css" />
+<link rel="stylesheet" type="text/css" href="/assets/css/woodcraft/www/popup.css" />
+<script type="text/javascript" src="/assets/js/woodcraft/www/define/iscroll-min.js"></script>
+<script type="text/javascript" src="/assets/js/woodcraft/www/define/hammer.min.js"></script>
+<script type="text/javascript" src="/assets/js/woodcraft/www/define/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="/assets/js/woodcraft/www/define/jquery.easing.1.3.js"></script>
+<!--[if lt IE 9]>
+<script type="text/javascript" src="/assets/js/woodcraft/www/define/html5shiv.min.js"></script>
+<script type="text/javascript" src="/assets/js/woodcraft/www/define/selectivizr.js"></script>
+<script type="text/javascript" src="/assets/js/woodcraft/www/define/respond.min.js"></script>
+<script type="text/javascript" src="/assets/js/woodcraft/www/define/jquery.backgroundSize.js"></script>
+<![endif]-->
+<script type="text/javascript" src="/assets/js/woodcraft/www/lib_define.js"></script>
+<script type="text/javascript" src="/assets/js/woodcraft/www/lib_scroll.js"></script>
+<script type="text/javascript" src="/assets/js/woodcraft/www/lib.js"></script>
+</head>
+<body>
+
+<!-- #container -->    
+<div id="container">
+<noscript><p>JavaScript has been disabled. This site requires JavaScript for full functionality, please enable.</p></noscript>
+
+<!-- #popup -->
+<div id="popup" class="init">
+	<!-- #popup_head -->
+	<div id="popup_head" class="clearfix">
+	<a href="#?" onclick="window.close();return false;" class="close"><i class="ic1 bsContain"></i> <span class="blind">창 닫기</span></a>
+		<!-- .container -->
+		<div class="container">
+            <h1>주문 취소 및 환불</h1>
+            
+		</div>
+		<!-- /.container -->	
+	</div>
+	<!-- /#popup_head -->
+
+	<!-- #popup_body -->
+	<div id="popup_body">
+		<!-- .container -->
+		<div class="container">
+
+
+
+
+		<!-- 주문/결재 작성 폼 -->
+		<form id="WcrfRefdForm" action="/mypage/wcrfMyPayView.do" method="post">
+			<!-- fieldset -->
+			<fieldset><legend class="blind">주문/결재 작성 폼</legend>				
+			<!-- bbs_write -->
+			<div class="bbs_write">
+					<table class="t1">
+                            <caption class="blind">
+                                <strong class="h1">주문 취소 및 환불</strong>
+                            </caption>
+                            <col style="width:25%" />
+                            <col />
+                            <tbody>
+                            <tr>
+                                <th scope="row"><label for="txt_refdSe">환불방법</label></th>
+                                <td>
+                                    <select id="txt_refdSe" title="환불방법">
+                                        <option value=""></option>
+                                        <option value="01">카드승인취소</option>
+                                        <option value="02">계좌입금</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><label for="txt_refdReqDt">반품/취소신청일자</label></th>
+                                <td>
+                                    <input type="tel" id="txt_refdReqDt" name="refdReqDt" size="20" maxlength="20" title="반품/취소신청일자" value="" />
+								</td>
+                            </tr>
+                            <tr>								
+                                <th scope="row"><label for="txt_refdResnCd">반품/취소사유</label></th>
+                                <td>
+                                    <select id="txt_refdResnCd" title="반품/취소사유">
+                                        <option value=""></option>
+                                        <option value="01">단순변심</option>
+                                        <option value="02">계좌입금</option>
+                                        <option value="03">계좌입금</option>
+                                    </select>
+								</td>
+                            </tr>
+                            <tr>								
+                                <th scope="row"><label for="txt_refdSttusCd">진행상태</label></th>
+                                <td>
+                                    <select id="txt_refdSttusCd" title="진행상태">
+                                        <!--<option value=""></option>-->
+                                        <option selected value="01">신청</option>
+                                        <!--<option value="02">접수</option>-->
+                                        <!--<option value="03">완료</option>-->
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><label for="txt_refdBankOwr">예금주</label></th>
+                                <td>
+                                    <input type="text" id="txt_refdBankOwr" name="refdBankOwr" size="20" maxlength="20" title="예금주" value="" />
+								</td>
+                            </tr>
+                            <tr>								
+                                <th scope="row"><label for="txt_refdBank">은행명</label></th>
+                                <td>
+                                    <input type="text" id="txt_refdBank" name="refdBank" size="20" maxlength="20" title="은행명" value="" />
+								</td>
+                            </tr>
+                            <tr>								
+                                <th scope="row"><label for="txt_refdAccNo">계좌번호</label></th>
+                                <td>
+                                    <input type="text" id="txt_refdAccNo" name="refdAccNo" size="20" maxlength="20" title="계좌번호" value="" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><label for="txt_returnCn">반품취소사유</label></th>
+                                <td>
+                                    <textarea id="txt_returnCn" name="returnCn" rows="5" cols="80" class="w100" value=""></textarea></td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><label for="txt_refdRsltCn">처리내용</label></th>
+                                <td>
+                                    <textarea id="txt_refdRsltCn" name="refdRsltCn" rows="5" cols="80" class="w100" value=""></textarea></td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+			</div>
+			<!-- /bbs_write -->
+
+		</fieldset>
+		<!-- //fieldset -->
+		<!-- infosection1 -->
+		<div class="infosection1">
+			<p class="tac">
+				<button id="btn_save" class="button submit">주문취소 / 환불</button>
+				<a href="?" class="button">목록</a>
+			</p>
+		</div>
+		<!-- /infosection1 -->
+		</form>
+		<!-- //주문/결재 작성 폼 -->
+
+
+
+
+
+		</div>
+		<!-- /.container -->	
+	</div>
+	<!-- /#popup_body -->
+</div>
+<!-- /#popup -->
+
+
+</div>   
+<!--/#container-->
+
+</body>
+</html>

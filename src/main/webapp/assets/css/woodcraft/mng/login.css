@@ -1,0 +1,190 @@
+@charset "utf-8";
+.sub-body .login {
+    position: relative;
+    display: block;
+    margin: 20px auto 80px auto;
+    padding: 40px;
+    width: 412px;
+    *zoom: 1;
+    overflow: hidden;
+    border: 1px solid #d4d4d4;
+}
+.sub-body .login:after { display: block; clear: both; content: "";}
+.sub-body .login h3 {
+    position: relative;
+    display: block;
+    margin: 0 0 20px 0;
+    padding: 0;
+    line-height: 100%;
+    font-size: 40px;
+    color: #353c4d;
+    *zoom: 1;
+}
+.sub-body .login .form-ul {
+    width: 410px !important;
+    margin: 0 auto !important;
+    border: 1px solid #afb2ba !important;
+}
+.sub-body .login .form-ul li.login-input {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 309px;
+    height: 36px;
+    border-top: 1px solid #f7f7f7;
+    border-left: 1px solid #f7f7f7;
+}
+.sub-body .login .form-ul li.login-input.border {
+    border-bottom: 1px solid #e8e9e8;
+}
+.sub-body .login .form-ul li.login-input input.input-login {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    height: 34px !important;
+    line-height: 34px !important;
+    border: none !important;
+    text-indent: 10px;
+    font-size: 16px;
+}
+.sub-body .login .form-ul li.login-button {
+    display: block;
+    position: absolute;
+    right: -1px;
+    top: -1px;
+    margin: 0;
+    padding: 0;
+    width: 99px;
+    height: 75px;
+    z-index: 1000;
+}
+.sub-body .login .form-ul li.login-input label {
+    width: 100% !important;
+    height: auto !important;
+}
+.sub-body .login .form-ul li.login-button button {
+    margin: 0;
+    padding: 0;
+    width: 99px;
+    height: 77px;
+    border: 1px solid #4c4e55;
+    background: #676a76;
+    background-image: none !important;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    line-height: 75px;
+}
+.sub-body .login .form-ul li.login-button button:hover,
+.sub-body .login .form-ul li.login-button button:focus {
+    cursor: pointer;
+    border: 1px solid #314f92;
+    background: #2471ed;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+/* Login Bottom */
+.sub-body .login .login-sub {
+    position: relative;
+    display: block;
+    margin: 10px 0 0 0;
+    padding: 0 2px;
+    *zoom: 1;
+    overflow: hidden;
+}
+.sub-body .login .login-sub:after { display: block; clear: both; content: "";}
+.sub-body .login .login-sub span {
+    display:-moz-inline-stack;     /*FF2*/
+    display:inline-block;
+    *zoom:1;
+    *display:inline;
+    font-size: 12px;
+    color: #909090;
+}
+.sub-body .login .login-sub span.lost {
+    float: left;
+}
+.sub-body .login .login-sub span.remember {
+    float: right;
+}
+.sub-body .login .login-sub span.label {
+    display:-moz-inline-stack;     /*FF2*/
+    display:inline-block;
+    *zoom:1;
+    *display:inline;
+    padding-right: 6px;
+    width: auto !important;
+    height: auto !important;
+}
+.sub-body .login-select {
+    position: relative;
+    display: block;
+    margin: 0 0 10px 0;
+    width: 412px;
+    background: url(../images/main/login_select_bg.png) repeat-x right bottom;
+    padding: 0;
+    *zoom: 1;
+    overflow: hidden;
+}
+.sub-body .login .login-select:after { display: block; clear: both; content: "";}
+.sub-body .login-select ul {
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 0;
+    *zoom: 1;
+    overflow: hidden;
+}
+.sub-body .login-select ul:after { display: block; clear: both; content: "";}
+.sub-body .login-select ul li {
+    position: relative;
+    float: left;
+    margin: 0;
+    padding: 0;
+    *zoom: 1;
+    overflow: hidden;
+}
+.sub-body .login-select ul li a{
+    position: relative;
+    display: block;
+    margin: 0 0 0 -1px;
+    padding: 0;
+    height: 38px;
+    line-height: 38px;
+    border: 1px solid #afb2ba;
+    *zoom: 1;
+    overflow: hidden;
+    text-align: center;
+    width: 136px;
+    font-size: 15px;
+    font-weight: normal;
+    background-color: #e6e9ee;
+}
+.sub-body .login-select ul li a.first {
+    margin-left: 0;
+}
+.sub-body .login-select ul li a.on,
+.sub-body .login-select ul li a:hover,
+.sub-body .login-select ul li a:focus {
+    background-color: #fff;
+}
+.sub-body .login-select ul li a.on {
+    border-bottom: 0;
+    height:39px;
+}
+.sub-body .login-select ul li a img {
+    vertical-align: text-top;
+    margin: -1px 6px 0 0;
+    padding: 0;
+}
+
+
+
+
+
+
+

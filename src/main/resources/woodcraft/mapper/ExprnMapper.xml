@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.twogoms.woodcraft.repository.exprn.ExprnRepository">
+    
+    <resultMap id="exprnMap" type="com.twogoms.woodcraft.dto.exprn.ExprnDto">
+        <id property="exprnId" column="EXPRN_ID" javaType="java.lang.String"/>
+        <result property="exprnNm" column="EXPRN_NM" javaType="java.lang.String" />
+        <result property="bgnDe" column="BGN_DE" javaType="java.lang.String" />
+        <result property="endDe" column="END_DE" javaType="java.lang.String" />
+        <result property="exprnSe" column="EXPRN_SE" javaType="java.lang.String" />
+        <result property="exprnBaseAmt" column="EXPRN_BASE_AMT" javaType="java.lang.String" />
+        <result property="exprnNmpr" column="EXPRN_NMPR" javaType="java.lang.String" />
+        <result property="exprnIntrcn" column="EXPRN_INTRCN" javaType="java.lang.String" />
+        <result property="atchFileId" column="ATCH_FILE_ID" javaType="java.lang.String" />
+        <result property="exprnSttus" column="EXPRN_STTUS" javaType="java.lang.String" />
+        <result property="teacherNm" column="TEACHER_NM" javaType="java.lang.String" />
+        <result property="exprnSeNm" column="EXPRN_SE_NM" javaType="java.lang.String" />
+        <result property="exprnMtrAmt" column="EXPRN_MTR_AMT" javaType="java.lang.String" />
+        <result property="typeCd" column="TYPE_CD" javaType="java.lang.String" />
+        <result property="exprnTime" column="EXPRN_TIME" javaType="java.lang.String" />
+        <result property="reqCnt" column="REQ_CNT" javaType="java.lang.String" />
+        <result property="exprnSttusNm" column="EXPRN_STTUS_NM" javaType="java.lang.String" />
+    </resultMap>
+
+    <resultMap id="calendarMap" type="com.twogoms.woodcraft.dto.exprn.CalendarDto">
+        <result property="year" column="YEAR" javaType="java.lang.String"/>
+        <result property="yearMonth" column="YEAR_MONTH" javaType="java.lang.String" />
+        <result property="ym" column="ym" javaType="java.lang.String" />
+        <result property="sun" column="Sun" javaType="java.lang.String" />
+        <result property="mon" column="Mon" javaType="java.lang.String" />
+        <result property="tue" column="Tue" javaType="java.lang.String" />
+        <result property="wed" column="Wed" javaType="java.lang.String" />
+        <result property="thu" column="Thu" javaType="java.lang.String" />
+        <result property="fri" column="Fri" javaType="java.lang.String" />
+        <result property="sat" column="Sat" javaType="java.lang.String" />
+    </resultMap>
+
+    <resultMap id="exprnLectureMap" type="com.twogoms.woodcraft.dto.exprn.ExprnLectureDto">
+        <result property="exprnLectureId" column="EXPRN_LECTURE_ID" javaType="java.lang.String"/>
+        <result property="exprnId" column="EXPRN_ID" javaType="java.lang.String" />
+        <result property="exprnDay" column="EXPRN_DAY" javaType="java.lang.String" />
+        <result property="exprnTime" column="EXPRN_TIME" javaType="java.lang.String" />
+        <result property="reservationCnt" column="RESERVATION_CNT" javaType="java.lang.String" />
+        <result property="note" column="NOTE" javaType="java.lang.String" />
+        <result property="exprnReqCnt" column="EXPRN_REQ_CNT" javaType="java.lang.String" />
+        <result property="exprnNmpr" column="EXPRN_NMPR" javaType="java.lang.String" />
+        <result property="exprnNm" column="EXPRN_NM" javaType="java.lang.String" />
+        <result property="exprnNmlc" column="EXPRN_NMLC" javaType="java.lang.String" />
+    </resultMap>
+
+    <resultMap id="exprnReqMap" type="com.twogoms.woodcraft.dto.exprn.ReqDto">
+        <result property="exprnReqstId" column="EXPRN_REQST_ID" javaType="java.lang.String" />
+        <result property="reqNm" column="REQ_NM" javaType="java.lang.String" />
+        <result property="reqEmail" column="REQ_EMAIL" javaType="java.lang.String" />
+        <result property="telNo" column="TEL_NO" javaType="java.lang.String" />
+        <result property="reqType" column="REQ_TYPE" javaType="java.lang.String" />
+        <result property="reqDt" column="REQ_DT" javaType="java.lang.String" />
+        <result property="exprnNmpr" column="EXPRN_NMPR" javaType="java.lang.String" />
+        <result property="exprnId" column="EXPRN_ID" javaType="java.lang.String" />
+        <result property="reqSttus" column="REQ_STTUS" javaType="java.lang.String" />
+
+    </resultMap>
+
+    <select id="getExprnList"  parameterType="com.twogoms.woodcraft.dto.exprn.criteria.ExprnCriteria" resultMap="exprnMap">
+        SELECT A.EXPRN_ID
+        , A.EXPRN_NM
+        , A.BGN_DE
+        , A.END_DE
+        , A.EXPRN_SE
+        , A.EXPRN_BASE_AMT
+        , A.EXPRN_NMPR
+        , A.EXPRN_INTRCN
+        , A.ATCH_FILE_ID
+        , A.EXPRN_STTUS
+        , A.TEACHER_NM
+        , A.RGSTR_ID
+        , A.REGIST_DT
+        , A.UPDTR_ID
+        , A.UPDT_DT
+        , (CASE A.TYPE_CD WHEN '01'
+        THEN GET_CODE_NM('WOD010',A.EXPRN_SE)
+        ELSE GET_CODE_NM('WOD006',A.EXPRN_SE) END) AS EXPRN_SE_NM
+        , A.EXPRN_MTR_AMT
+        , A.TYPE_CD
+        , A.EXPRN_TIME
+        , GET_CODE_NM('WOD007',A.EXPRN_STTUS) AS EXPRN_STTUS_NM
+        ,(select ifnull(SUM(B.EXPRN_NMPR),0) from
+        TB_EXPRN_REQ B
+        where
+        A.EXPRN_ID = B.EXPRN_ID
+        and B.REQ_STTUS IN ('02','03','04','05')) AS REQ_CNT
+        FROM TB_EXPRN_INFO A
+        WHERE  0 = 0
+        <if test="searchExprnNm != null and searchExprnNm != ''">
+            AND A.EXPRN_NM LIKE CONCAT('%',#{searchExprnNm},'%')
+        </if>
+        <if test="typeCd != null and typeCd != ''">
+            AND A.TYPE_CD = #{typeCd}
+        </if>
+        ORDER  BY
+        A.REGIST_DT DESC
+        LIMIT  #{recordCountPerPage} OFFSET #{firstIndex}
+    </select>
+
+    <select id="getExprnPgmList"  parameterType="com.twogoms.woodcraft.dto.exprn.criteria.ExprnCriteria" resultMap="exprnMap">
+        SELECT A.EXPRN_ID
+        , A.EXPRN_NM
+        , A.BGN_DE
+        , A.END_DE
+        , A.EXPRN_SE
+        , A.EXPRN_BASE_AMT
+        , A.EXPRN_NMPR
+        , A.EXPRN_INTRCN
+        , A.ATCH_FILE_ID
+        , A.EXPRN_STTUS
+        , A.TEACHER_NM
+        , A.RGSTR_ID
+        , A.REGIST_DT
+        , A.UPDTR_ID
+        , A.UPDT_DT
+        , (CASE A.TYPE_CD WHEN '01'
+        THEN GET_CODE_NM('WOD010',A.EXPRN_SE)
+        ELSE GET_CODE_NM('WOD006',A.EXPRN_SE) END) AS EXPRN_SE_NM
+        , A.EXPRN_MTR_AMT
+        , A.TYPE_CD
+        , A.EXPRN_TIME
+        , GET_CODE_NM('WOD007',A.EXPRN_STTUS) AS EXPRN_STTUS_NM
+        ,(select ifnull(SUM(B.EXPRN_NMPR),0) from
+        TB_EXPRN_REQ B
+        where
+        A.EXPRN_ID = B.EXPRN_ID
+        and B.REQ_STTUS IN ('02','03','04','05')) AS REQ_CNT
+        FROM TB_EXPRN_INFO A
+        WHERE  0 = 0
+        <if test="searchExprnNm != null and searchExprnNm != ''">
+            AND A.EXPRN_NM LIKE CONCAT('%',#{searchExprnNm},'%')
+        </if>
+        <if test="typeCd != null and typeCd != ''">
+            AND A.TYPE_CD = #{typeCd}
+        </if>
+        <if test="typeCd != null and typeCd != ''">
+            AND A.EXPRN_SE = #{exprnSe}
+        </if>
+        ORDER  BY
+        A.REGIST_DT DESC
+    </select>
+
+    <select id="getExprnPgmListCount" parameterType="com.twogoms.woodcraft.dto.exprn.criteria.ExprnCriteria" resultType="int">
+        SELECT COUNT(*) FROM TB_EXPRN_INFO A
+        WHERE  0 = 0
+        <if test="searchExprnNm != null and searchExprnNm != ''">
+            AND A.EXPRN_NM LIKE CONCAT('%',#{searchExprnNm},'%')
+        </if>
+        <if test="typeCd != null and typeCd != ''">
+            AND A.TYPE_CD = #{typeCd}
+        </if>
+        <if test="typeCd != null and typeCd != ''">
+            AND A.EXPRN_SE = #{exprnSe}
+        </if>
+    </select>
+
+    <select id="getExprnListCount" parameterType="com.twogoms.woodcraft.dto.exprn.criteria.ExprnCriteria" resultType="int">
+        SELECT COUNT(*) FROM TB_EXPRN_INFO A
+        WHERE  0 = 0
+        <if test="searchExprnNm != null and searchExprnNm != ''">
+            AND A.EXPRN_NM LIKE CONCAT('%',#{searchExprnNm},'%')
+        </if>
+        <if test="typeCd != null and typeCd != ''">
+            AND A.TYPE_CD = #{typeCd}
+        </if>
+
+    </select>
+
+    <select id="getExprn" parameterType="com.twogoms.woodcraft.dto.exprn.ExprnDto" resultMap="exprnMap">
+        SELECT A.EXPRN_ID
+        , A.EXPRN_NM
+        , A.BGN_DE
+        , A.END_DE
+        , A.EXPRN_SE
+        , A.EXPRN_BASE_AMT
+        , A.EXPRN_NMPR
+        , A.EXPRN_INTRCN
+        , A.ATCH_FILE_ID
+        , A.EXPRN_STTUS
+        , A.RGSTR_ID
+        , A.REGIST_DT
+        , A.UPDTR_ID
+        , A.UPDT_DT
+        , A.TEACHER_NM
+                , (CASE A.TYPE_CD WHEN '01'
+         THEN GET_CODE_NM('WOD010',A.EXPRN_SE)
+         ELSE GET_CODE_NM('WOD006',A.EXPRN_SE) END) AS EXPRN_SE_NM
+        , A.EXPRN_MTR_AMT
+        , A.TYPE_CD
+        , A.EXPRN_TIME
+        ,(select ifnull(SUM(B.EXPRN_NMPR),0) from
+        TB_EXPRN_REQ B
+        where
+        A.EXPRN_ID = B.EXPRN_ID
+        and B.REQ_STTUS IN ('02','03','04','05')) AS REQ_CNT
+        FROM   TB_EXPRN_INFO A
+        WHERE  A.EXPRN_ID = #{exprnId}
+    </select>
+
+    <insert id="insertExprn" parameterType="com.twogoms.woodcraft.dto.exprn.ExprnDto">
+      INSERT INTO TB_EXPRN_INFO (
+        EXPRN_ID
+        , EXPRN_NM
+        , BGN_DE
+        , END_DE
+        , EXPRN_SE
+        , EXPRN_BASE_AMT
+        , EXPRN_NMPR
+        , EXPRN_INTRCN
+        , ATCH_FILE_ID
+        , EXPRN_STTUS
+        , TEACHER_NM
+        , RGSTR_ID
+        , REGIST_DT
+        , UPDTR_ID
+        , UPDT_DT
+        , EXPRN_MTR_AMT
+        , TYPE_CD
+        , EXPRN_TIME
+      ) VALUES (
+        #{exprnId}
+      , #{exprnNm}
+      , #{bgnDe}
+      , #{endDe}
+      , #{exprnSe}
+      , #{exprnBaseAmt}
+      , #{exprnNmpr}
+      , #{exprnIntrcn}
+      , #{atchFileId}
+      , #{exprnSttus}
+      , #{teacherNm}
+      , #{rgstrId}
+      , now()
+      , #{updtrId}
+      , now()
+      , #{exprnMtrAmt}
+      , #{typeCd}
+      , #{exprnTime}
+      )
+    </insert>
+
+    <update id="updateExprn"  parameterType="com.twogoms.woodcraft.dto.exprn.ExprnDto">
+        UPDATE TB_EXPRN_INFO SET
+                EXPRN_NM = #{exprnNm}
+        ,       BGN_DE = #{bgnDe}
+        ,       END_DE= #{endDe}
+        ,       EXPRN_SE= #{exprnSe}
+        ,       EXPRN_BASE_AMT= #{exprnBaseAmt}
+        ,       EXPRN_NMPR= #{exprnNmpr}
+        ,       EXPRN_INTRCN= #{exprnIntrcn}
+        ,       EXPRN_STTUS= #{exprnSttus}
+        ,       TEACHER_NM= #{teacherNm}
+        ,       UPDTR_ID = #{updtrId}
+        ,       UPDT_DT = now()
+        ,       EXPRN_MTR_AMT = #{exprnMtrAmt}
+        ,       EXPRN_TIME = #{exprnTime}
+        ,       ATCH_FILE_ID = #{atchFileId}
+        WHERE   EXPRN_ID = #{exprnId}
+    </update>
+
+    <delete id="deleteExprn" parameterType="com.twogoms.woodcraft.dto.exprn.ExprnDto">
+       DELETE FROM TB_EXPRN_INFO WHERE EXPRN_ID = #{exprnId}
+    </delete>
+
+    <select id="getCalendarList" parameterType="com.twogoms.woodcraft.dto.exprn.CalendarDto" resultMap="calendarMap">
+    SELECT ym
+    , MIN(CASE dw WHEN 1 THEN d END) Sun
+    , MIN(CASE dw WHEN 2 THEN d END) Mon
+    , MIN(CASE dw WHEN 3 THEN d END) Tue
+    , MIN(CASE dw WHEN 4 THEN d END) Wed
+    , MIN(CASE dw WHEN 5 THEN d END) Thu
+    , MIN(CASE dw WHEN 6 THEN d END) Fri
+    , MIN(CASE dw WHEN 7 THEN d END) Sat
+    FROM (SELECT date_format(dt,'%Y%m') ym
+    , Week(dt) w
+    , Day(dt) d
+    , DayofWeek(dt) dw
+    FROM (SELECT CONCAT(y, '0101') + INTERVAL a*100 + b*10 + c DAY dt
+    FROM (SELECT 0 a
+    UNION ALL SELECT 1
+    UNION ALL SELECT 2
+    UNION ALL SELECT 3
+    ) a
+    , (SELECT 0 b
+    UNION ALL SELECT 1
+    UNION ALL SELECT 2
+    UNION ALL SELECT 3
+    UNION ALL SELECT 4
+    UNION ALL SELECT 5
+    UNION ALL SELECT 6
+    UNION ALL SELECT 7
+    UNION ALL SELECT 8
+    UNION ALL SELECT 9
+    ) b
+    , (SELECT 0 c
+    UNION ALL SELECT 1
+    UNION ALL SELECT 2
+    UNION ALL SELECT 3
+    UNION ALL SELECT 4
+    UNION ALL SELECT 5
+    UNION ALL SELECT 6
+    UNION ALL SELECT 7
+    UNION ALL SELECT 8
+    UNION ALL SELECT 9
+    ) c
+    , (SELECT #{year} y) d
+    WHERE <![CDATA[ a*100 + b*10 + c < DayOfYear(CONCAT(y, '1231')) ]]>
+
+    ) a
+    ) a
+    where
+    ym = #{yearMonth}
+    GROUP BY ym, w
+    ;
+    </select>
+
+    <select id="getExprnLectureList"  parameterType="com.twogoms.woodcraft.dto.exprn.ExprnDto" resultMap="exprnLectureMap">
+
+        SELECT A.EXPRN_ID,
+               A.EXPRN_NM,
+               B.EXPRN_LECTURE_ID,
+               B.EXPRN_DAY,
+               B.EXPRN_TIME,
+               B.NOTE,
+               A.EXPRN_NMPR,
+               B.RESERVATION_CNT,
+               B.EXPRN_NMLC,
+               IFNULL(C.EXPRN_REQ_CNT, 0) AS EXPRN_REQ_CNT
+        FROM TB_EXPRN_INFO A
+        INNER JOIN TB_EXPRN_LECTURE B
+          ON A.EXPRN_ID = B.EXPRN_ID
+        LEFT OUTER JOIN (
+            SELECT EXPRN_ID,
+            EXPRN_DAY,
+            EXPRN_TIME,
+            SUM(EXPRN_NMPR) AS EXPRN_REQ_CNT
+            FROM TB_EXPRN_REQ
+            WHERE REQ_STTUS IN ('02','03','04','05')
+            GROUP BY EXPRN_ID, EXPRN_DAY, EXPRN_TIME
+        ) C
+          ON B.EXPRN_ID = C.EXPRN_ID
+          AND B.EXPRN_DAY = C.EXPRN_DAY
+          AND B.EXPRN_TIME = C.EXPRN_TIME
+        <where>
+            <if test="exprnId != null and exprnId != ''">
+                 AND B.EXPRN_ID = #{exprnId}
+            </if>
+            <if test="exprnDay != null and exprnDay != ''">
+                AND SUBSTRING(B.EXPRN_DAY,1,6) = #{exprnDay}
+            </if>
+        </where>
+        ORDER BY B.EXPRN_DAY DESC, B.EXPRN_TIME ASC
+    </select>
+
+    <select id="getExprnLectureListView"  parameterType="com.twogoms.woodcraft.dto.exprn.ExprnDto" resultMap="exprnLectureMap">
+
+        SELECT A.EXPRN_ID,
+        A.EXPRN_NM,
+        B.EXPRN_LECTURE_ID,
+        B.EXPRN_DAY,
+        B.EXPRN_TIME,
+        B.NOTE,
+        A.EXPRN_NMPR,
+        B.RESERVATION_CNT,
+        IFNULL(C.EXPRN_REQ_CNT, 0) AS EXPRN_REQ_CNT,
+        B.EXPRN_NMLC
+        FROM TB_EXPRN_INFO A
+        INNER JOIN TB_EXPRN_LECTURE B
+        ON A.EXPRN_ID = B.EXPRN_ID
+        LEFT OUTER JOIN (
+        SELECT EXPRN_ID,
+        EXPRN_DAY,
+        EXPRN_TIME,
+        SUM(EXPRN_NMPR) AS EXPRN_REQ_CNT
+        FROM TB_EXPRN_REQ
+        WHERE REQ_STTUS IN ('02','03','04','05')
+        GROUP BY EXPRN_ID, EXPRN_DAY, EXPRN_TIME
+        ) C
+        ON B.EXPRN_ID = C.EXPRN_ID
+        AND B.EXPRN_DAY = C.EXPRN_DAY
+        AND B.EXPRN_TIME = C.EXPRN_TIME
+        <where>
+            <if test="exprnId != null and exprnId != ''">
+                AND B.EXPRN_ID = #{exprnId}
+            </if>
+            <if test="exprnDay != null and exprnDay != ''">
+                AND SUBSTRING(B.EXPRN_DAY,1,6) = #{exprnDay}
+            </if>
+        </where>
+        ORDER BY B.EXPRN_DAY DESC, B.EXPRN_TIME ASC
+        LIMIT  #{recordCountPerPage} OFFSET #{firstIndex}
+    </select>
+
+    <select id="getExprnLectureListCount" parameterType="com.twogoms.woodcraft.dto.exprn.criteria.ExprnCriteria" resultType="int">
+        SELECT COUNT(*) FROM TB_EXPRN_LECTURE A,
+        TB_EXPRN_INFO B
+        WHERE  0 = 0
+        AND A.EXPRN_ID = B.EXPRN_ID
+        <if test="exprnId != null and exprnId != ''">
+               AND B.EXPRN_ID = #{exprnId}
+        </if>
+        <if test="exprnDay != null and exprnDay != ''">
+            AND SUBSTRING(A.EXPRN_DAY,1,6) = #{exprnDay}
+        </if>
+
+    </select>
+
+    <select id="getExprnLecture" parameterType="com.twogoms.woodcraft.dto.exprn.ExprnLectureDto" resultMap="exprnLectureMap">
+        SELECT A.EXPRN_LECTURE_ID
+        ,A.EXPRN_ID
+        ,A.EXPRN_DAY
+        ,A.EXPRN_TIME
+        ,A.RESERVATION_CNT
+        ,A.NOTE
+        ,A.RGSTR_ID
+        ,A.REGIST_DT
+        ,A.UPDTR_ID
+        ,A.UPDT_DT
+        ,A.EXPRN_NMLC
+        ,(select ifnull(SUM(B.EXPRN_NMPR),0) from
+        TB_EXPRN_REQ B
+        where
+        C.EXPRN_ID = B.EXPRN_ID
+        and A.EXPRN_ID = B.EXPRN_ID
+        and A.EXPRN_DAY = B.EXPRN_DAY
+        and A.EXPRN_TIME = B.EXPRN_TIME
+        and B.REQ_STTUS IN ('02','03','04','05')) AS EXPRN_REQ_CNT
+        ,C.EXPRN_NMPR
+        ,C.EXPRN_NM
+        FROM TB_EXPRN_LECTURE A,
+        TB_EXPRN_INFO C
+        WHERE  0=0
+        <if test="exprnLectureId != null and exprnLectureId != ''">
+            AND A.EXPRN_LECTURE_ID = #{exprnLectureId}
+        </if>
+        AND A.EXPRN_ID = C.EXPRN_ID
+        <if test="exprnId != null and exprnId != ''">
+            AND A.EXPRN_ID = #{exprnId}
+        </if>
+        <if test="exprnDay != null and exprnDay != ''">
+            AND A.EXPRN_DAY = #{exprnDay}
+        </if>
+        <if test="exprnTime != null and exprnTime != ''">
+            AND A.EXPRN_TIME = #{exprnTime}
+        </if>
+    </select>
+
+    <insert id="insertExprnLecture" parameterType="com.twogoms.woodcraft.dto.exprn.ExprnLectureDto">
+      INSERT INTO TB_EXPRN_LECTURE (
+        EXPRN_LECTURE_ID
+        ,EXPRN_ID
+        ,EXPRN_DAY
+        ,EXPRN_TIME
+        ,RESERVATION_CNT
+        ,NOTE
+        ,RGSTR_ID
+        ,REGIST_DT
+        ,UPDTR_ID
+        ,UPDT_DT
+        ,EXPRN_NMLC
+      ) VALUES (
+        #{exprnLectureId}
+      , #{exprnId}
+      , #{exprnDay}
+      , #{exprnTime}
+      , #{reservationCnt}
+      , #{note}
+      , #{rgstrId}
+      , now()
+      , #{updtrId}
+      , now()
+      , #{exprnNmlc}
+      )
+    </insert>
+
+    <update id="updateExprnLecture"  parameterType="com.twogoms.woodcraft.dto.exprn.ExprnLectureDto">
+        UPDATE TB_EXPRN_LECTURE SET
+                EXPRN_ID = #{exprnId}
+        ,       EXPRN_DAY = #{exprnDay}
+        ,       EXPRN_TIME = #{exprnTime}
+        ,       RESERVATION_CNT= #{reservationCnt}
+        ,       NOTE= #{note}
+        ,       UPDTR_ID = #{updtrId}
+        ,       UPDT_DT = now()
+        ,       EXPRN_NMLC = #{exprnNmlc}
+        WHERE  EXPRN_LECTURE_ID = #{exprnLectureId}
+    </update>
+
+    <delete id="deleteExprnLecture" parameterType="com.twogoms.woodcraft.dto.exprn.ExprnLectureDto">
+       DELETE FROM TB_EXPRN_LECTURE WHERE EXPRN_LECTURE_ID = #{exprnLectureId}
+    </delete>
+
+    <select id="getExprnLectureReqList" parameterType="com.twogoms.woodcraft.dto.exprn.ExprnLectureDto" resultMap="exprnReqMap">
+        SELECT A.REQ_NM
+             , A.TEL_NO
+             , A.REQ_EMAIL
+             , A.REQ_DT
+             , A.EXPRN_NMPR
+             , GET_CODE_NM('WOD008',A.REQ_STTUS) AS REQ_STTUS
+        FROM   TB_EXPRN_REQ A , TB_EXPRN_LECTURE B
+        WHERE  0 = 0
+        AND    B.EXPRN_LECTURE_ID = #{exprnLectureId}
+        AND    A.REQ_STTUS IN ('02','03','04','05')
+        AND    A.EXPRN_ID = B.EXPRN_ID
+        AND    A.EXPRN_DAY = B.EXPRN_DAY
+        AND    A.EXPRN_TIME = B.EXPRN_TIME
+    </select>
+
+    <select id="getExprnLectureReqListCnt" parameterType="com.twogoms.woodcraft.dto.exprn.ExprnLectureDto" resultType="int">
+        SELECT COUNT(*) AS CNT
+        FROM   TB_EXPRN_REQ A , TB_EXPRN_LECTURE B
+        WHERE  0 = 0
+        AND    B.EXPRN_LECTURE_ID = #{exprnLectureId}
+        AND    A.REQ_STTUS IN ('02','03','04','05')
+        AND    A.EXPRN_ID = B.EXPRN_ID
+        AND    A.EXPRN_DAY = B.EXPRN_DAY
+        AND    A.EXPRN_TIME = B.EXPRN_TIME
+    </select>
+
+    <select id="getExprnPrgmReqList" parameterType="com.twogoms.woodcraft.dto.exprn.ReqDto" resultMap="exprnReqMap">
+        SELECT A.REQ_NM
+             , A.TEL_NO
+             , A.REQ_EMAIL
+             , A.REQ_DT
+             , A.EXPRN_NMPR
+             , GET_CODE_NM('WOD008',A.REQ_STTUS) AS REQ_STTUS
+        FROM   TB_EXPRN_REQ A
+        WHERE  0 = 0
+        AND  A.EXPRN_ID = #{exprnId}
+        AND  A.REQ_STTUS IN ('02','03','04','05')
+    </select>
+
+    <select id="getExprnPrgmReqListCnt" parameterType="com.twogoms.woodcraft.dto.exprn.ReqDto" resultType="int">
+        SELECT COUNT(*) AS CNT
+        FROM   TB_EXPRN_REQ A
+        WHERE  0 = 0
+          AND  A.EXPRN_ID = #{exprnId}
+          AND  A.REQ_STTUS IN ('02','03','04','05')
+    </select>
+
+</mapper>

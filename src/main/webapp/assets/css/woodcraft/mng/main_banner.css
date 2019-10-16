@@ -1,0 +1,79 @@
+@charset "utf-8";
+.banner .prev {
+	float: left;
+	margin-left: 10px;
+}
+.banner .next {
+	float: right;
+	margin-right: 10px;
+}
+/* main bottom banner slide(jQuery) */
+.banner, .banner .banner-container, .banner ul.banner-slider {
+	position: relative;
+	display: block;
+	padding: 0;
+	height: 50px;
+	overflow: hidden;
+	*zoom: 1;
+}
+.banner {
+	margin: 0;
+	width: 100%;
+	background: url(../images/footer_banner/bg_banner.png) repeat-x 0 0;
+}
+.banner .banner-container,.banner ul.banner-slider {
+	margin: 0 auto;
+}
+.banner .banner-container {
+	width: 980px;
+}
+.banner ul.banner-slider {
+	width: 936px;
+}
+.banner:after, .banner .banner-container:after, .banner ul.banner-slider:after {display: block; clear: both; content: "";}
+.banner ul.banner-slider li {
+	position: relative;
+	float: left;
+	margin: 5px 0 0 0;
+	padding: 0 8px;
+	}
+.banner ul.banner-slider li a{
+	position: relative;
+	display: block;
+	margin: 0;
+	padding: 0;
+	width: 138px;
+	height: 38px;
+	border: 1px solid #ebebeb;
+	background: #fff;
+}
+.banner .prev, .banner .next {
+	position: absolute;
+	display: block;
+	margin: 0;
+	padding: 0;
+	top: 21px;
+	width: 5px;
+	height: 8px;
+	font-size: 8px;
+	color: #909090;
+	background: url(../images/main/spr_main.png) no-repeat 0 0;
+}
+.banner .prev {
+	left: 10px;
+	background-position: 0 -70px;
+}
+.banner .next {
+	right: 10px;
+	background-position: -10px -70px;
+}
+.banner ul.banner-slider li a img {
+	width: 138px;
+	height: 38px;
+	margin: 0;
+	padding: 0;
+}
+
+
+
+

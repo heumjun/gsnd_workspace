@@ -1,0 +1,603 @@
+@charset "utf-8";
+/* Multi purpose(Common) class */
+/* Image Replacement Tech (For Web Accessibility) */
+.ir {
+    position:absolute;
+    z-index:-1;
+    visibility:hidden;
+}
+.display-none {
+    display: none;
+}
+.sub-body img {
+    max-width: 100%;
+    height: auto;
+}
+.sub-body img.block {
+    display: block;
+}
+.margin-top-l {
+    margin-top: 14px !important;
+}
+.sub-body hr {
+    position: relative;
+    display: block !important;
+    margin: 20px auto 20px auto;
+    padding: 0 !important;
+    height: 1px;
+    background: #ddd;
+    border-collapse: collapse;
+    border: 0 !important;
+    zoom: 1;
+    clear: both;
+}
+.sub-body hr.narrow {
+    margin: 10px auto !important;
+}
+.sub-body hr:after {display:block; clear:both; content:"";}
+/* Clear Fix!! */
+.clear {
+    display:block;
+    clear:both;
+    content:"";
+}
+/* Float */
+.float-left {
+    position:relative;
+    float:left;
+}
+.float-right {
+    position:relative;
+    float:right;
+}
+.float-center {
+    position: relative !important;
+    display: block !important;
+    margin: 0 auto !important;
+}
+/* Spot Icon */
+span.list-spot-icon {
+    display:-moz-inline-stack;     /*FF2*/
+    display:inline-block;
+    *zoom:1;
+    *display:inline;
+    margin: 0 6px;
+    padding: 0 4px;
+    height: 12px;
+    line-height: 9px;
+    font-size: 9px;
+    font-family: verdana, tahoma;
+    color: #fff;
+    -webkit-box-shadow: 1px 1px 1px 0px rgba(204, 204, 204, 1);
+    -moz-box-shadow: 1px 1px 1px 0px rgba(204, 204, 204, 1);
+    box-shadow: 1px 1px 1px 0px rgba(204, 204, 204, 1);
+    border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; -o-border-radius: 3px; -ms-border-radius: 3px;
+    border-width: 2px 1px 0 1px;
+    border-style: solid;
+    -webkit-font-smoothing: none;
+    *vertical-align: middle;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+span.list-spot-icon.kor {
+    padding: 0 4px;
+    height: 16px;
+    line-height: 16px !important;
+    font-size: 11px;
+    font-family: 'Dotum', 'Malgun Gothic', verdana, tahoma !important;
+    -webkit-font-smoothing: auto !important;
+}
+span.list-spot-icon.red {
+    border-color: #c44a4a;
+    background: #dc5353;
+}
+span.list-spot-icon.orange {
+    border-color: #c4604a;
+    background: #dc6c53;
+}
+span.list-spot-icon.yellow {
+    border-color: #c18c30;
+    background: #d39d3f;
+}
+span.list-spot-icon.green {
+    border-color: #57a838;
+    background: #67b947;;
+}
+span.list-spot-icon.blue {
+    border-color: #53b2dc;
+    background: #4a9fc4;
+}
+span.list-spot-icon.navy {
+    border-color: #4a7ec4;
+    background: #538ddc;
+}
+span.list-spot-icon.purple {
+    border-color: #614ac4;
+    background: #6d53dc;
+}
+span.list-spot-icon.gray {
+    border-color: #878787;
+    background: #979797;
+}
+span.list-spot-icon.black {
+    border-color: #535353;
+    background: #5c5c5c;
+}
+span.list-spot-icon.white {
+    border-color: #cacaca;
+    background: #d5d5d5;
+    color: #606060;
+}
+/* Text Align Option */
+.align-left {
+    text-align:left !important;
+}
+.align-center {
+    text-align:center !important;
+}
+.align-right {
+    text-align:right !important;
+}
+
+/* Font Color Option */
+.font-color-white {
+    color: #cccccc !important;
+}
+.font-color-black {
+    color: #303030 !important;
+}
+.font-color-normal {
+    color: #333 !important;
+}
+.font-color-gray {
+    color: #909090 !important;
+}
+.font-color-light {
+    color: #a4a4a4 !important;
+}
+.font-color-blue,
+.em {
+    color: #2471de !important;
+}
+.font-color-navy {
+    color: #495f85 !important;
+}
+.font-color-green {
+    color: #308145 !important;
+}
+.font-color-yellow,
+.i {
+    color: #a37f39 !important;
+}
+.font-color-red,
+.strong {
+    color: #9d2222 !important;
+}
+/* Font Size Option */
+.font-size-s {
+    font-size: 11px !important;
+}
+.font-size-m {
+    font-size: 12px !important;
+}
+.font-size-ml {
+    font-size: 13px !important;
+}
+.font-size-l {
+    font-size: 14px !important;
+}
+.font-size-xl {
+    font-size: 16px !important;
+}
+.font-size-xxl {
+    font-size: 18px !important;
+}
+.font-size-xxxl {
+    font-size: 20px !important;
+}
+.font-size-xxxxl {
+    font-size: 24px !important;
+}
+.font-size-xxxxxl {
+    font-size: 24px !important;
+}
+.font-size-xxxxxxl {
+    font-size: 28px !important;
+}
+.font-size-xxxxxxxl {
+    font-size: 34px !important;
+}
+.font-weight-bold {
+    font-weight: normal;
+    font-family: 'NanumBarunGothicBold' !important;
+}
+.text-underline {
+    text-decoration: underline !important;
+}
+/* Alert box */
+.alert-box {
+    background: #f8f8f8;
+    margin: 10px 0 0 0 !important;
+    padding: 6px 16px !important;
+    border: 1px solid #c7c7c7;
+}
+/* Common HX, P, IMG and Sentence */
+.sub-body h1.title-h1,
+.sub-body h2.title-h2,
+.sub-body h3.title-h3,
+.sub-body h4.title-h4,
+.sub-body h5.title-h5,
+.sub-body p.page-paragraph{
+    position: relative;
+    display: block;
+    margin: 20px 0 4px 0;
+    padding: 0;
+    font-weight: bold;
+    letter-spacing: 0;
+    *zoom: 1 !important;
+}
+.sub-body h1.title-h1:after,
+.sub-body h2.title-h2:after,
+.sub-body h3.title-h3:after,
+.sub-body h4.title-h4:after,
+.sub-body h5.title-h5:after,
+.sub-body p.page-paragraph:after { display: block; clear: both; content: "";}
+.sub-body h1.title-h1 {
+    margin: 0 0 6px 0;
+    padding: 1px 0 1px 2px;
+    line-height: 120%;
+    /* background: url(/assets/images/woodcraft/mng/common_ico/bg_hx.png) no-repeat 0 0; */
+    font-size: 26px;
+    color: #2471de;
+    clear: both;
+}
+.sub-body h2.title-h2 {
+    padding: 0 0 0 16px;
+    font-size: 18px;
+    color: #2471de;
+    background: url(../../../images/woodcraft/mng/common_ico/bg_hx.png) no-repeat 0 -46px;
+}
+.sub-body h3.title-h3 {
+    padding: 0 0 6px 14px;
+    font-size: 16px;
+    color: #303030;
+    background: url(../../../images/woodcraft/mng/common_ico/bg_hx.png) no-repeat 0 -81px;
+}
+.sub-body h4.title-h4 {
+    padding: 0 0 0 17px;
+    font-size: 15px;
+    color: #2471de;
+    background: url(../../../images/woodcraft/mng/common_ico/bg_hx.png) no-repeat 3px -112px;
+}
+.sub-body h5.title-h5 {
+    padding: 0 0 0 17px;
+    font-size: 14px;
+    color: #a37f39;
+    background: url(../../../images/woodcraft/mng/common_ico/bg_hx.png) no-repeat 4px -140px;
+}
+.sub-body p.page-paragraph {
+    margin: 2px 0 10px 0;
+    font-size: 100%;
+    color: #333;
+    line-height: 200%;
+    font-weight: normal;
+    *zoom: 1;
+}
+.sub-body p.page-paragraph.padding-left-m {
+    padding-left: 20px;
+}
+/* Image Element */
+.sub-body p.page-paragraph img{
+    margin: 2px;
+    padding: 2px;
+}
+.sub-body p.page-paragraph img.float-left{
+    padding-right: 20px;
+}
+.sub-body p.page-paragraph img.float-right{
+    padding-left: 20px;
+}
+/* Paragraph List Element Style */
+.sub-body ul.page-ul {
+    position: relative;
+    display: block;
+    margin: 4px 0 14px 0;
+    padding: 0 0 0 18px;
+    font-weight: normal;
+    *zoom: 1;
+    overflow: hidden;
+}
+.sub-body table ul.page-ul {
+    margin: 0;
+    padding: 0;
+}
+.sub-body h1.page-ul-title,
+.sub-body h2.page-ul-title,
+.sub-body h3.page-ul-title,
+.sub-body h4.page-ul-title,
+.sub-body h5.page-ul-title{
+    padding: 0 0 0 17px !important;
+    font-size: 14px !important;
+    color: #a37f39;
+    background: url(../../../images/woodcraft/mng/common_ico/ico_page_ul_hx.png) no-repeat 3px 0 !important;
+}/* Paragraph List Element title Style */
+.sub-body ul.page-ul li {
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 2px 10px;
+    line-height: 140%;
+    color: #454545;
+}
+.sub-body ul.page-ul li.depth-a {
+    background: url(../../../images/woodcraft/mng/common_ico/ico_page_ul_li.png) no-repeat 4px 6px;
+}
+.sub-body ul.page-ul li.depth-a ul {
+    position: relative;
+    display: block;
+    margin: 1px 0 4px 0;
+    padding: 0 0 0 10px;
+    *zoom: 1;
+}
+.sub-body ul.page-ul li.depth-a ul.depth-b li {
+    background: url(../../../images/woodcraft/mng/common_ico/ico_page_ul_li_circle.png) no-repeat 2px 6px;
+    color: #647e9b;
+}
+.sub-body ul.page-ul li.depth-a ul.depth-b {
+    position: relative;
+    display: block;
+    margin: 1px 0 4px 0;
+    padding: 0 0 0 10px;
+    *zoom: 1;
+}
+.sub-body ul.page-ul li.depth-a ul.equal li {
+    background: url(../../../images/woodcraft/mng/common_ico/ico_page_ul_li_equal.png) no-repeat 2px 6px;
+    color: #707070;
+}
+.sub-body ul.page-ul.large li.depth-a {
+    background: url(../../../images/woodcraft/mng/common_ico/ico_page_ul_li.png) no-repeat 4px 8px;
+    font-size: 14px;
+    padding-left: 16px;
+    margin-top: 6px;
+    margin-bottom: 8px
+}
+.sub-body ul.page-ul li.depth-a ul.depth-b {
+    font-size: 13px;
+}
+/* bisection box */
+.sub-body .box {
+    position: relative;
+    display: block;
+    margin: 20px auto 0 auto;
+    padding: 0;
+    width: 691px;
+    overflow: hidden;
+    *zoom: 1;
+}
+.sub-body .box:after { display: block; clear: both; content: "";}
+.sub-body .box ul.bisection {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    border-top: 1px solid #d6d6d6;
+    border-bottom: 1px solid #d6d6d6;
+    overflow: hidden;
+    *zoom: 1;
+}
+.sub-body .box ul.bisection:after { display: block; clear: both; content: "";}
+.sub-body .box ul.bisection > li {
+    position: relative;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+.sub-body .box ul.bisection.bisection-three {
+    width: 693px;
+}
+.sub-body .box ul.bisection.bisection-three > li {
+    width: 229px;
+    border-right: 1px solid #d6d6d6;
+}
+.sub-body .box ul.bisection.bisection-two > li {
+    width: 344px;
+    border-right: 1px solid #d6d6d6;
+}
+.sub-body .box ul.bisection.bisection-three > li:first-child {
+    border-left: 1px solid #d6d6d6;
+}
+.sub-body .box ul.bisection.bisection-three > li a {
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    text-align: center;
+    border: 4px solid #fff;
+    height: 232px;
+    overflow: hidden;
+}
+.sub-body .box ul.bisection.bisection-three > li a.professor {
+    background: url(../../../images/woodcraft/mng/common_ico/ico_large_professor.png) no-repeat center 94px;
+}
+.sub-body .box ul.bisection.bisection-three > li a.student {
+    background: url(../../../images/woodcraft/mng/common_ico/ico_large_student.png) no-repeat center 94px;
+}
+.sub-body .box ul.bisection.bisection-three > li a.company {
+    background: url(../../../images/woodcraft/mng/common_ico/ico_large_company.png) no-repeat center 100px;
+}
+
+.sub-body .box ul.bisection.bisection-three > li a.db {
+    background: url(../../../images/woodcraft/mng/common_ico/ico_large_db.png) no-repeat center 94px;
+}
+.sub-body .box ul.bisection.bisection-three > li a.ht {
+    background: url(../../../images/woodcraft/mng/common_ico/ico_large_ht.png) no-repeat center 100px;
+}
+
+.sub-body .box ul.bisection.bisection-three > li a:hover,
+.sub-body .box ul.bisection.bisection-three > li a:focus {
+    border: 4px solid #d3d9e7;
+    height: 232px;
+    background-color: #f2f6fc;
+    -webkit-transition: all .6s;
+    -moz-transition: all .6s;
+    -ms-transition: all .6s;
+    -o-transition: all .6s;
+    transition: all .6s;
+}
+.sub-body .box ul.bisection.bisection-three > li a:hover.professor {
+    background: url(../../../images/woodcraft/mng/common_ico/ico_large_professor_off.png) no-repeat center 94px;
+}
+.sub-body .box ul.bisection.bisection-three > li a:hover.student {
+    background: url(../../../images/woodcraft/mng/common_ico/ico_large_student_off.png) no-repeat center 94px;
+}
+.sub-body .box ul.bisection.bisection-three > li a:hover.company {
+    background: url(../../../images/woodcraft/mng/common_ico/ico_large_company_off.png) no-repeat center 100px;
+}
+.sub-body .box ul.bisection.bisection-three > li a:hover.db {
+    background: url(../../../images/woodcraft/mng/common_ico/ico_large_db_off.png) no-repeat center 94px;
+}
+.sub-body .box ul.bisection.bisection-three > li a:hover.ht {
+    background: url(../../../images/woodcraft/mng/common_ico/ico_large_ht_off.png) no-repeat center 100px;
+}
+.sub-body .box ul.bisection.bisection-three > li h4 {
+    position: relative;
+    display: block;
+    margin: 40px;
+    padding: 0;
+    font-size: 32px;
+    font-weight: normal;
+    color: #93a2c1;
+}
+.sub-body .box ul.bisection.bisection-two > li h4 {
+    position: relative;
+    display: block;
+    margin: 40px;
+    padding: 0;
+    font-size: 24px;
+    font-weight: normal;
+    color: #93a2c1;
+}
+.sub-body .box ul.bisection.bisection-three > li a:hover h4,
+.sub-body .box ul.bisection.bisection-three > li a:focus h4 {
+    color: #484e5e;
+}
+/* etc TEXT */
+.sub-body h2.spot-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #000;
+    text-align: center;
+    letter-spacing: -1px;
+}
+
+/* float-ul-content */
+.sub-body ul.float-content {
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 0;
+    *zoom: 1;
+    overflow: hidden;
+}
+.sub-body ul.float-content:after {display: block; clear: both; content: "";}
+.sub-body ul.float-content li {
+    position: relative;
+    float: left;
+    margin: 0 12px 0 0;
+    padding: 10px 18px 10px 0;
+    background: url(../../../images/woodcraft/mng/sub/ico_arrow.png) no-repeat right center;
+}
+.sub-body ul.float-content li.bg-off {
+    background-image: none !important;
+}
+.sub-body ul.float-content li.last {
+    background: none;
+    margin-right: 0;
+    padding-right: 0;
+}
+.sub-body ul.float-content li p {
+    text-align: center;
+    font-size: 16px;
+    line-height: 160%;
+    background: #95a5bd;
+    color: #fff;
+    padding: 14px 10px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    border-radius: 6px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -o-border-radius: 6px;
+    -ms-border-radius: 6px;
+    border-bottom: 3px solid #8596b1;
+}
+.sub-body ul.float-content li p.brown {
+    background-color: #bdac96;
+    border-bottom-color: #b19f87;
+}
+.sub-body ul.float-content.over-six li {
+    width: 210px;
+}
+.sub-body ul.float-content.six li {
+    width: 95px;
+}
+.sub-body ul.float-content.five li {
+    width: 120px;
+}
+.sub-body ul.float-content.four li {
+    width: 158px;
+}
+.sub-body ul.float-content.three li {
+    width: 220px;
+}
+.sub-body ul.float-content.two li {
+    width: 346px;
+}
+.sub-body ul.float-content.one li {
+    width: 158px;
+}
+
+
+.page-paragraph.box-wrapping {
+    border: 1px solid #ddd;
+    padding: 20px !important;
+    border-radius: 12px;
+    -moz-border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -o-border-radius: 12px;
+    -ms-border-radius: 12px;
+    border-bottom: 3px solid #ccc;
+}
+.page-paragraph.box-wrapping img {
+    max-width: 100%;
+    height: auto;
+}
+p.title-h4 {
+    position: relative;
+    display: block;
+    margin: 20px 0 4px 0;
+    font-weight: bold;
+    letter-spacing: 0;
+    *zoom: 1;
+    padding: 0 0 0 14px;
+    font-size: 15px;
+    color: #2471de;
+    background: url(../../../images/woodcraft/mng/common_ico/bg_hx.png) no-repeat 3px -112px;
+}
+
+.sub-body .prgrmInfo .half .page-paragraph.narrow {
+    margin-bottom: 4px !important;
+}
+.sub-body .prgrmInfo h1.title-h1.wide {
+    width: 94%;
+    line-height: 140% !important;
+    border: 1px solid #ddd;
+    border-bottom-color: #ccc;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0 auto 20px auto;
+    background: #f8f8f8;
+    -webkit-box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.16); -moz-box-shadow:    0px 4px 6px 0px rgba(0, 0, 0, 0.16); box-shadow:         0px 4px 6px 0px rgba(0, 0, 0, 0.16);
+    border-radius: 6px; -moz-border-radius: 6px; -webkit-border-radius: 6px; -o-border-radius: 6px; -ms-border-radius: 6px;
+}

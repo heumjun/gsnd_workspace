@@ -1,0 +1,356 @@
+@charset "utf-8";
+
+#foot{margin:0 0 20px 0;}     
+#main_visual1{position:relative;}
+
+/*********** 메인 비쥬얼 ***********/
+#vpr1{display:block;position:relative;margin:0 auto;z-index:0;}
+
+#vpr1 .wrap1{position:relative;}
+#vpr1 .mView{z-index:0;position:relative;height:340px;overflow:hidden;}
+#vpr1 .mCont{position:relative;width:100%;height:100%;}
+#vpr1 .mContC{display:block;position:absolute;left:0;top:0;width:100%;height:100%;background:#fff;}
+
+#vpr1 .mContC:first-child{z-index:1;}
+
+#vpr1 .mContC.on{display:block;}
+#vpr1 .mContC .c{display:block;position:absolute;left:0;right:0;top:0;bottom:0;overflow:hidden;}
+#vpr1 .mContC a[href]{text-decoration:none;cursor:pointer;}
+#vpr1 .mContC .t1{display:block;position:absolute;left:0;right:0;top:0;bottom:0;overflow:hidden;z-index:20;}
+#vpr1 .mContC .t1 .t1t1{margin:30px 0 0 0;}
+#vpr1 .mContC .t1 .t1t1  img{width:100%;}
+#vpr1 .mContC .t1 .t1t1 .t1t1t1{display:block;width:185px;display:none;}
+#vpr1 .mContC .t1 .t1t1 .t1t1t2{display:block;font-size:12px;font-weight:600;color:#353535;margin:10px 0 6px 0;}
+#vpr1 .mContC .t1 .t1t1 .t1t1t3{display:block;font-size:11px;color:#222;line-height:1.333;}
+#vpr1 .mContC .t1 .t1t1 .t1t1t3 span{color:#d32f2f;}
+#vpr1 .mContC .t1 .t1t1 .t1t1t2 img{width:60px;vertical-align:middle;}
+#vpr1 .mContC .t1 .t1t1 .t1t1t3 img{width:88px;vertical-align:middle;}
+#vpr1 .mContC .t1 .t1t1 .t1t1t4{display:block;margin:10px 0 6px 0;width:290px;}
+#vpr1 .mContC .t1 .t1t1 .t1t1t4 img{width:290px;}
+#vpr1 .mContC .f1{display:block;position:absolute;left:0;right:0;top:0;bottom:0;overflow:hidden;z-index:10;}
+#vpr1 .mContC .f1p1{display:block;position:absolute;left:0;right:0;top:0;bottom:0;margin:0 -1000px;}
+#vpr1 .mContC .f1p1 .f1p1p1{position:absolute;left:0;right:0;top:0;bottom:0;display:none;width:auto;height:100%;margin:0 auto;z-index:12;}
+#vpr1 .mContC .f1p1 .f1p1bg1{position:absolute;left:0;right:0;top:0;bottom:0;display:block;width:auto;height:100%;margin:0 auto;z-index:11;}
+#vpr1 .mContC .f1p1 .f1p1bg1.f1p1full{display:none;}
+#vpr1 .mContC .f1p1 .f1p1bg1.f1p1small{display:block;}
+#vpr1 .mContC .f1p1 img{display:block;width:auto;height:100%;margin:0 auto;}
+#vpr1 .mContC .c:focus{border:1px dotted #000;}
+#vpr1 .mContC .c:focus .f1{margin:-1px;}
+#vpr1 .mContC.on .a1{}
+#vpr1 .mContC.off .a1{}
+#vpr1 .mContC.prev-on .a1{}
+#vpr1 .mContC.next-on .a1{}
+
+#vpr1 .menu{display:block;z-index:10;position:absolute;font-size:0;left:8px;bottom:225px;}
+#vpr1 .menu .menubg1{display:inline-block;background:url(../../../images/woodcraft/www/main/menubg1.png);border-radius:9999px;padding:4px 8px 4px 8px;}
+#vpr1 .menu .m{display:inline-block;position:relative;box-sizing:border-box;margin:0;padding:0;border:0;background:transparent;line-height:1;vertical-align:middle;cursor:pointer;overflow:visible;}
+#vpr1 .menu .m .ic1{float:left;position:absolute;left:50%;top:50%;width:100%;height:100%;margin:-50%;background:url() no-repeat center center;background-size:contain;text-indent:-9999px;overflow:hidden;}
+#vpr1 .mNum{display:inline-block;vertical-align:middle;}
+#vpr1 .mNum .m{display:inline-block;width:12px;height:12px;margin:0 2px 0 0;}
+#vpr1 .mNum .m .ic1{width:100%;height:100%;background-image:url(../../../images/woodcraft/www/main/ic1vpr1m1@2x.png);}
+#vpr1 .mNum .m.on .ic1{background-image:url(../../../images/woodcraft/www/main/ic1vpr1m1on@2x.png);}
+
+#vpr1 .mControl{display:inline-block;vertical-align:middle;margin:0 5px 0 0;}
+#vpr1 .mControl .m{float:left;width:12px;height:12px;margin:0 3px 0 0;}
+#vpr1 .mControl .m .ic1{width:100%;height:100%;}
+#vpr1 .mControl .stop .ic1{background-image:url(../../../images/woodcraft/www/main/ic1vpr1pause1@2x.png);}
+#vpr1 .mControl .play .ic1{background-image:url(../../../images/woodcraft/www/main/ic1vpr1play1@2x.png);}
+
+
+/*********** 팝업존 ***********/
+#epr1{display:block;position:absolute;right:10px;bottom:10px;border:1px solid #1a1a1a;z-index:1;background:#fff;}
+#epr1 .wrap1{position:relative;width:196px;height:201px;}
+
+#epr1 .mView{z-index:0;position:absolute;left:0;right:0;top:0;bottom:0;overflow:hidden;height:175px;}
+#epr1 .mCont{position:absolute;left:0;top:0;width:100%;height:100%;}
+#epr1 .mContC{display:block;position:absolute;left:0;top:0;width:100%;height:100%;background:#fff;}
+#epr1 .mContC.on{display:block;}
+#epr1 .mContC .c{display:block;position:absolute;left:0;right:0;top:0;bottom:0;text-decoration:none;}
+#epr1 .mContC a{cursor:pointer;}
+#epr1 .mContC .f1{display:block;position:absolute;left:0;right:0;top:0;bottom:0;overflow:hidden;}
+#epr1 .mContC .f1p1{display:block;position:absolute;left:0;right:0;top:0;bottom:0;}
+#epr1 .mContC .f1p1 img{display:block;width:100%;height:100%;margin:0 auto;}
+#epr1 .mContC .c:focus{border:1px dotted #000;overflow:hidden;}
+#epr1 .mContC .c:focus .f1{margin:-1px;}
+#epr1 .mContC.on .a1{}
+#epr1 .mContC.off .a1{}
+#epr1 .mContC.prev-on .a1{}
+#epr1 .mContC.next-on .a1{}
+
+#epr1 .menu{display:block;z-index:10;position:absolute;left:0;right:0;bottom:0;height:25px;border:1px solid #c6c7c8;text-align:right;}
+#epr1 .menu .m{display:inline-block;position:relative;box-sizing:border-box;margin:0;padding:0;border-radius:0;border:0;background:transparent;line-height:1;vertical-align:middle;cursor:pointer;overflow:visible;}
+#epr1 .menu .m .ic1{float:right;width:100%;height:100%;background:url() no-repeat center center;background-size:contain;overflow:hidden;}
+#epr1 .mControl{display:inline-block;vertical-align:middle;}
+#epr1 .mControl .m{float:left;width:25px;height:25px;border-left:1px solid #c6c7c8;}
+#epr1 .mControl .m .ic1{width:100%;height:100%;}
+#epr1 .mControl .stop .ic1{background-image:url(../../../images/woodcraft/www/main/ic1epr1pause1@2x.png);}
+#epr1 .mControl .prev .ic1{background-image:url(../../../images/woodcraft/www/main/ic1epr1left1@2x.png);}
+#epr1 .mControl .next .ic1{background-image:url(../../../images/woodcraft/www/main/ic1epr1right1@2x.png);}
+#epr1 .mPage{position:absolute;left:0px;bottom:3px;display:inline-block;box-sizing:border-box;padding:1px 1px 1px 10px;border-radius:2px;}
+#epr1 .mPage .text{display:inline-block;color:#787878;letter-spacing:0;vertical-align:middle;}
+#epr1 .mPage .text .on{display:inline-block;color:#f94e61;font-weight:600;vertical-align:middle;}
+#epr1 .mPage .text .sep{display:inline-block;font-weight:200;font-size:14px;vertical-align:middle;}
+#epr1 .mPage .text .total{display:inline-block;font-weight:500;vertical-align:middle;}
+
+
+/*********** 영역 1 ***********/
+.new{border-radius:3px;padding:0px 3px 3px 3px;background:#e05652;color:#fff;font-size:11px;line-height:1;white-space:nowrap;}
+
+#main_body1{border:1px solid #a1a8ad;border-width:1px 0 1px 0;}
+#main_body1 .container{margin:0;}
+#main_body1 .wrap1{position:relative;height:40px;}
+#main_body1 h2{position:absolute;left:0;top:0;height:40px;line-height:40px;color:#000;font-size:13px;padding:0 10px 0 44px;background:url(../../../images/woodcraft/www/main/bg1bar1.png) 100% 50% no-repeat;}
+#main_body1 h2 i{position:absolute;left:0;top:0;display:block;width:38px;height:40px;background:url() 50% 50% no-repeat;}
+
+/* 공지사항 */
+#main_body1 .section1 h2 i.ic1{background-image:url(../../../images/woodcraft/www/main/ic1section1.png);}
+#main_body1 .section1 .mCont{display:block;position:relative;margin:0 40px 0 108px;overflow: hidden;}
+#main_body1 .section1 .more{position:absolute;right:10px;top:50%;margin-top:-10px;text-align:center;}
+#main_body1 .section1 .more .ic1{display:inline-block;width:15px;height:15px;border:1px solid #a4a5a7;background:url(../../../images/woodcraft/www/main/ic1more1.png) 50% 50% no-repeat;background-size:contain;vertical-align:middle;}
+#main_body1 .section1 .mCont a{display:inline-block;width:100%;color:#666;padding:10px 0;}
+#main_body1 .section1 .mCont .t1{float:left;max-width:76%;margin-right:35px;color:#333;display:block;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;overflow:hidden;vertical-align:middle;}
+#main_body1 .section1 .mCont .t2{float:left;display:none;vertical-align:middle;}
+#main_body1 .section1 .mCont .new{float:left;margin-left:-30px;margin-top:2px;vertical-align:middle;}
+/* 전화번호 */
+#main_body1 .section2{border-top:1px solid #a1a8ad;overflow:hidden;}
+#main_body1 .section2 h2 i.ic1{background-image:url(../../../images/woodcraft/www/main/ic1section2.png);}
+#main_body1 .section2 .mCont{display:block;position:relative;margin:0 0 0 108px;overflow:hidden;line-height:40px;}
+#main_body1 .section2 .mCont .t1{color:#d32f2f;font-weight:600;}
+#main_body1 .section2 .mCont .t1 a{color:#d32f2f;}
+#main_body1 .section2 .mCont .t2{font-size:11px;padding-left:5px;letter-spacing:-1px;}
+
+
+/*********** 영역 2 ***********/
+#main_body2{padding:10px 0;}
+#main_body2 .section3,
+#main_body2 .section4 {width:100%;}
+
+/* 교육체험 */
+#main_body2 .section3 h2{font-size:15px;color:#000;}
+#main_body2 .section3 .mCont{}
+#main_body2 .section3 .mCont:after{content:'';display:table;clear:both;}
+#main_body2 .section3 .mCont ul{margin:10px 0;}
+#main_body2 .section3 .mCont li{float:right;width:49%;}
+#main_body2 .section3 .mCont li:first-child{float:left;}
+#main_body2 .section3 .mCont li .f1{display:block;border:1px solid #c3c3c3;height:80px;overflow:hidden;}
+#main_body2 .section3 .mCont li .f1 img{display:block;width:100%;}
+#main_body2 .section3 .mCont li .t1{display:block;font-size:15px;font-weight:600;color:#333;margin:5px 0 ;}
+#main_body2 .section3 .mCont li .t2{display:block;font-size:12px;height:34px;color:#666;overflow:hidden;}
+#main_body2 .section3 .more .ic1{display:inline-block;width:15px;height:15px;background:url(../../../images/woodcraft/www/main/ic1more1.png) 50% 50% no-repeat;background-size:contain;vertical-align:middle;}
+
+/* 바로가기 */
+#main_body2 .section4{padding:15px 0;}
+#main_body2 .section4:after{content:'';display:table;clear:both;}
+#main_body2 .section4 ul{}
+#main_body2 .section4 ul li{float:left;width:25%;text-align:center;}
+#main_body2 .section4 ul li a{display:block;width:100%;height:80px;color:#333;font-weight:600;}
+#main_body2 .section4 ul li i{display:block;width:59px;height:40px;background:url() 50% 50% no-repeat;background-size:contain;margin:10px auto 2px;}
+#main_body2 .section4 ul li.m1 i{background-image:url(../../../images/woodcraft/www/main/ic1s4m1@2x.png);}
+#main_body2 .section4 ul li.m2 i{background-image:url(../../../images/woodcraft/www/main/ic1s4m2@2x.png);}
+#main_body2 .section4 ul li.m3 i{background-image:url(../../../images/woodcraft/www/main/ic1s4m3@2x.png);}
+#main_body2 .section4 ul li.m4 i{background-image:url(../../../images/woodcraft/www/main/ic1s4m4@2x.png);}
+#main_body2 .section4 ul li.m5 i{background-image:url(../../../images/woodcraft/www/main/ic1s4m5@2x.png);}
+#main_body2 .section4 ul li.m6 i{background-image:url(../../../images/woodcraft/www/main/ic1s4m6@2x.png);}
+#main_body2 .section4 ul li.m7 i{background-image:url(../../../images/woodcraft/www/main/ic1s4m7@2x.png);}
+#main_body2 .section4 ul li.m8 i{background-image:url(../../../images/woodcraft/www/main/ic1s4m8@2x.png);}
+#main_body2 .section4 ul li.m1{background:#634133;}
+#main_body2 .section4 ul li.m1 a{color:#fff;}
+#main_body2 .section4 ul li.m3{background:#aa9385;}
+#main_body2 .section4 ul li.m3 a{color:#fff;}
+#main_body2 .section4 ul li.m6{background:#e34945;}
+#main_body2 .section4 ul li.m6 a{color:#fff;}
+#main_body2 .section4 ul li.m8{background:#34241e;}
+#main_body2 .section4 ul li.m8 a{color:#fff;}
+
+
+/*********** 영역 3 ***********/
+#main_body3{}
+#main_body3 .more .ic1{display:inline-block;width:15px;height:15px;background:url(../../../images/woodcraft/www/main/ic1more1.png) 50% 50% no-repeat;background-size:contain;vertical-align:middle;}
+#main_body3 #wood1{position:relative;box-sizing:border-box;padding:10px 0;background:url(../../../images/woodcraft/www/main/wood1bg1.jpg) 50% 0px no-repeat;background-size:cover;}
+#main_body3 #wood1 h2.tab{position:absolute;top:0;width:76px;height:40px;z-index:10;}
+#main_body3 #wood1 h2.tab a{display:table-cell;width:76px;height:40px;vertical-align: middle;color:#37312f;border:2px solid #bababa;box-sizing:border-box;text-align:center;font-size:12px;border-radius:9999px;}
+#main_body3 #wood1 h2.tab.on a{color:#fff;background:#634133;border:none;} 
+#main_body3 #wood1 .tab:nth-of-type(1){right:80px;}
+#main_body3 #wood1 .tab:nth-of-type(2){right:0;}
+#main_body3 #wood1 .cont{display:block;position:relative;padding:10px 0 0 0;}
+#main_body3 #wood1 .cont h3{color:#333;;font-size:16px;margin-bottom:3px;}
+#main_body3 #wood1 .cont p{display:none;}
+#main_body3 #wood1 .cont .contC{padding-top:15px;}
+
+
+/*********** 영역 4 ***********/
+#main_body4{background:#aa9385;}
+#main_body4 .container{margin:0;}
+#main_body4 .section7{text-align:center;}
+#main_body4 .section7 h2{color:#fff;font-size:17px;}
+#main_body4 .section7 .t1{display:none;color:#fff;}
+#main_body4 .section7 .wrap1{padding:13px 0 10px 0;}
+#main_body4 .section7 ul{width:100%;margin-top:3px;}
+#main_body4 .section7 ul:after{content:'';display:table;clear:both;}
+#main_body4 .section7 ul li{float:left;width:33.3%;}
+#main_body4 .section7 ul li a{position:relative;display:block;width:80px;height:80px;color:#333;margin:5px auto 5px;}
+#main_body4 .section7 ul li a i{position:absolute;left:0;top:0;display:block;width:100%;height:100%;background:url() 50% 50% no-repeat;background-size:contain;z-index:0;}
+#main_body4 .section7 ul li a .t2{position:absolute;bottom:13px;font-size:12px;font-weight:600;display:block;width:100%;z-index:1;}
+#main_body4 .section7 ul li.m1 i.ic1{background-image:url(../../../images/woodcraft/www/main/ic1s7m1@2x.png);}
+#main_body4 .section7 ul li.m2 i.ic1{background-image:url(../../../images/woodcraft/www/main/ic1s7m2@2x.png);}
+#main_body4 .section7 ul li.m3 i.ic1{background-image:url(../../../images/woodcraft/www/main/ic1s7m3@2x.png);}
+#main_body4 .section7 ul li.m4 i.ic1{background-image:url(../../../images/woodcraft/www/main/ic1s7m4@2x.png);}
+#main_body4 .section7 ul li.m5 i.ic1{background-image:url(../../../images/woodcraft/www/main/ic1s7m5@2x.png);}
+#main_body4 .section7 ul li.m6 i.ic1{background-image:url(../../../images/woodcraft/www/main/ic1s7m6@2x.png);}
+
+
+@media all and (min-width:500px){
+    #vpr1 .mContC .t1 .t1t1{margin-left:20px;}      
+    #vpr1 .menu{left:28px;}
+    #epr1{right:20px;bottom:30px;}
+}   
+
+@media all and (min-width:768px){    
+
+    #vpr1 .mView{height:532px;}
+    #vpr1 .mContC .f1p1 .f1p1p1{display:block;}
+    #vpr1 .mContC .t1 .t1t1{margin:60px 0 0 30px;}
+    #vpr1 .mContC .t1 .t1t1 .t1t1t1{width:316px;}
+    #vpr1 .mContC .t1 .t1t1 .t1t1t2{font-size:21px;margin:13px 0 10px 0;}
+    #vpr1 .mContC .t1 .t1t1 .t1t1t3{font-size:17px;}         
+    #vpr1 .mContC .t1 .t1t1 .t1t1t2 img{width:103px;margin-top:-1px;}
+    #vpr1 .mContC .t1 .t1t1 .t1t1t3 img{width:150px;}
+    #vpr1 .mContC .t1 .t1t1 .t1t1t4{margin:13px 0 10px 0;}
+    #vpr1 .mContC .t1 .t1t1 .t1t1t4 img{width:600px;}
+    #vpr1 .menu{left:0;right:0;bottom:0;height:0;margin:0 0 60px;text-align:center;}
+    #vpr1 .mNum .m{width:16px;height:16px;}
+    #vpr1 .mNum .m{margin:0 5px 0 0;}    
+    #vpr1 .mControl .m{width:16px;height:16px;margin:0 5px 0 0;}  
+    
+    #epr1 {right:20px;bottom:45px;}
+    #epr1 .wrap1{width:307px;height:318px;}
+    #epr1 .mView{height:279px;}
+    #epr1 .menu{height:38px;}
+    #epr1 .mControl .m{width:38px;height:38px;}    
+
+    #main_body1 .wrap1{float:left;width:50%;position:relative;height:60px;}
+    #main_body1 h2{font-size:17px;width:40px;height:60px;line-height:1.333;padding:7px 60px 0 20px;background:none;}
+    #main_body1 h2 i{left:65px;width:57px;height:60px;}
+    #main_body1 .section1 h2 i.ic1{background-image:url(../../../images/woodcraft/www/main/ic1section1@2x.png);}
+    #main_body1 .section1 .mCont{display:block;position:relative;margin:0 60px 0 124px;overflow: hidden;}
+    #main_body1 .section1 .mCont a{padding:20px 0;}
+    #main_body1 .section1 .mCont a .t1{}
+    #main_body1 .section1 .more{right:10px;margin-top:-14px;}
+    #main_body1 .section1 .more .ic1{width:26px;height:26px;}
+    #main_body1 .section2{border-top:none;}
+    #main_body1 .section2 h2 i.ic1{background-image:url(../../../images/woodcraft/www/main/ic1section2@2x.png);}
+    #main_body1 .section2 .mCont{display:block;position:relative;margin:0 0 0 124px;overflow:hidden;line-height:60px;}
+    #main_body1 .section2 .mCont .t1{font-size:18px;vertical-align:middle;}
+    #main_body1 .section2 .mCont .t2{font-size:13px;letter-spacing:0;vertical-align:middle;}    
+
+    #main_body2 .section3 {float:left;width:38%;padding-top:7px;}
+    #main_body2 .section3 h2{font-size:18px;}
+    #main_body2 .section3 .mCont li{position:relative;width:100%;min-height:105px;}
+    #main_body2 .section3 .mCont li:first-child{margin-bottom:10px;}
+    #main_body2 .section3 .mCont li .f1{position:absolute;left:0;top:0;width:135px;height:105px;}
+    #main_body2 .section3 .mCont li .f1 img{width:auto;height:100%;}
+    #main_body2 .section3 .mCont li .txt1{display:block;margin:0 0 0 145px;}
+    #main_body2 .section3 .mCont li .t1{font-size:16px;margin:0 0 5px 0;}
+    #main_body2 .section3 .mCont li .t2{font-size:13px;height:70px;}
+    #main_body2 .section3 .more .ic1{width:26px;height:26px;}
+    
+    #main_body2 .section4 {float:right;width:60%;padding-top:15px;}
+    #main_body2 .section4 ul li a{height:116px;}
+    #main_body2 .section4 ul li i{width:100px;height:68px;}    
+
+    #main_body3 .more .ic1{width:26px;height:26px;}    
+    #main_body3 #wood1{padding:20px 0;}
+    #main_body3 #wood1 h2.tab{width:86px;height:86px;}
+    #main_body3 #wood1 h2.tab a{width:86px;height:86px;font-size:16px;}
+    #main_body3 #wood1 .tab:nth-of-type(1){right:90px;}
+    #main_body3 #wood1 .cont h3{text-align:center;font-size:27px;margin-bottom:3px;}
+    #main_body3 #wood1 .cont p{display:block;text-align:center;font-size:14px;}
+    #main_body3 #wood1 .cont .contC{padding-top:30px;}
+
+    #main_body4 .container{margin:0 20px;}
+    #main_body4 .section7 h2{font-size:27px;}
+    #main_body4 .section7 .t1{display:block;}
+    #main_body4 .section7 .wrap1{padding:23px 0 20px 0;}
+    #main_body4 .section7 ul{max-width:900px;margin:10px auto 0;}
+    #main_body4 .section7 ul li{float:left;width:16.66%;}
+    #main_body4 .section7 ul li a{width:110px;height:110px;}
+    #main_body4 .section7 ul li a .t2{bottom:20px;font-size:14px;} 
+} 
+
+@media all and (min-width:1000px){
+
+}
+
+@media all and (min-width:1260px){
+    #foot{margin:0px 0 20px 0;}
+    #vpr1 .mView{height:700px;}
+    #vpr1 .mContC .t1 .t1t1{margin:63px 0 0 45px;}
+    #vpr1 .mContC .t1 .t1t1 .t1t1t1{width:422px;display:block;}
+    #vpr1 .mContC .t1 .t1t1 .t1t1t2{font-size:29px;margin:20px 0 12px 0;}
+    #vpr1 .mContC .t1 .t1t1 .t1t1t3{font-size:20px;}   
+    #vpr1 .mContC .t1 .t1t1 .t1t1t2 img{width:150px;/*margin: -3px 0 0 5px;*/}
+    #vpr1 .mContC .t1 .t1t1 .t1t1t3 img{width:180px;}
+    #vpr1 .mContC .t1 .t1t1 .t1t1t4{margin:20px 0 12px 0;}
+    #vpr1 .mContC .t1 .t1t1 .t1t1t4 img{width:688px;}
+
+    #vpr1 .menu{margin:0 0 85px;}    
+    #vpr1 .menu .menubg1{padding:8px 10px 8px 15px;}  
+    #epr1{right:50%;bottom:120px;margin-right:-640px;}
+
+    .new{padding:2px 5px 5px 5px;}
+
+    #main_body1 .container{max-width:1300px;margin:0 auto;}
+    #main_body1 .wrap1{height:82px;}
+    #main_body1 .section1.wrap1{width:50%;}
+    #main_body1 .section2.wrap1{float:right;width:45%;}
+    #main_body1 h2{font-size:19px;width:40px;height:82px;line-height:1.333;padding:16px 88px 0 0px;background:none;}
+    #main_body1 h2 i{left:45px;width:78px;height:82px;}
+    #main_body1 .section1 .mCont{display:block;position:relative;margin:0 60px 0 140px;overflow: hidden;}
+    #main_body1 .section1 .mCont a{padding:30px 0;}
+    #main_body1 .section1 .mCont a .t1{font-size:17px;font-weight:600;max-width:68%;margin-right:0;}
+    #main_body1 .section1 .mCont a .t2{font-size:15px;display:block;margin-right:45px;}
+    #main_body1 .section1 .more{right:20px;margin-top:-19px;}
+    #main_body1 .section1 .more .ic1{width:34px;height:34px;}
+    #main_body1 .section2 .mCont{line-height:82px;}
+    #main_body1 .section2 .mCont .t1{font-size:24px;}
+    #main_body1 .section2 .mCont .t2{font-size:15px;padding-left:10px;}    
+
+    #main_body2{margin-bottom:35px;}
+    #main_body2 .section3 {width:32%;padding-top:45px;}
+    #main_body2 .section3 h2{font-size:24px;padding-bottom:8px;letter-spacing:-1px;}
+    #main_body2 .section3 .mCont li{position:relative;width:100%;min-height:140px;}
+    #main_body2 .section3 .mCont li:first-child{margin-bottom:25px;}
+    #main_body2 .section3 .mCont li .f1{width:180px;height:140px;}
+    #main_body2 .section3 .mCont li .txt1{margin:0 0 0 202px;}
+    #main_body2 .section3 .mCont li .t1{font-size:21px;margin:0 0 5px 0;}
+    #main_body2 .section3 .mCont li .t2{font-size:16px;height:86px;}
+    #main_body2 .section3 .more .ic1{width:34px;height:34px;}
+    
+    #main_body2 .section4 {width:63%;padding-top:50px;}
+    #main_body2 .section4 ul li a{height:168px;font-size:18px;}
+    #main_body2 .section4 ul li i{width:160px;height:109px;}    
+
+    #main_body3 .more .ic1{width:34px;height:34px;}        
+    #main_body3 #wood1{padding:50px 0;}
+    #main_body3 #wood1 h2.tab{width:88px;height:88px;}
+    #main_body3 #wood1 h2.tab a{width:88px;height:88px;}
+    #main_body3 #wood1 .tab:nth-of-type(1){right:98px;}
+    #main_body3 #wood1 .cont{padding:0;}
+    #main_body3 #wood1 .cont h3{font-size:32px;}
+    #main_body3 #wood1 .cont p{font-size:16px;}
+    #main_body3 #wood1 .cont .contC{padding-top:40px;}    
+
+    #main_body4 .container{max-width:1300px;margin:0 auto;}
+    #main_body4 .section7 h2{font-size:32px;}
+    #main_body4 .section7 .wrap1{padding:43px 0 40px 0;}
+    #main_body4 .section7 ul{max-width:1200px;margin:20px auto 0;}
+    #main_body4 .section7 ul li a{width:160px;height:160px;}
+    #main_body4 .section7 ul li a .t2{bottom:30px;font-size:17px;}
+    
+}
+
+@media all and (min-width:1921px) {
+    #vpr1 .mView{height:833px;}
+    #vpr1 .mContC .f1p1 .f1p1bg1.f1p1full{display:block;}
+    #vpr1 .mContC .f1p1 .f1p1bg1.f1p1small{display:none;}
+}

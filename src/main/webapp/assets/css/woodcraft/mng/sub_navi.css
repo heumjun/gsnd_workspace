@@ -1,0 +1,104 @@
+@charset "utf-8";
+/* Subpage Side(Left) Navigation */
+nav.sub-nav {
+    position: relative;
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 196px;
+}
+/* Current Page Navigation Title */
+nav.sub-nav h1 {
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 1px 4px 10px 8px;
+    font-size: 18px;
+    color: #354053;
+    font-weight: normal;
+    font-family: 'NanumBarunGothicBold' !important;
+    border-bottom: 2px solid #538ce9;
+    overflow: hidden;
+    letter-spacing: -.4px;
+    line-height: 140%;
+    /*background: url(../images/sub/bg_sub_nav_title.png) no-repeat;*/
+}
+/* There is no float element, so all that elements attr. are block and relative */
+nav.sub-nav ul, nav.sub-nav li, nav.sub-nav a {
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+nav.sub-nav ul:after,
+nav.sub-nav li:after,
+nav.sub-nav a:after {display: block; clear: both; content: "";}
+/* 1Depth item */
+nav.sub-nav ul.depth-one li.depth-one-li a.depth-one-item{
+    padding: 0 0 0 10px;
+    height: 34px;
+    border-bottom: 1px solid #d6d6d6;
+    line-height: 36px;
+    background: url(../images/sub/sNav_arrow.png) no-repeat -20px 12px #fff;
+    font-size: 13px;
+    font-weight: normal;
+    color: #363c4d;
+    letter-spacing: -1px;
+}
+nav.sub-nav ul.depth-one li.depth-one-li:hover a.depth-one-item,
+nav.sub-nav ul.depth-one li.depth-one-li:focus a.depth-one-item,
+nav.sub-nav ul.depth-one li.depth-one-li:active a.depth-one-item,
+nav.sub-nav ul.depth-one li.depth-one-li.on a.depth-one-item {
+    color: #fff;
+    background-position: 180px 12px;
+    background-color: #538ce9;
+    -webkit-transition: background-color .3s linear;
+    -moz-transition: background-color .3s linear;
+    -o-transition: background-color .3s linear;
+    -ms-transition: background-color .3s linear;
+    transition: background-color .3s linear;
+}
+nav.sub-nav ul.depth-one ul.depth-two {
+    border-bottom: 1px solid #d6d6d6;
+    background: #6d7078;
+}
+nav.sub-nav ul.depth-one ul.depth-two li.depth-two-li {
+    padding-left: 10px;
+    background: url(../images/sub/ico_depth_two_bullet.png) no-repeat 14px 13px;
+    /*border-bottom: 1px solid #c7c7c7;*/
+}
+/* 2Depth item */
+nav.sub-nav ul.depth-one ul.depth-two li.depth-two-li a.depth-two-item {
+    padding: 8px 14px 8px 14px;
+    line-height: 140%;
+    /*background: #f8f8f8;*/
+    font-size: 12px;
+    letter-spacing: -.6px;
+    font-weight: normal;
+    color: #d9d9d9;
+}
+nav.sub-nav ul.depth-one ul.depth-two li.depth-two-li a.depth-two-item:hover,
+nav.sub-nav ul.depth-one ul.depth-two li.depth-two-li a.depth-two-item:focus,
+nav.sub-nav ul.depth-one ul.depth-two li.depth-two-li a.depth-two-item:active {
+    color: #fff;
+}
+nav.sub-nav ul.depth-one ul.depth-two li.depth-two-li:hover {
+    background-color: #354053;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
+nav.sub-nav ul.depth-one ul.depth-two li.depth-two-li.on {
+    background: #354053;
+}
+nav.sub-nav ul.depth-one ul.depth-two li.depth-two-li.on a.depth-two-item {
+    color: #fff;
+    font-weight: normal;
+    font-family: 'NanumBarunGothicBold' !important;
+}
+nav.sub-nav ul.depth-one ul.depth-two li.depth-two-li a.depth-two-item .bullet {
+    color: #999;
+    margin-right: 4px;
+}

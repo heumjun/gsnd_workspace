@@ -1,0 +1,887 @@
+@charset "utf-8";
+
+/* 공통 */
+li.gallerylinodata{width:100% !important;border:none !important;border-top:3px solid #34241e !important;border-bottom:1px solid #bbb !important;padding:2% 0 3% 0 !important;text-align:center;}
+/*li.gallerylinodata{position:relative;float:left;display:block;border:1px solid #a4a4a4;width:48%;margin:0 1% 2% 1%;}*/
+li.gallerylinodata:hover{box-shadow:none !important;}
+
+/* 정보 */
+.infosection1{z-index:10;clear:both;position:relative;width:100%;min-height:0;margin-bottom:.5em;/*margin:1.357em 0;*/}
+.infosection1:before,
+.infosection1:after{content:'';display:block;clear:both;height:0;visibility:hidden;}
+.infosection1 .left{float:left;}
+.infosection1 .right{float:right;text-align:right;}
+.infosection1 .center{margin:0 auto;text-align:center;}
+.infosection1 .center .button{margin-left:3px;margin-right:3px;}
+
+/* 검색 */
+[class*='search1']{position:relative;margin:0 0 1em;overflow:hidden;width:100%;}
+[class*='search1'] fieldset{margin:0;}
+[class*='search1'] [class*='select']{float:left;width:29%;margin-left:.5%;margin-right:.5%;}
+[class*='search1'] .text1{float:left;width:47%;margin-left:.5%;margin-right:.5%;}
+[class*='search1'] .submit{float:left;width:21%;margin-left:.5%;margin-right:.5%;}
+*+html [class*='search1'] .submit{width:20%;}
+[class*='search1'] button[class*='search']{background:#34241e;color:#fff;border:transparent;}
+
+
+/* 상세보기 사진 갤러리 변경(공통) */
+.pic1list1{position:relative;margin:0 auto 1em;}
+.pic1list1 *{list-style:none;margin:0;padding:0;border:0;}
+.pic1list1 .figure{z-index:10;position:relative;width:100%;margin:0 auto 1em;overflow:hidden;}
+.pic1list1 .figure>.p1{border:1px solid #a4a4a4;background:#fff;overflow:hidden;background:url(../../../images/woodcraft/www/lib/ic1noimg1.png) no-repeat 50% 50%;min-height:150px;}
+.pic1list1 .figure>.p1>img{display:block;width:auto;height:auto;min-width:0;max-width:100%;min-height:0;max-height:924px;margin:0 auto;}
+.pic1list1 .mNum ul{margin:0 -8px 0 0;overflow:hidden;}
+.pic1list1 .mNum li{float:left;width:12.5%;}
+*+html .pic1list1 li{margin-right:-1px;}
+.pic1list1 li>a{display:block;position:relative;min-height:0;margin:0 8px 8px 0;padding-bottom:60%;border:4px solid #eee;text-decoration:none;transition: 200ms ease-out;}
+.pic1list1 li>a>.mf1{z-index:10;display:block;position:absolute;left:0;right:0;top:0;bottom:0;min-height:0;margin:-2px;text-align:center;overflow:hidden;border:1px solid #a4a4a4;}
+.pic1list1 li>a>.mf1>img{display:block;position:absolute;left:0;top:0;bottom:0;width:100%;height:auto;min-height:100%;vertical-align:top;}
+.pic1list1 li.on>a[href]{border-color:#678;overflow:hidden;}
+.pic1list1 li>a[href]:focus{border-color:#3399ff;overflow:hidden;}
+
+
+/* 목공예품 */
+.gallery1product1{width:100%;}
+.gallery1product1:after{content:'';display:table;clear:both;}
+.gallery1product1 ul{}
+.gallery1product1 ul li{position:relative;float:left;display:block;box-sizing:border-box;border:1px solid #a4a4a4;width:49%;margin:0 1% 2% 1%;background:#fff;}
+.gallery1product1 ul li:hover{border-color:#656565;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+.gallery1product1 ul li:nth-child(2n+1){clear:both;margin-left:0;}
+.gallery1product1 ul li:nth-child(2n){margin-right:0;}
+.gallery1product1 ul li a.a1{}
+.gallery1product1 ul li .f1{display:block;position:relative;width:100%;height:95px;overflow:hidden;background:#e6e6e6 url(../../../images/woodcraft/www/lib/ic1noimg1.png) no-repeat 50% 50%;}
+.gallery1product1 ul li .f1 img{width:100%;height:100%;}
+.gallery1product1 ul li .text1{display:block;overflow:hidden;padding:.5em;border-top:1px solid #c6c7c8;}
+.gallery1product1 ul li .text1 .t1{display:block;font-size:14px;line-height:1.666; color:#111;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;overflow:hidden;}
+.gallery1product1 ul li .text1 .t2{display:block;font-size:12px; color:#666;}
+
+
+/* 시설대관 */
+.gallery1sisul1{width:100%;}
+.gallery1sisul1:after{content:'';display:table;clear:both;}
+.gallery1sisul1 ul{}
+.gallery1sisul1 ul li{position:relative;float:left;display:block;border:1px solid #a4a4a4;width:48%;margin:0 1% 2% 1%;box-sizing:border-box;}
+.gallery1sisul1 ul li:hover{border-color:#656565;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+.gallery1sisul1 ul li:nth-child(2n+1){clear:both;margin-left:0;}
+.gallery1sisul1 ul li:nth-child(2n){margin-right:0;}
+.gallery1sisul1 ul li a.a1{}
+.gallery1sisul1 ul li .f1{display:block;position:relative;width:100%;height:95px;overflow:hidden;background:#e6e6e6 url(../../../images/woodcraft/www/lib/ic1noimg1.png) no-repeat 50% 50%;}
+.gallery1sisul1 ul li .f1 img{width:100%;height:100%;}
+.gallery1sisul1 ul li .text1{display:block;overflow:hidden;padding:.5em;border-top:1px solid #c6c7c8;}
+.gallery1sisul1 ul li .text1 .t1{display:block;font-size:14px;line-height:1.666; color:#111;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;overflow:hidden;}
+.gallery1sisul1 ul li .text1 .t2{display:block;font-size:12px; color:#666;}
+.gallery1sisul1 ul li .btns{display:block;width:100%;border-top:1px solid #a4a4a4;}
+.gallery1sisul1 ul li .btns:after{content:'';display:table;clear:both;}
+.gallery1sisul1 ul li .btns .btn1{float:left;display:inline-block;box-sizing:border-box;width:50%;text-align:center;color:#333;padding:.548em .786em;line-height:1.333;}
+.gallery1sisul1 ul li .btns .btn1.b1veiw1{border-right:1px solid #a4a4a4;}
+.gallery1sisul1 ul li .btns .btn1:hover{background-color:#363940;color:#fff;}
+
+/* 갤러리 */
+.gallery1bbs1{width:100%;}
+.gallery1bbs1:after{content:'';display:table;clear:both;}
+.gallery1bbs1 ul{}
+.gallery1bbs1 ul li{position:relative;float:left;display:block;border:1px solid #a4a4a4;width:48%;margin:0 1% 2% 1%;box-sizing:border-box;}
+.gallery1bbs1 ul li:hover{border-color:#656565;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+.gallery1bbs1 ul li:nth-child(2n+1){clear:both;margin-left:0;}
+.gallery1bbs1 ul li:nth-child(2n){margin-right:0;}
+.gallery1bbs1 ul li a.a1{}
+.gallery1bbs1 ul li .f1{display:block;position:relative;width:100%;height:95px;overflow:hidden;background:#e6e6e6 url(../../../images/woodcraft/www/lib/ic1noimg1.png) no-repeat 50% 50%;}
+.gallery1bbs1 ul li .f1 img{width:100%;height:100%;}
+.gallery1bbs1 ul li .text1{display:block;overflow:hidden;padding:.5em .5em .7em .5em;border-top:1px solid #c6c7c8;}
+.gallery1bbs1 ul li .text1 .t1{display:block;font-size:14px;line-height:1.666; color:#111;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;overflow:hidden;}
+.gallery1bbs1 ul li .text1 .t2{float:left;display:block;font-size:12px; color:#666;background:url(../../../images/woodcraft/www/lib/sep1s.png) no-repeat 0 50%;padding:3px 8px;}
+.gallery1bbs1 ul li .text1 .t2:first-child{background:transparent;padding-left:0px;}
+
+/* 페이징 */
+.pagination{clear:both;width:100%;margin:.666em auto 0;line-height:normal;text-align:center;}
+.pagination .m a{display:inline-block;width:23px;height:23px;margin:-.125em 0 .5em .125em;border:1px solid #ccc;background:#fff;color:#333;vertical-align:middle;white-space:nowrap;overflow:hidden;text-decoration:none !important;}
+.pagination .m.pages a{width:auto;min-width:1em;padding:0 6px;font-size:.923em;line-height:23px;}
+.pagination .m.pages.on a{background:#8d6148;color:#fff;}
+.pagination .m.control a .ic{display:block;font-family: Arial, sans-serif;font-size:23px;line-height:23px;}
+.pagination a:not([href]){cursor:default;}
+.pagination a.control:not([href]){opacity:.4;}
+
+/* 공지사항 - 리스트 */
+.bbs_list {margin-bottom:3%;}
+.bbs_list .bbs_num{display:none;}
+.bbs_list .bbs_title{width:auto;}
+.bbs_list .bbs_author{width:4em;}
+.bbs_list .bbs_date{width:6em;}
+.bbs_list .bbs_attach{display:none;}
+.bbs_list .bbs_view{display:none;}
+
+/* 공지사항 - 글쓰기 */
+.bbs_write {}
+.bbs_write table.t1{table-layout:fixed;border-top:none;}
+.bbs_write table.t1>*>tr:first-child>td,
+.bbs_write table.t1>*>tr:first-child>th{border-top:3px solid #34241e;}
+.bbs_write table.t1>*>tr>td{text-align:left;padding:.5em .75em;}
+.bbs_write table.t1>*>tr>th{background-color:#ddd;vertical-align:middle !important;padding:.5em .75em;}
+.explain {font-size:.9em;color:#666;}
+/*
+.bbs_write table.t1>*>tr>th,
+.bbs_write table.t1>*>tr>td{min-height:2.571em;vertical-align:middle;}
+*/
+.bbs_write table.t1>*>tr>th{padding:1.2em 1.4em;}
+.bbs_write table.t1>*>tr>td{vertical-align:middle !important;}
+
+
+/* 공지사항 - 상세보기 */
+.bbs_view{clear:both;position:relative;border-top:3px solid #34241e;border-bottom:1px solid #34241e;margin-bottom:5px;}
+.bbs_view>.h1:first-child{margin:0;padding:.666em 0;color:#333;font-weight:600;font-size:1.1em;line-height:1.333;}
+.bbs_view .info1{margin:0 0 -1px 0;border-top:1px solid #34241e;border-bottom:1px solid #bbbbbb;background:#fff;overflow:hidden;}
+.bbs_view .info1 dl{list-style:none;margin:0;padding:.333em 0;color:#666;font-size:.929em;overflow:hidden;}
+.bbs_view .info1 dt{float:left;margin:0;padding:0;font-size:1em;overflow:hidden;width:0;text-indent:-9999px;color:#333;}
+.bbs_view .info1 dd{float:left;margin:0;padding:3px 8px 3px 8px;background:url(../../../images/woodcraft/www/lib/sep1s.png) no-repeat 0 50%;}
+.bbs_view .info1 dl>dt:first-child{padding:0;}
+.bbs_view .info1 dl>dt:first-child+dd{padding-left:0;background:none;}
+
+.bbs_view .attach1{font-size:.923em;}
+.bbs_view .attach1 ul{list-style:none;margin:0;padding:.75em 0;overflow:hidden;}
+.bbs_view .attach1 li{min-height:0;margin:0;padding:3px 3.333em 3px 0;white-space:nowrap;overflow:hidden;}
+.bbs_view .attach1 li .filename{float:left;/*width:100%;*/height:20px;color:#666;line-height:20px;letter-spacing:0;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;overflow:hidden;}
+.bbs_view .attach1 li a i{display:inline-block;width:16px;height:16px;background:url() 50% 50% no-repeat;}
+.bbs_view .attach1 li a i.ic_doc{background:url(../../../images/woodcraft/www/template/ic16_doc.png) no-repeat;}
+.bbs_view .attach1 li a i.ic_file{background:url(../../../images/woodcraft/www/template/ic16_file.png) no-repeat;}
+.bbs_view .attach1 li a i.ic_gif{background:url(../../../images/woodcraft/www/template/ic16_gif.png) no-repeat;}
+.bbs_view .attach1 li a i.ic_html{background:url(../../../images/woodcraft/www/template/ic16_html.png) no-repeat;}
+.bbs_view .attach1 li a i.ic_hwp{background:url(../../../images/woodcraft/www/template/ic16_hwp.png) no-repeat;}
+.bbs_view .attach1 li a i.ic_jpg{background:url(../../../images/woodcraft/www/template/ic16_jpg.png) no-repeat;}
+.bbs_view .attach1 li a i.ic_pdf{background:url(../../../images/woodcraft/www/template/ic16_pdf.png) no-repeat;}
+.bbs_view .attach1 li a i.ic_ppt{background:url(../../../images/woodcraft/www/template/ic16_ppt.png) no-repeat;}
+.bbs_view .attach1 li a i.ic_txt{background:url(../../../images/woodcraft/www/template/ic16_txt.png) no-repeat;}
+.bbs_view .attach1 li a i.ic_xls{background:url(../../../images/woodcraft/www/template/ic16_xls.png) no-repeat;}
+.bbs_view .attach1 li a i.ic_zip{background:url(../../../images/woodcraft/www/template/ic16_zip.png) no-repeat;}
+/* 바로보기 추가 (06.20) */
+.bbs_view .attach1 .b1{float:left;position:relative;min-width:46px;height:23px;padding:0 5px 0 30px;border:1px solid #757575;background:#757575;color:#fff !important;line-height:21px;margin-left:5px;}
+.bbs_view .attach1 .b1 .ic1{float:left;position:absolute;left:0;top:50%;width:20px;height:20px;margin:-10px 0 0 9px;background:url(../../../images/woodcraft/www/template/ic1s.png) no-repeat;overflow:hidden;text-indent:-9999px;}
+.bbs_view .attach1 .b1:hover,
+.bbs_view .attach1 .b1:focus{background:#000;text-decoration:none;}
+.bbs_view .attach1 .b1.quickview .ic1{background-position:-50px 0;}
+.bbs_view .attach1 .b1.download .ic1{background-position:-100px 0;}
+
+
+.bbs_view .substance{padding:2em 0;border-top:1px solid #bbbbbb;}
+.bbs_view .substance img,
+.bbs_view .substance object,
+.bbs_view .substance embed,
+.bbs_view .substance video,
+.bbs_view .substance audio{max-width:100%;height:auto;border:0;vertical-align:top;}
+
+/* 목공예인소개 */
+.artist1bbs1{width:100%;}
+.artist1bbs1:after{content:'';display:table;clear:both;}
+.artist1bbs1 ul{}
+.artist1bbs1 ul li{position:relative;float:left;display:block;border:1px solid #a4a4a4;box-sizing:border-box;padding:1em;margin-bottom:2%;}
+.artist1bbs1 ul li .f1{position:absolute;display:block;overflow:hidden;border: 1px solid #a9a9a9;background:#e6e6e6 url(../../../images/woodcraft/www/lib/ic1noimg1.png) no-repeat 50% 50%;}
+.artist1bbs1 ul li .f1 img{width:100%;}
+.artist1bbs1 ul li .text1{display:block;padding:.2em .5em;}
+.artist1bbs1 ul li .text1 .t1{display:block;color:#111;}
+.artist1bbs1 ul li .text1 .t3{display:block;color:#333;margin:-.2em 0 .7em 0;}
+.artist1bbs1 ul li .text1 .t2{display:block;color:#666;margin:.2em 0;background:url(../../../images/woodcraft/www/lib/span1bg.png) 0 .6em no-repeat;}
+.artist1bbs1 ul li .text1 .t2 .tit{color:#111;}
+.artist1bbs1 ul li .text1 .t2 .tit:after{content:'';display:inline-block;background:url(../../../images/woodcraft/www/lib/sep1s.png) 50% 50% no-repeat;width:20px;height:10px;vertical-align:middle;}
+.artist1bbs1 ul li .text1 .t2 a{color:#666;}
+.artist1bbs1 ul li .text1 .t2 a.ic_new:after{content:'';display:inline-block;width:18px;height:11px;background:url(../../../images/woodcraft/www/lib/ic11newwindow.png) 100% 50% no-repeat;}
+.artist1bbs1 ul li{width:100%;min-height:165px;}
+.artist1bbs1 ul li .f1{width:100px;height:130px;}
+.artist1bbs1 ul li .text1{margin-left:110px;}
+.artist1bbs1 ul li .text1 .t1{font-size:14px;margin-bottom:.333em;}
+.artist1bbs1 ul li .text1 .t2{font-size:13px;padding-left:8px;}
+.artist1bbs1 ul li .text1 .t2 .tit{display:none;}
+.artist1bbs1 ul li:hover{border-color:#656565;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+
+/* 목공예인 (메인사용) */
+.gallery1artist1{width:100%;}
+.gallery1artist1:after{content:'';display:table;clear:both;}
+.gallery1artist1 ul{}
+.gallery1artist1 ul li{position:relative;float:left;display:block;box-sizing:border-box;border:1px solid #a4a4a4;width:49%;margin:0 1% 2% 1%;background:#fff;}
+.gallery1artist1 ul li:hover{border-color:#656565;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+.gallery1artist1 ul li:nth-child(2n+1){clear:both;margin-left:0;}
+.gallery1artist1 ul li:nth-child(2n){margin-right:0;}
+.gallery1artist1 ul li a.a1{padding-top:40px;}
+.gallery1artist1 ul li .f1{display:block;position:relative;width:100%;overflow:hidden;}
+.gallery1artist1 ul li .f1 img{width:100%;}
+.gallery1artist1 ul li .text1{display:block;overflow:hidden;padding:.5em .5em .7em .5em;border-top:1px solid #c6c7c8;}
+.gallery1artist1 ul li .text1 .t1{display:block;font-size:14px;line-height:1.666; color:#111;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;overflow:hidden;}
+.gallery1artist1 ul li .text1 .t2{display:block;font-size:12px; color:#666;}
+.gallery1artist1 ul li .a2{display:block;background:#e6e6e7;line-height:1.666;padding:.5em .5em .7em .5em;color:#787878;font-size:11px;cursor: pointer;}
+.gallery1artist1 ul li .a2 i.ic1{display: inline-block;width:15px;height:15px;margin-right:5px;background:url(../../../images/woodcraft/www/lib/ic1tel1.png) 50% 50% no-repeat;vertical-align:middle;}
+
+
+
+/* 장바구니 3단계 */
+.cart_cnb{}
+.cart_cnb:after{content:'';display:table;clear:both;margin-bottom:2%;}
+.cart_cnb ul{}
+.cart_cnb ul li{float:left;box-sizing:border-box;width:25%;text-align:center;border:1px solid #a4a4a4;margin-left:-1px;}
+.cart_cnb ul li a{display:block;padding:.5em;color:#333;font-weight:bold;}
+.cart_cnb ul li.on {background:#e34a44;border-color:#e34a44;}
+.cart_cnb ul li.on a{color:#fff;}
+.cart_cnb ul li i{background:url() 50% 50% no-repeat;background-size:contain;vertical-align:middle;}
+.cart_cnb ul li i.ic1{background-image:url(../../../images/woodcraft/www/lib/ic1cartcnb1@x2.png);}
+.cart_cnb ul li i.ic2{background-image:url(../../../images/woodcraft/www/lib/ic1cartcnb2@x2.png);}
+.cart_cnb ul li i.ic3{background-image:url(../../../images/woodcraft/www/lib/ic1cartcnb3@x2.png);}
+.cart_cnb ul li i.ic4{background-image:url(../../../images/woodcraft/www/lib/ic1cartcnb4@x2.png);}
+.cart_cnb ul li.on i.ic1{background-image:url(../../../images/woodcraft/www/lib/ic1cartcnb1on@x2.png);}
+.cart_cnb ul li.on i.ic2{background-image:url(../../../images/woodcraft/www/lib/ic1cartcnb2on@x2.png);}
+.cart_cnb ul li.on i.ic3{background-image:url(../../../images/woodcraft/www/lib/ic1cartcnb3on@x2.png);}
+.cart_cnb ul li.on i.ic4{background-image:url(../../../images/woodcraft/www/lib/ic1cartcnb4on@x2.png);}
+.cart_cnb ul li .t1{display:none;}
+.cart_cnb ul li i{display:block;width:25px;height:25px;margin:0 auto;}
+
+.cart_list{}
+.cart_list .cart_title{width:auto;}
+.cart_list td.cart_title{text-align:left;}
+.cart_list td{vertical-align:middle;}
+.cart_list input[type='text']{text-align:center;}
+.cart_list a.a1{position:relative;display:block;}
+.cart_list a .f1{overflow:hidden;border:1px solid #a9a9a9;display:block;width:30px;height:30px;}
+.cart_list a .f1 img{width:90%;padding:5%;}
+.cart_list a .text1{display:table-cell;vertical-align:middle;}
+.cart_list .cart_price{width:3em;}
+.cart_list .cart_delivery{width:3em;}
+.cart_list .cart_btn{display:none;width:3em;}
+.cart_list input[type='text'],
+.cart_list .button{font-size:12px !important;}
+
+.cart_list .total_price{position:relative;border:4px solid #34241e;padding:1em;color:#111;border-radius:5px;margin:2% 0;text-align:right;}
+.cart_list .total_price i{display:inline-block;vertical-align:middle;background:url() 50% 50% no-repeat;background-size:contain;margin-right:5px;}
+.cart_list .total_price i.ic1{position:absolute;top:50%;left:.82em;background-image:url(../../../images/woodcraft/www/lib/ic1cartplus1@x2.png);}
+.cart_list .total_price i.ic2{background-image:url(../../../images/woodcraft/www/lib/ic1cartsum1@x2.png);}
+.cart_list .total_price em{color:#d03032;}
+.cart_list .order{background-color:#35241d;border-color:#35241d;color:#fff;}
+.cart_list .total_price{font-size:13px;}
+.cart_list .total_price em{font-size:15px;}
+.cart_list .total_price i{width:20px;height:20px;}
+.cart_list .total_price i.ic1{margin-top:-10px;}
+.cart_list .btn_group .button{font-size:13px !important;}
+
+/* 주문하기 */
+.order_td_w1{width:20%;}
+.order_total_price{font-size:1.4em;color:#d03032 !important;font-weight:bold;}
+.order_list {}
+.order_list td{vertical-align:middle;}
+.order_list i{display:block;width:1.82em;height:1.82em;background:url() no-repeat;background-size:contain;}
+.order_list i.ic1{background-image:url(../../../images/woodcraft/www/lib/ic1cartplus1@x2.png);}
+.order_list i.ic2{background-image:url(../../../images/woodcraft/www/lib/ic1cartsum1@x2.png);}
+.order_list i.ic3{background-image:url(../../../images/woodcraft/www/lib/ic1cartminus1@x2.png);}
+
+/* 예약 (신청) */
+.order_list{}
+.order_list .wrap1f1t1{overflow:hidden;}
+.order_list .wrap1f1t1>.f1{float:left;width:18%;border: 1px solid #a9a9a9}
+.order_list .wrap1f1t1>.f1>img{width:90%;padding:5%;}
+.order_list .wrap1f1t1>.text1{float:right;width:80%;font-size:.929em;line-height:1.5;}
+.order_list .wrap1f1t1>.text1 ul,
+.order_list .wrap1f1t1>.text1 li{margin:0;}
+
+
+
+/* 예약하기 (달력) */
+.res1cal1{position:relative;width:100%;margin:1em auto;}
+.res1cal1 .month{position:relative;width:4em;margin:0 auto .333em;padding:0 1.333em;font-size:2.571em;line-height:1.333;text-align:center;}
+.res1cal1 .month .h1{margin:0;padding:0;background:transparent;}
+.res1cal1 .month .em1{color:#4b7716;}
+.res1cal1 .month a.b1{float:left;position:absolute;top:50%;width:36px;height:36px;margin:-18px 0 0 0;border-radius:50%;background:#707070;line-height:1;vertical-align:middle;text-decoration:none;}
+.res1cal1 .month a.prev{left:0;}
+.res1cal1 .month a.next{right:0;}
+.res1cal1 .month a.b1>.ic1{float:left;width:30px;height:30px;margin:3px;background:url() no-repeat center center;background-size:contain;}
+.res1cal1 .month a.prev>.ic1{background-image:url(../../../images/woodcraft/www/lib/ic1cal1prev1.png);}
+.res1cal1 .month a.next>.ic1{background-image:url(../../../images/woodcraft/www/lib/ic1cal1next1.png);}
+.res1cal1 table.t1cal1{clear:both;width:100%;margin:0;border:0;border-collapse:collapse;border-top:3px solid #000;border-bottom:1px solid #000;line-height:normal;}
+.res1cal1 table.t1cal1 th,
+.res1cal1 table.t1cal1 td{width:14.286%;padding:0;border:1px solid #ccc;background:#f7f7f7;color:#666;vertical-align:top;}
+.res1cal1 table.t1cal1 tr.day>th{height:1em;padding:.866em .4em;text-align:center;color:#333;border:1px solid #000;border-width:1px 0 1px 0;}
+.res1cal1 table.t1cal1 tbody>tr:first-child>td{border-top-color:#000;}
+.res1cal1 table.t1cal1 tr.day .sat,
+.res1cal1 table.t1cal1 tr .sat .date{color:#00b;}
+.res1cal1 table.t1cal1 tr.day .sun,
+.res1cal1 table.t1cal1 tr .sun .date,
+.res1cal1 table.t1cal1 tr.day .hol,
+.res1cal1 table.t1cal1 tr .hol .date{color:#e00;}
+.res1cal1 table.t1cal1 td{background:#fff;}
+.res1cal1 table.t1cal1 td>.cell{display:block;position:relative;min-height:40px;padding:0 .2em;overflow:hidden;}
+.res1cal1 table.t1cal1 td>.cell .deco1{float:left;position:absolute;left:50%;bottom:0;width:0;height:0;margin:0 -5px;border:6px solid transparent;border-bottom-color:#333;}
+.res1cal1 table.t1cal1 td .date{float:left;margin:.333em;color:#000;font-size:1em;}
+.res1cal1 table.t1cal1 td .menu{clear:both;margin:.5em 0;overflow:hidden;}
+.res1cal1 table.t1cal1 td .menu ul{clear:both;list-style:none;margin:0;padding:0;}
+.res1cal1 table.t1cal1 td .menu li{float:left;width:100%;margin:0;padding:0;}
+.res1cal1 table.t1cal1 td .menu li>a{display:block;padding:.167em;color:#333;text-decoration:none;overflow:hidden;}
+.res1cal1 table.t1cal1 td .menu li>a>.ic1{display:inline-block;width:20px;height:21px;margin:0 .167em;padding-right:1px;border-radius:21px;background:#666;color:#fff;font-weight:normal;font-size:12px;line-height:21px;text-align:center;}
+.res1cal1 table.t1cal1 td .menu li>a.st0>.ic1{background:#380;}
+.res1cal1 table.t1cal1 td .menu li>a.st1>.ic1{background:#37c;}
+.res1cal1 table.t1cal1 td .menu li>a.st2>.ic1{background:#444;}
+.res1cal1 table.t1cal1 td .menu li>a.st3>.ic1{background:#5758cc;}
+.res1cal1 table.t1cal1 td .menu li>a.st4>.ic1{background:#e00;}
+.res1cal1 table.t1cal1 td .menu li>a>.t1{display:inline;color:#666;font-size:13px;line-height:21px;}
+.res1cal1 table.t1cal1 td .menu li>a>.t2{display:block;font-size:15px;line-height:21px;text-align:right;}
+.res1cal1 table.t1cal1 td .menu li>a:hover,
+.res1cal1 table.t1cal1 td .menu li>a:focus{background:#f1f5f9;border-radius:4px;}
+.res1cal1 table.t1cal1 td .menu li>a.on{background:#000;color:#fff;border-radius:4px;}
+.res1cal1 .note1{padding:.8em 0;overflow:hidden;}
+.res1cal1 .note1 .menu{display:block;overflow:hidden;}
+.res1cal1 .note1 .menu ul{overflow:hidden;}
+.res1cal1 .note1 .menu li{float:left;}
+.res1cal1 .note1 .menu li>a{display:block;padding:.167em;text-decoration:none !important;overflow:hidden;}
+.res1cal1 .note1 .menu li>a>.ic1{float:left;width:20px;height:21px;margin:0 .167em;padding-right:1px;border-radius:21px;background:#666;color:#fff;font-weight:normal;font-size:12px;line-height:21px;text-align:center;}
+.res1cal1 .note1 .menu li>a.st0>.ic1{background:#380;}
+.res1cal1 .note1 .menu li>a.st1>.ic1{background:#37c;}
+.res1cal1 .note1 .menu li>a.st2>.ic1{background:#444;}
+.res1cal1 .note1 .menu li>a.st3>.ic1{background:#5758cc;}
+.res1cal1 .note1 .menu li>a.st4>.ic1{background:#e00;}
+.res1cal1 .note1 .menu li>a>.t1{float:left;height:21px;line-height:21px;text-decoration:none !important;}
+
+
+/* 상단 알림박스 */
+.notice1{position:relative;padding:1em;border:2px solid #ccc;vertical-align:middle;}
+.notice1:after{content:'';display:table;clear:both;}
+.notice1 i{display:none;width:90px;height:90px;background:url(../../../images/woodcraft/www/lib/ic1notice1@x2.png) no-repeat;background-size:contain;}
+.notice1 i.ic2{background-image:url(../../../images/woodcraft/www/lib/ic1notice2@x2.png) !important;}
+.notice1 ul li{line-height:1.5;background:url(../../../images/woodcraft/www/lib/li1bg.png) no-repeat 0 10px;padding-left:10px;}
+
+/* 환영메시지 */
+.complete1{position:relative;box-sizing:border-box;margin:1.333em auto;padding:3% 6%;border:2px solid #cccccc;background:#fff;}
+.complete1 .wrap1{padding:20px 0;}
+.complete1 i{display:inline-block;width:100px;height:100px;margin:0 auto;background:url() no-repeat center center;background-size:contain;text-indent:-9999px;overflow:hidden;}
+.complete1 .ic1{background-image:url(../../../images/woodcraft/www/lib/ic1complete1@x2.png);}
+.complete1 .ic2{background-image:url(../../../images/woodcraft/www/lib/ic1complete2@x2.png);}
+.complete1 .ic3{background-image:url(../../../images/woodcraft/www/lib/ic1complete3@x2.png);}
+.complete1 .txt1{display:block;font-size:1.666em;color:#111;font-weight:600;}
+.complete1 .txt2{display:block;font-size:1em;color:#333;margin:1.2em 0 .5em 0;}
+.complete1 .txt3{display:block;font-size:1em;margin:.32em 0 1.32em 0;line-height:1.5;}
+.complete1 .bbs_write{padding-top:1%;}
+
+/* 회원가입 4단계 */
+.join_cnb{}
+.join_cnb:after{content:'';display:table;clear:both;margin-bottom:2%;}
+.join_cnb ul{}
+.join_cnb ul li{float:left;box-sizing:border-box;width:25%;text-align:center;border:1px solid #a4a4a4;margin-left:-1px;}
+.join_cnb ul li a{display:block;padding:.5em;color:#333;font-weight:bold;}
+.join_cnb ul li.on {background:#e34a44;border-color:#e34a44;}
+.join_cnb ul li.on a{color:#fff;}
+.join_cnb ul li i{background:url() 50% 50% no-repeat;background-size:contain;vertical-align:middle;}
+.join_cnb ul li i.ic1{background-image:url(../../../images/woodcraft/www/lib/ic1joincnb1@x2.png);}
+.join_cnb ul li i.ic2{background-image:url(../../../images/woodcraft/www/lib/ic1joincnb2@x2.png);}
+.join_cnb ul li i.ic3{background-image:url(../../../images/woodcraft/www/lib/ic1joincnb3@x2.png);}
+.join_cnb ul li i.ic4{background-image:url(../../../images/woodcraft/www/lib/ic1joincnb4@x2.png);}
+.join_cnb ul li.on i.ic1{background-image:url(../../../images/woodcraft/www/lib/ic1joincnb1on@x2.png);}
+.join_cnb ul li.on i.ic2{background-image:url(../../../images/woodcraft/www/lib/ic1joincnb2on@x2.png);}
+.join_cnb ul li.on i.ic3{background-image:url(../../../images/woodcraft/www/lib/ic1joincnb3on@x2.png);}
+.join_cnb ul li.on i.ic4{background-image:url(../../../images/woodcraft/www/lib/ic1joincnb4on@x2.png);}
+.join_cnb ul li .t1{display:none;}
+.join_cnb ul li i{display:block;width:25px;height:25px;margin:0 auto;}
+
+/* 약관 */
+.join_agree_box1 {border:1px solid #ccc;height:16.666em;padding: .666em 1em;overflow: hidden;overflow-y: auto;}
+.join_agree_box1 p{line-height:1.5;}
+.join_agree_check{border:1px solid #ccc;margin-top:-1px;padding: .666em 1em;background:#dddddd;}
+
+/* 대관신청서 약관 */
+.sisul1_agree_box1 {border:1px solid #ccc;height:16.666em;padding: .666em 1em;overflow: hidden;overflow-y: auto;margin:10px 0 5px 0;}
+.sisul1_agree_box1 p{line-height:1.5;}
+
+/* 실명인증 */
+.login1jumin{position:relative;box-sizing:border-box;margin:1.333em auto;/*padding:3% 6%;*/border:2px solid #cccccc;}
+.login1jumin:after{content:'';display:block;clear:both;height:0;visibility:hidden;}
+.login1jumin .wrap1{width:100%;margin:0 auto;}
+.login1jumin .em{padding:.5em 0 1em 0;}
+.login1jumin i{display:block;background:url() 50% 50% no-repeat;background-size:contain;vertical-align:middle;margin:0 auto;}
+.login1jumin .login1c1 i.ic1{background-image:url(../../../images/woodcraft/www/lib/ic1login1@x2.png);}
+.login1jumin .login1c2 i.ic1{background-image:url(../../../images/woodcraft/www/lib/ic1login2@x2.png);}
+.login1jumin i{width:100px;height:100px;}
+.login1c1, .login1c2{box-sizing:border-box;text-align:center;padding:1em 0;}
+
+
+/* 로그인 */
+.login2{position:relative;box-sizing:border-box;margin:0 auto;border:1px solid #a4a4a4;}
+.login2:after{content:'';display:block;clear:both;height:0;visibility:hidden;}
+.login2 .wrap1{width:100%;margin:0 auto;}
+.login2c1{box-sizing:border-box;padding:0 0 5% 0;}
+.login2c2{box-sizing:border-box;padding:0 0 1% 0;}
+.login2 h2{display:block;padding:0;margin:0 !important;background:#e3e3e3;font-weight:600;line-height:2;font-size:1.3em;color:#111;text-align:center;color:#fff;}
+.login2c1 h2{background:#8d6148;}
+.login2c2 h2{background:#34241d;}
+.login2 h3{font-size:1.1em;color:#333;margin-top:5px;}
+.login2 a{color:#666;}
+.login2 i{display:block;background:url() 50% 50% no-repeat;background-size:contain;vertical-align:middle;margin:0 auto;margin-top:15px;width:60px;height:60px;}
+.login2 i.ic1{background:url(../../../images/woodcraft/www/lib/ic1login-con1@x2.png);}
+.login2 i.ic2{background-image:url(../../../images/woodcraft/www/lib/ic1login1@x2.png);}
+.login2 i.ic3{background-image:url(../../../images/woodcraft/www/lib/ic1login2@x2.png);}
+.login2 .login-con1{width:90%;margin:5px auto;}
+.login2 .login-con1 input,
+.login2 .login-con1 .button{width:100%;}
+.login2 .login-con1 .button{font-weight:bold;}
+.login2 .login-con2{width:90%;margin:5px auto;text-align:center;margin-top:2%;}
+.login2 .login-con2 a{display:inline-block;background:url(../../../images/woodcraft/www/lib/ic1login-con1fn1s.png) 0 53% no-repeat;padding:0 10px;line-height:1.333;}
+.login2 .login-con2 a:first-child{background:none;}
+.login2 .login-con3 {position:relative;padding:10px 10px 10px 100px;}
+.login2 .login-con3 i{position:absolute;left:20px;top:50%;margin-top:-40px;}
+.login2 .login-con3 p.t1{padding:2% 0 1% 0;}
+.login2 .login-con3 p.em{padding:1% 0 2% 0;}
+.login2 .login-con3 .btns .button{background:#333;border-color:#333;color:#fff;}
+
+.login2txt1{border:1px solid #a4a4a4;padding:5px 15px 15px 15px; border-top:none;}
+.login2txt1 h3{font-size:1.1em !important;}
+.login2txt1 ul{margin-top:.72em;}
+.login2txt1 a{color:#666;}
+
+/* 아이디 찾기 */
+.findid{position:relative;box-sizing:border-box;margin:1.333em auto;padding:3% 6%;border:2px solid #cccccc;background:#fff;text-align:center;}
+.findid .wrap1{}
+.findid i{display:inline-block;width:100px;height:100px;margin:0 auto;background:url() no-repeat center center;background-size:contain;text-indent:-9999px;overflow:hidden;}
+.findid .ic1{background-image:url(../../../images/woodcraft/www/lib/ic1findid1@x2.png);}
+.findid .txt1{display:block;font-size:1.666em;color:#111;font-weight:600;}
+.findid .txt2{display:block;font-size:1em;line-height:1.5;}
+.findid .btns{padding:10px 0 20px 0;}
+.findid .bbs_write{padding-top:1%;}
+
+/* 비밀번호 찾기 */
+.findpassword{position:relative;box-sizing:border-box;margin:1.333em auto;padding:3% 6%;border:2px solid #cccccc;background:#fff;}
+.findpassword .wrap1{padding:20px 0;}
+.findpassword i{display:inline-block;width:100px;height:100px;margin:0 auto;background:url() no-repeat center center;background-size:contain;text-indent:-9999px;overflow:hidden;}
+.findpassword .ic1{background-image:url(../../../images/woodcraft/www/lib/ic1findpassword1@x2.png);}
+.findpassword .txt1{display:block;font-size:1.666em;color:#111;font-weight:600;}
+.findpassword .txt2{display:block;font-size:1em;margin:.32em 0 1.32em 0;line-height:1.5;}
+.findpassword .bbs_write{padding-top:1%;}
+
+/* 회원정보 수정 */
+.myinfo1q1out{border:2px solid #cccccc;padding:5px 15px;margin-top:3%;}
+.myinfo1q1out:after{content:'';display:table;clear:both;}
+.myinfo1q1out .q1{float:left;width:50%;}
+.myinfo1q1out ul{margin:10px 5px;}
+.myinfo1q1out .btns{float:right;width:50%;text-align:right;}
+
+/* 회원탈퇴 */
+.mem1out{position:relative;box-sizing:border-box;margin:1.333em auto;padding:3% 6%;border:2px solid #cccccc;background:#fff;}
+.mem1out .wrap1{padding:20px 0;}
+.mem1out i{display:inline-block;width:100px;height:100px;margin:0 auto;background:url() no-repeat center center;background-size:contain;text-indent:-9999px;overflow:hidden;}
+.mem1out .ic1{background-image:url(../../../images/woodcraft/www/lib/ic1mem1out@x2.png);}
+.mem1out .txt1{display:block;font-size:1.666em;color:#111;font-weight:600;}
+.mem1out .txt2{display:block;font-size:1em;margin:.32em 0 1.32em 0;line-height:1.5;}
+.mem1out .bbs_write{padding-top:1%;}
+
+/* 교육/체험 리스트 */
+.edu1list1 {border-top:3px solid #34241e;}
+.edu1list1 ul{margin-bottom:3%;}
+.edu1list1 li{position:relative;padding:2% 0;border-bottom:1px solid #bbb;}
+.edu1list1 li a{position:relative;display:block;}
+.edu1list1 li .edu1item1{display:block;}
+.edu1list1 li .edu1item1:after{content:'';display:table;clear:both;}
+.edu1list1 .f1{display:inline-block;width:100%;border:1px solid #a4a4a4;}
+.edu1list1 .f1 img{width:100%;}
+.edu1list1 .texts{display:inline-block;margin-right:70px;}
+.edu1list1 .texts .c1{display:block;padding-bottom:0.5%;}
+.edu1list1 .texts .t1{display:block;font-size:1.666em;color:#111;font-weight:600;}
+.edu1list1 .texts .t2{display:block;color:#666;padding:1% 0 0.5% 0;}
+.edu1list1 .texts .t3{display:block;}
+.edu1list1 .texts .t3 .t3t1{display:inline-block;background:url(../../../images/woodcraft/www/lib/sep1s.png) no-repeat 0 50%;padding:1px 8px 1px 8px;color:#666;}
+.edu1list1 .texts .t3 .t3t1:first-child{background:none;padding-left:0;}
+.edu1list1 .now{display:inline-block;width:100%;}
+.edu1list1 .now{position:absolute;right:0;bottom:15px;width:65px;text-align:center;}
+.edu1list1 .now .sting{display:inline-block;width:65px;height:65px;line-height:65px;border-radius:9999px;padding:0;text-align:center;color:#fff;font-weight:600;}
+.edu1list1 .now .st1{background-color:#e34945;}
+.edu1list1 .now .st2{background-color:#34241e;}
+.edu1list1 .now .st3{background-color:#1c9fbc}
+.edu1list1 .now .st4{background-color:#146cd0;}
+.edu1list1 .now .st5{background-color:#1b9768;}
+.edu1list1 .now .st6{background-color:#f37720;}
+.edu1list1 li .btns{display:block;padding-top:5px;}
+.edu1list1 li .btns a{display:inline-block;}
+
+#edu1 .division{}
+#edu1 .division:after{content:'';display:table;clear:both;}
+#edu1 .division .division-tit {color:#111;font-weight:bold;background:url(../../../images/woodcraft/www/lib/h4bg.png) no-repeat 0 50%;padding-left:14px;margin: 10px 0;font-size:14px;}
+
+
+/* 교육/체험 상세보기 */
+.edu1view1{margin-bottom:3%;}
+.edu1view1 .info1{}
+.edu1view1 .info1:after{content:'';display:table;clear:both;}
+.edu1view1 .f1{display:block;width:100%;}
+.edu1view1 .texts{position:relative;display:block;margin-top:10px;}
+.edu1view1 .texts .c1{display:block;padding-bottom:1%;}
+.edu1view1 .texts .t1{display:block;font-size:1.666em;color:#111;font-weight:600;}
+.edu1view1 .texts .t2{border:1px solid #bbbbbb;padding:2% 3% 2% 3%;margin:1% 0;box-sizing:border-box;border-top:3px solid #34241e;}
+.edu1view1 .texts ul li span{display:inline-block;background:url(../../../images/woodcraft/www/lib/sep1s.png) no-repeat 100% 50%;padding:1px 8px 1px 0;font-weight:600;}
+.edu1view1 .texts ul li .tel{color:#666;}
+
+.edu1view1 .substance{border:1px solid #bbb;padding:2%;}
+.edu1view1 .substance img,
+.edu1view1 .substance object,
+.edu1view1 .substance embed,
+.edu1view1 .substance video,
+.edu1view1 .substance audio{max-width:100%;height:auto;border:0;vertical-align:top;}
+
+.edu1view1 .now{position:absolute;left:0;top:-5px;width:4.2em;}
+.edu1view1 .now .sting{display:inline-block;width:4.2em;height:4.2em;line-height:4em;border-radius:9999px;padding:0;text-align:center;color:#fff;font-weight:600;}
+.edu1view1 .now .st1{background-color:#e34945;}
+.edu1view1 .now .st2{background-color:#34241e;}
+.edu1view1 .now .st3{background-color:#1c9fbc}
+.edu1view1 .now .st4{background-color:#146cd0;}
+.edu1view1 .now .st5{background-color:#1b9768;}
+.edu1view1 .now .st6{background-color:#f37720;}
+.edu1view1 .edu1tit{padding-left:5em;}
+.edu1view1 .edu1tit.readonly{padding-left:0;}
+.edu1view1 .txt1pad1{padding:20px 0;}
+
+/* 목공예품 상세보기 */
+.product1view1{margin-bottom:3%;}
+.product1view1 .info1{}
+.product1view1 .info1:after{content:'';display:table;clear:both;}
+.product1view1 .f1{display:block;width:100%;}
+.product1view1 .texts{display:block;margin:10px 0;}
+.product1view1 .btns{display:block;margin:10px 0;}
+.product1view1 .texts .t1{display:block;font-size:1.666em;color:#111;font-weight:600;}
+.product1view1 .texts .t2{display:block;border:1px solid #bbbbbb;padding:2% 3% 2% 3%;margin:1% 0;border-top:3px solid #34241e;}
+.product1view1 .texts ul li span{display:inline-block;background:url(../../../images/woodcraft/www/lib/sep1s.png) no-repeat 100% 50%;padding:1px 8px 1px 0;font-weight:600;}
+.product1view1 .substance{border:1px solid #bbb;padding:2%;}
+.product1view1 .substance img,
+.product1view1 .substance object,
+.product1view1 .substance embed,
+.product1view1 .substance video,
+.product1view1 .substance audio{max-width:100%;height:auto;border:0;vertical-align:top;}
+.product1view1 .btns .button{background:url() no-repeat 23px 50%;color:#fff;padding-left:50px;padding-right:30px;}
+.product1view1 .btns .b1buy{background-color:#e34a44; background-image:url(../../../images/woodcraft/www/lib/ic1b1buy1.png);border-color:#e34a44;}
+.product1view1 .btns .b1cart{background-color:#34241e;background-image:url(../../../images/woodcraft/www/lib/ic1b1cart1.png);border-color:#34241e;}
+.product1view1 .texts em.price{color:#d03032;font-weight:600;font-size:1.1em;}
+.product1view1 .texts a.ic1_user{background:url(../../../images/woodcraft/www/lib/ic1user1.png) 8px 50% no-repeat;
+    color:#666;border:1px solid #999;border-radius:1px;padding:2px 10px 2px 28px;font-size:.92em;}
+
+
+/* 시설정보 상세보기 */
+.sisul1view1{margin-bottom:3%;}
+.sisul1view1 .info1{}
+.sisul1view1 .info1:after{content:'';display:table;clear:both;}
+.sisul1view1 .f1{display:block;width:100%;}
+.sisul1view1 .texts{display:block;margin:10px 0;}
+.sisul1view1 .btns{display:block;margin:10px 0;}
+.sisul1view1 .texts .t1{display:block;font-size:1.666em;color:#111;font-weight:600;}
+.sisul1view1 .texts .t2{display:block;border:1px solid #bbbbbb;padding:2% 3% 2% 3%;margin:1% 0;border-top:3px solid #34241e;}
+.sisul1view1 .texts ul li span{display:inline-block;background:url(../../../images/woodcraft/www/lib/sep1s.png) no-repeat 100% 50%;padding:1px 8px 1px 0;font-weight:600;}
+.sisul1view1 .substance{border:1px solid #bbb;padding:2%;}
+.sisul1view1 .substance img,
+.sisul1view1 .substance object,
+.sisul1view1 .substance embed,
+.sisul1view1 .substance video,
+.sisul1view1 .substance audio{max-width:100%;height:auto;border:0;vertical-align:top;}
+.sisul1view1 .btns .button{background:url() no-repeat 23px 50%;color:#fff;padding-left:50px;padding-right:30px;}
+.sisul1view1 .btns .b1res1{background-color:#e34a44; background-image:url(../../../images/woodcraft/www/lib/ic1b1buy1.png);border-color:#e34a44;}
+.sisul1view1 .texts em.price{color:#d03032;font-weight:600;font-size:1.1em;}
+.sisul1view1 .texts a.ic1_user{background:url(../../../images/woodcraft/www/lib/ic1user1.png) 8px 50% no-repeat;
+    color:#666;border:1px solid #999;border-radius:1px;padding:2px 10px 2px 28px;font-size:.92em;}
+
+
+/* FAQ */
+#faq1{border-top:3px solid #34241e;}
+#faq1 .tab{border-bottom:1px solid #ddd;}
+#faq1 .cont{display:none;border-bottom:1px solid #ddd;line-height:1.333;padding:15px 27px;background:#e4e4e4;}
+#faq1 h2 {position:relative;}
+#faq1 h2 i.ic1{position:absolute;display:block;left:0px;top:50%;width:22px;height:22px;margin-top:-11px;background:url(../../../images/woodcraft/www/lib/faq_q.png) 50% 50% no-repeat;background-size:contain;}
+#faq1 h2.on i.ic1{background-image:url(../../../images/woodcraft/www/lib/faq_q_on.png);}
+#faq1 h2 i.ic2{position:absolute;display:block;right:10px;top:50%;width:12px;height:12px;margin-top:-6px;background:url(../../../images/woodcraft/www/lib/faq_open.png) 50% 50% no-repeat;background-size:contain;}
+#faq1 h2.on i.ic2{background-image:url(../../../images/woodcraft/www/lib/faq_q_close.png);}
+#faq1 h2 a{display:block;color:#333;font-weight:normal;line-height:1.666;padding:10px 27px;}
+#faq1 h2.on a{color:#e53935;}
+#faq1 h3{color:#333;}
+#faq1 h2{font-size:14px;}
+#faq1 h3{font-size:13px;line-height:2;margin-top:2%;}
+#faq1 h3:first-of-type{margin-top:0;}
+#faq1 ol li{margin:3px 0;}
+#faq1 ol li ul{margin-bottom:15px;}
+#faq1 ol li b{color:#333;}
+
+/* 약관 동의 관련 */
+.com1agree1q1{color:#d03032;font-weight:bold;background:url(../../../images/woodcraft/www/lib/li1bg.png) 0 9px no-repeat;padding-left:10px;font-size:1.12em;}
+.com1agree1w1{width:25%;}
+
+/* 개인 정보 폰트 확대 (20180625 추가.) */
+.com1agree1td1{font-weight:bold;font-size:1.02em;color:#d03032 !important;}
+
+
+
+/* 로그인(20180620 추가. 본인인증만!!) */
+.login2realname1{position:relative;box-sizing:border-box;margin:1.333em auto;border:2px solid #cccccc;}
+.login2realname1:after{content:'';display:block;clear:both;height:0;visibility:hidden;}
+.login2realname1 .wrap1{position:relative;text-align:center;padding:70px 0 20px 0;}
+.login2realname1 .wrap1 .em{padding:.5em 0 1em 0;}
+.login2realname1 .wrap1 i{position:absolute;left:50%;top:50%;display:block;background:url() 50% 50% no-repeat;background-size:contain;width:75px;height:75px;margin-top:-115px;margin-left:-32px;}
+.login2realname1 .wrap1 i.ic1{background-image:url(../../../images/woodcraft/www/lib/ic1login1@x2.png);}
+.login2realname1 .wrap1 .btns a.button{background:#333;color:#fff;border-color:#333;}
+.login2realname1 .txt2{border-top:1px solid #ccc;padding:5px 15px 15px 15px;}
+.login2realname1 .txt2 h3{font-size:1.1em !important;}
+.login2realname1 .txt2 ul{margin-top:.72em;}
+.login2realname1 .txt2 a{color:#666;}
+
+
+
+@media all and (min-width:500px){
+    .gallery1artist1 ul li{width:23.5%;}
+    .gallery1artist1 ul li:nth-child(2n+1){clear:none;margin:0 1% 2% 1%;}
+    .gallery1artist1 ul li:nth-child(2n){margin:0 1% 2% 1%;}
+    .gallery1artist1 ul li:nth-child(4n+1){clear:both;margin-left:0;}
+    .gallery1artist1 ul li:nth-child(4n){margin-right:0;}
+
+    .gallery1product1 ul li{width:23.5%;margin:0 1% 2% 1%;}
+    .gallery1product1 ul li:nth-child(2n+1){clear:none;margin:0 1% 2% 1%;}
+    .gallery1product1 ul li:nth-child(2n){margin:0 1% 2% 1%;}
+    .gallery1product1 ul li:nth-child(4n+1){clear:both;margin-left:0;}
+    .gallery1product1 ul li:nth-child(4n){margin-right:0;}
+
+    .gallery1bbs1 ul li{width:23.23%;margin:0 1% 2% 1%;}
+    .gallery1bbs1 ul li:nth-child(2n+1){clear:none;}
+    .gallery1bbs1 ul li:nth-child(2n){margin-right:1%;}
+    .gallery1bbs1 ul li:nth-child(4n+3){margin-left:1%;}
+    .gallery1bbs1 ul li:nth-child(4n+1){clear:both;}
+}
+
+@media all and (min-width:768px){
+
+    [class*='search1']{float:right;width:40%;}
+    .infosection1{font-size:13px;}
+    .infosection1 .info_list1{margin-top:-40px;}
+
+    .pic1list1 .figure>.p1{min-height:180px}
+
+    .gallery1product1 ul li .text1 .t1{font-size:17px;}
+    .gallery1product1 ul li .text1 .t2{font-size:13px;}
+    .gallery1product1 ul li .f1{height:155px;}
+
+    .gallery1sisul1 ul li{width:23.23%;margin:0 1% 2% 1%;}
+    .gallery1sisul1 ul li .text1 .t1{font-size:17px;}
+    .gallery1sisul1 ul li .text1 .t2{font-size:13px;}
+    .gallery1sisul1 ul li:nth-child(2n+1){clear:none;}
+    .gallery1sisul1 ul li:nth-child(2n){margin-right:1%;}
+    .gallery1sisul1 ul li:nth-child(4n+3){margin-left:1%;}
+    .gallery1sisul1 ul li:nth-child(4n+1){clear:both;}
+    .gallery1sisul1 ul li .f1{height:155px;}
+
+    .gallery1bbs1 ul li .text1 .t1{font-size:17px;}
+    .gallery1bbs1 ul li .f1{height:155px;}
+
+    .bbs_list .bbs_num{display:table-cell;width:80px;font-size:0.92em;}
+    .bbs_list .bbs_title{width:auto;}
+    .bbs_list .bbs_author{width:100px;}
+    .bbs_list .bbs_date{display:table-cell;width:120px;font-size:0.92em;}
+    .bbs_list .bbs_attach{display:table-cell;width:80px;}
+    .bbs_list .bbs_view{display:table-cell;width:auto;font-size:0.92em;}
+    .bbs_list td{vertical-align: middle;}
+
+    .artist1bbs1 ul li{width:48.7%;}
+    .artist1bbs1 ul li .text1 .t1{font-size:17px;}
+    .artist1bbs1 ul li .text1 .t2{font-size:13px;}
+    .artist1bbs1 ul li .text1 .t2 .tit{display:inline-block;}
+    .artist1bbs1 ul li:nth-child(2n+1){margin-right:1%;clear:both;}
+    .artist1bbs1 ul li:nth-child(2n){margin-left:1%;}
+
+    .cart_cnb ul li .t1{display:inline-block;}
+    .cart_cnb ul li i{display:inline-block;width:30px;height:30px;margin-right:10px;}
+
+    .join_cnb ul li .t1{display:inline-block;}
+    .join_cnb ul li i{display:inline-block;width:30px;height:30px;margin-right:10px;}
+
+    .cart_list .total_price{font-size:15px;}
+    .cart_list .total_price em{font-size:17px;}
+    .cart_list .total_price i{width:24px;height:24px;}
+    .cart_list .total_price i.ic1{margin-top:-12px;}
+    .cart_list .btn_group .button{font-size:15px !important;}
+
+    .cart_list .cart_chk{width:2em;}
+    .cart_list .cart_num{width:10em;}
+    .cart_list .cart_price{width:7em;}
+    .cart_list .cart_delivery{width:7em;}
+    .cart_list .cart_btn{display:table-cell;width:4em;}
+    .cart_list input[type='text'],
+    .cart_list .button{font-size:14px !important;}
+    .cart_list a.a1{padding:0 0 0 100px;min-height:80px;}
+    .cart_list a .f1{position:absolute;left:0;top:0;width:80px;height:80px;}
+    .cart_list a .text1{min-height:80px;}
+
+    .notice1{position:relative;padding-left:110px;margin-bottom:2%;}
+    .notice1 i{display:block;position:absolute;left:20px;top:10px;width:70px;height:70px;}
+
+    .login1jumin i{width:180px;height:180px;}
+    .login1jumin .login1c2{border-left:1px solid #a4a4a4;margin-left:-4px;}
+    .login1c1, .login1c2{width:50%;float:left;padding:3.5em 0 4.2em 0;}
+
+    .login2c1, .login2c2{width:50%;float:left;}
+    .login2c1{border-right:1px solid #a4a4a4;}
+    .login2 h2{/*border-bottom:1px solid #a4a4a4;*/}
+    .login2 i{width:95px;height:95px;margin-top:8%;margin-bottom:1%;}
+    .login2 .login-con1 {width:50%;}
+    .login2 .login-con2 {width: 85%;}
+    .login2 .login-con3 {padding:120px 10px 10px 10px;text-align:center;}
+    .login2 .login-con3 i{display:block;position:absolute;top:65px;left:50%;width:95px;height:95px;margin-left:-42px;}
+    .login2c1, .login2c2{padding-bottom:4%;}
+
+    .findid{position:relative;text-align:left;}
+    .findid i{position:absolute;width:150px;height:150px;left:50%;top:50%;margin-left:-270px;margin-top:-100px;}
+    .findid .wrap1{text-algin:left !important;width:270px;padding:20px 0;padding-left:130px;margin:0 auto;}
+    .findid .txt2{padding:3px 0;}
+
+    .edu1list1 li a.a1{margin:0 100px 0 0;}
+    .edu1list1 li .btns{position:absolute;right:0;top:50%;margin-top:-45px;width:100px;text-align:center;padding-top:0;}
+    .edu1list1 li .edu1item1{margin-right:140px;}
+    .edu1list1 .f1{float:left;width:21%;margin-right:2.5%;}
+    .edu1list1 .texts{float:left;width:76%;margin-right:0;}
+    .edu1list1 .now{top:50%;margin-top:-31px;}
+
+    #edu1 .division .division-tit {font-size:16px;}
+
+    .edu1view1 .f1{float:left;width:46%;margin-right:2.5%;}
+    .edu1view1 .texts{float:left;width:51%;margin-right:0;}
+    .edu1view1 .texts .t1{padding-bottom:2%;}
+    .edu1view1 .substance{margin-top:30px;}
+    .edu1view1 .texts .t2{margin-top:0;}
+
+    .product1view1 .f1{float:left;width:46%;margin-right:2.5%;}
+    .product1view1 .texts{float:left;width:51%;margin-right:0;}
+    .product1view1 .texts .t1{padding-bottom:2%;}
+    .product1view1 .texts .t2{margin-top:0;}
+    .product1view1 .substance{margin-top:30px;}
+
+    .sisul1view1 .f1{float:left;width:46%;margin-right:2.5%;}
+    .sisul1view1 .texts{float:left;width:51%;margin-right:0;}
+    .sisul1view1 .texts .t1{padding-bottom:2%;}
+    .sisul1view1 .texts .t2{margin-top:0;}
+    .sisul1view1 .substance{margin-top:30px;}
+
+    #faq1 h2 i.ic1{width:30px;height:30px;margin-top:-15px;}
+    #faq1 h2 i.ic2{width:18px;height:18px;margin-top:-9px;}
+    #faq1 h2{font-size:16px;}
+    #faq1 h3{font-size:15px;}
+    #faq1 h2 i.ic1{left:15px;}
+    #faq1 h2 i.ic2{right:20px;}
+    #faq1 .cont{padding:20px 55px;}
+    #faq1 h2 a{padding:15px 55px;}
+
+    .com1agree1w1{width:12%;}
+
+    .login2realname1 .wrap1{text-align:left;padding:20px 0 40px 0;}
+    .login2realname1 .wrap1 i{width:140px;height:140px;margin-top:-72px;margin-left:-300px;}
+    .login2realname1 .wrap1 .txt1{margin:0 auto;width:450px;padding-left:200px;}
+
+    .res1cal1 table.t1cal1 td{min-height:115px;}
+}
+
+@media all and (min-width:1000px){
+    .gallery1artist1 ul li{width:18.4%;margin:0 1% 2% 1%;}
+    .gallery1artist1 ul li:nth-child(4n+1){clear:none;margin:0 1% 2% 1%;}
+    .gallery1artist1 ul li:nth-child(4n){margin:0 1% 2% 1%;}
+    .gallery1artist1 ul li:nth-child(5n+1){clear:none;margin-left:0;}
+    .gallery1artist1 ul li:nth-child(5n){margin-right:0;}
+    .gallery1artist1 ul li .text1 .t1{font-size:17px;}
+    .gallery1artist1 ul li .f1{}
+    .gallery1artist1 ul li .a2{font-size:13px;}
+    .gallery1artist1 ul li .a2 i.ic1{width:25px;height:25px;}
+
+    #edu1 .division .division-tit {float:left;width:12%;box-sizing: border-box;background:url(../../../images/woodcraft/www/lib/h2bg.png)  0 100% no-repeat;padding:0 0 14px 0;margin:0;font-size:24px;}
+    #edu1 .division .division-cont{float:right;width:86%;box-sizing: border-box;}
+}
+
+@media all and (min-width:1260px){
+
+    .pic1list1 .figure>.p1{background-image:url(../../../images/woodcraft/www/lib/ic1noimg1@x2.png);min-height:310px;}
+
+    .infosection1{font-size:16px;}
+    .infosection1 .info_list1{margin-top:-50px;font-size:15px;}
+    .infosection1 .info_write{font-size:15px;}
+    .gallery1product1 ul li .text1 .t1{font-size:21px;}
+    .gallery1product1 ul li .text1 .t2{font-size:16px;}
+    .gallery1product1 ul li .f1{height:215px;}
+
+    .gallery1bbs1 ul li .text1 .t1{font-size:21px;}
+    .gallery1bbs1 ul li .text1 .t2{font-size:14px;}
+    .gallery1bbs1 ul li .f1{height:215px;}
+
+    .pagination .m a{width:36px;height:36px;}
+    .pagination .m.pages a{padding:0 10px;line-height:34px;}
+    .pagination .m.control a .ic{font-size:23px;line-height:33px;}
+
+    .bbs_view{margin-bottom:20px;}
+    .bbs_view>.h1:first-child{font-size:1.5em;}
+    .bbs_view .info1 dt{width:auto;text-indent:0;background:url(../../../images/woodcraft/www/lib/dt1bg.png) no-repeat 0 50%;padding:3px 8px 3px 8px;}
+    .bbs_view .info1 dd{float:left;margin:0;padding:3px 15px 3px 8px;}
+    .bbs_view .info1 dl>dt:first-child{padding:3px 8px 3px 8px;}
+    .bbs_view .info1 dl>dt:first-child+dd{padding-left:8px;background:url(../../../images/woodcraft/www/lib/sep1s.png) no-repeat 0 50%;}
+    .bbs_view .attach1 li{/*float:left;*/margin-right:1em;}
+    .bbs_view .attach1 li .filename {height:25px;line-height:25px;}
+
+    .artist1bbs1 ul li{min-height:255px;}
+    .artist1bbs1 ul li .f1{width:170px;height:218px;}
+    .artist1bbs1 ul li .text1{margin-left:190px;margin-top:.3em;margin-bottom:.82em;}
+    .artist1bbs1 ul li .text1 .t1{font-size:21px;}
+    .artist1bbs1 ul li .text1 .t2{font-size:16px;padding-left:10px;}
+
+    .gallery1artist1 ul li .text1 .t1{font-size:21px;}
+    .gallery1artist1 ul li .text1 .t2{font-size:16px;}
+    .gallery1artist1 ul li .f1{}
+    .gallery1artist1 ul li .a2{font-size:16px;}
+
+    .cart_cnb ul li i{width:40px;height:40px;}
+
+    .join_cnb ul li i{width:40px;height:40px;}
+
+    .cart_list .total_price{font-size:21px;font-weight:bold;}
+    .cart_list .total_price i{width:30px;height:30px;}
+    .cart_list .total_price i.ic1{margin-top:-15px;}
+    .cart_list .total_price em{font-size:24px;}
+    .cart_list .btn_group .button{font-size:17px !important;}
+
+    .order_td_w1{width:15%;}
+
+    .notice1{padding:2em 1em 2em 200px;}
+    .notice1 i{left:70px;top:50%;margin-top:-50px;width:100px;height:100px;}
+
+    .complete1 i{width:200px;height:200px;margin-top:-20px;}
+
+    .login2 h2{padding:11px 0;}
+    .login2 i{width:150px;height:150px;margin-top:8%;margin-bottom:2%;}
+    .login2 .login-con3 {padding:195px 20px 30px 20px;}
+    .login2 .login-con3 i{top:90px;width:150px;height:150px;margin-left:-65px;}
+    .login2 .login-con3 h3{margin-top:5px;font-size:1.1em;}
+    .login2 .login-con3 .btns{margin-top:2px;}
+    .login2 .login-con1 input{padding-left:15px;}
+    .login2txt1{padding:5px 30px 30px 30px;}
+
+    .findid i{width:200px;height:200px;margin-left:-350px;margin-top:-130px;}
+    .findid .wrap1{width:330px;padding:50px 0;padding-left:150px;margin:0 auto;}
+    .findid .txt2{padding:3px 0;}
+    .findid .btns{margin-top:5px;}
+
+    .findpassword i{width:200px;height:200px;}
+    .mem1out i{width:150px;height:150px;}
+
+    .myinfo1q1out{padding:10px 25px;}
+    .myinfo1q1out ul{margin:15px 5px;}
+
+    .edu1list1 li a.a1{margin:0 120px 0 0;}
+    .edu1list1 li .btns{margin-top:-43px;width:120px;}
+    .edu1list1 .now{margin-top:-42px;width:120px;}
+    .edu1list1 .now .sting{width:95px;height:95px;line-height:95px;}
+
+
+    .edu1view1{margin-top:10px;}
+
+    .product1view1{margin-top:10px;}
+    .product1view1 .btns .button{font-size:1.05em;}
+
+    .sisul1view1{margin-top:10px;}
+    .sisul1view1 .btns .button{font-size:1.05em;}
+
+    #faq1 h2 i.ic1{left:15px;}
+    #faq1 h2 i.ic2{right:20px;}
+    #faq1 .cont{padding:25px 58px;}
+    #faq1 h2 a{padding:20px 58px;font-weight:bold;}
+    #faq1 h2{font-size:21px;}
+    #faq1 h3{font-size:18px;}
+
+    .login2realname1 .wrap1{padding:50px 0 90px 0;}
+    .login2realname1 .wrap1 i{width:170px;height:170px;margin-top:-95px;margin-left:-300px;}
+    .login2realname1 .wrap1 .txt1{margin:0 auto;width:450px;padding-left:280px;}
+    .login2realname1 .wrap1 .txt1 .hb1.h2{font-size:27px;}
+    .login2realname1 .wrap1 .btns{margin-top:1px;}
+    .login2realname1 .txt2{padding:5px 30px 30px 30px;}
+
+    .res1cal1 table.t1cal1 td{min-height:145px;}
+}

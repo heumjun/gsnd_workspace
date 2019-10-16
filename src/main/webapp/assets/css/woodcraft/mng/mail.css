@@ -1,0 +1,175 @@
+@charset "utf-8";
+body > .mail {
+    position: relative;
+    display: block;
+    margin: 40px auto;
+    padding: 0;
+    width: 680px;
+    *zoom: 1;
+    overflow: hidden;
+    font-family: 'NanumBarunGothic';
+    line-height: 140%;
+    font-size: 12px;
+    color: #606060;
+}
+body > .mail:after {display: block; clear: both; content: "";}
+body > .mail header {
+    position: relative;
+    display: block;
+    margin: 0 0 20px 0;
+    padding: 20px;
+    overflow: hidden;
+    *zoom: 1;
+    border: 1px solid #6ea3ec;
+    border-bottom: 1px solid #4985d7;
+    /* box-shadow */
+    border-radius: 6px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -o-border-radius: 6px;
+    -ms-border-radius: 6px;
+    background: url(../images/mail/bg_mail_header.png) no-repeat 0 0 #fff;
+    height: 86px;
+    overflow: hidden;
+}
+body > .mail header:after {display: block; clear: both; content: "";}
+body > .mail header h1 {
+    position: relative;
+    display: block;
+    margin: 40px 4px 0 0;
+    padding: 10px 4px;
+    font-size: 34px;
+    color: #304462;
+    font-weight: bold;
+    text-align: right;
+}
+body > .mail header h2.logo {
+    position: absolute;
+    display: block;
+    margin: 0;
+    padding: 0;
+    right: 20px;
+    top: 10px;
+    width: 128px;
+    height: 26px;
+    background: url(../images/mail/logo_mail_header.png) no-repeat 0 0;
+}
+body > .mail header p {
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 4px;
+    font-size: 11px;
+    color: #606060;
+    font-weight: normal;
+    text-align: right;
+}
+body > .mail ul,
+body > .mail ul li,
+body > .mail ul li h2,
+body > .mail ul li p {
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    *zoom: 1;
+}
+body > .mail ul {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-top: 4px solid #2298ff;
+}
+body > .mail ul li {
+    margin: 0;
+    padding: 10px 20px;
+    border-top: 1px solid #ebebeb;
+}
+body > .mail ul li:first-child {
+    border-top: 0;
+}
+body > .mail ul li h2 {
+    margin: 6px 0;
+    padding: 0 0 0 12px;
+    font-size: 14px;
+    font-weight: normal;
+    color: #303030;
+    background: url(../images/common_ico/bg_hx.png) no-repeat 0 -111px;
+}
+body > .mail span.mail-sep {
+    color: #ccc;
+    padding: 0 4px;
+}
+body > .mail em {
+    font-weight: bold;
+    color: #354053;
+}
+body > .mail ul li p.counsel-content {
+    margin: 14px 0 10px 14px;
+    padding: 16px 20px;
+    border: 3px solid #dce5f3;
+    background: #fff;
+    line-height: 180%;
+}
+body > .mail ul li.address {
+    background: #304462;
+}
+body > .mail ul li.address p {
+    padding: 10px;
+    color: #fff;
+}
+body > .mail ul li p.date {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    height: 18px;
+    line-height: 18px;
+    color: #909090;
+    font-size: 11px;
+}
+body > .mail ul li.info {
+    background: #f8f8f8;
+}
+body > .mail ul li.info p{
+    padding: 4px 0 4px 16px;
+    background: url(../images/common_ico/ico_page_ul_hx.png) no-repeat 3px 6px !important;
+}
+body > .mail ul li.info p a {
+    color: #2298ff;
+    font-weight: bold;
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-bottom: 1px;
+    border-bottom: 2px solid #2298ff;
+}
+body > .mail ul li.info p a:hover,
+body > .mail ul li.info p a:focus {
+    color: #000;
+    border-color: #000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

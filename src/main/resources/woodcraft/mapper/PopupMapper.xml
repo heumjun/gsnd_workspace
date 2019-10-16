@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.twogoms.woodcraft.repository.cmm.PopupRepository">
+
+    <resultMap id="popupMap" type="com.twogoms.woodcraft.dto.cmm.PopupDto">
+        <id property="popupId" column="POPUP_ID" javaType="java.lang.String"/>
+        <result property="popupNm" column="POPUP_NM" javaType="java.lang.String" />
+        <result property="strtDe" column="STRT_DE" javaType="java.lang.String" />
+        <result property="endDe" column="END_DE" javaType="java.lang.String" />
+        <result property="urlType" column="URL_TYPE" javaType="java.lang.String" />
+        <result property="linkUrl" column="LINK_URL" javaType="java.lang.String" />
+        <result property="useYn" column="USE_YN" javaType="java.lang.String" />
+        <result property="atchFileId" column="ATCH_FILE_ID" javaType="java.lang.String" />
+    </resultMap>
+
+    <select id="getPopupList"  parameterType="com.twogoms.woodcraft.dto.cmm.criteria.PopupCriteria" resultMap="popupMap">
+        SELECT A.POPUP_ID
+        ,      A.POPUP_NM
+        ,      A.STRT_DE
+        ,      A.END_DE
+        ,      A.URL_TYPE
+        ,      A.LINK_URL
+        ,      A.ATCH_FILE_ID
+        ,      A.USE_YN
+        ,      A.RGSTR_ID
+        ,      A.REGIST_DT
+        ,      A.UPDTR_ID
+        ,      A.UPDT_DT
+        FROM   TB_POPUP A
+        WHERE  0 = 0
+        <if test="searchPopupNm != null and searchPopupNm != ''">
+            AND A.POPUP_NM LIKE CONCAT('%',#{searchPopupNm},'%')
+        </if>
+        <if test="searchUseYn != null and searchUseYn != ''">
+            AND A.USE_YN = #{useYN}
+        </if>
+        <if test="searchStrtDe != null and searchStrtDe != ''">
+            AND A.STRT_DE &lt;= #{searchStrtDe}
+        </if>
+        <if test="searchEndDe != null and searchEndDe != ''">
+            AND A.END_DE &gt;= #{searchEndDe}
+        </if>
+        ORDER  BY
+        A.POPUP_NM ASC
+        LIMIT  #{recordCountPerPage} OFFSET #{firstIndex}
+    </select>
+
+    <select id="getPopupListCount" parameterType="com.twogoms.woodcraft.dto.cmm.criteria.PopupCriteria" resultType="int">
+        SELECT COUNT(*) AS CNT
+        FROM   TB_POPUP A
+        WHERE  0 = 0
+        <if test="searchPopupNm != null and searchPopupNm != ''">
+            AND A.POPUP_NM LIKE CONCAT('%',#{searchPopupNm},'%')
+        </if>
+        <if test="searchStrtDe != null and searchStrtDe != ''">
+            AND A.STRT_DE &gt;= #{searchStrtDe}
+        </if>
+        <if test="searchEndDe != null and searchEndDe != ''">
+            AND A.END_DE &lt;= #{searchEndDe}
+        </if>
+    </select>
+
+    <select id="getPopup" parameterType="com.twogoms.woodcraft.dto.cmm.PopupDto" resultMap="popupMap">
+        SELECT A.POPUP_ID
+        ,      A.POPUP_NM
+        ,      A.STRT_DE
+        ,      A.END_DE
+        ,      A.URL_TYPE
+        ,      A.LINK_URL
+        ,      A.USE_YN
+        ,      A.ATCH_FILE_ID
+        ,      A.RGSTR_ID
+        ,      A.REGIST_DT
+        ,      A.UPDTR_ID
+        ,      A.UPDT_DT
+        FROM   TB_POPUP A
+        WHERE  0 = 0
+        AND    A.POPUP_ID = #{popupId}
+    </select>
+
+    <insert id="insertPopup" parameterType="com.twogoms.woodcraft.dto.cmm.PopupDto">
+      INSERT INTO TB_POPUP (
+        POPUP_ID
+      , POPUP_NM
+      , STRT_DE
+      , END_DE
+      , URL_TYPE
+      , LINK_URL
+      , ATCH_FILE_ID
+      , USE_YN
+      , RGSTR_ID
+      , REGIST_DT
+      , UPDTR_ID
+      , UPDT_DT
+      ) VALUES (
+        #{popupId}
+      , #{popupNm}
+      , #{strtDe}
+      , #{endDe}
+      , #{urlType}
+      , #{linkUrl}
+      , #{atchFileId}
+      , #{useYn}
+      , #{rgstrId}
+      , now()
+      , #{updtrId}
+      , now()
+      )
+    </insert>
+
+    <update id="updatePopup"  parameterType="com.twogoms.woodcraft.dto.cmm.PopupDto">
+        UPDATE  TB_ARTIST SET
+                POPUP_NM = #{popupNm}
+        ,       STRT_DE = #{strtDe}
+        ,       END_DE= #{endDe}
+        ,       URL_TYPE= #{urlType}
+        ,       LINK_URL= #{linkUrl}
+        ,       ATCH_FILE_ID = #{atchFileId}
+        ,       USE_YN = #{useYn}
+        ,       UPDTR_ID= #{updtrId}
+        ,       UPDT_DT = now()
+        WHERE   POPUP_ID = #{popupId}
+    </update>
+
+    <delete id="deletePopup" parameterType="com.twogoms.woodcraft.dto.cmm.PopupDto">
+       DELETE FROM TB_POPUP WHERE  POPUP_ID = #{popupId}
+    </delete>
+
+</mapper>

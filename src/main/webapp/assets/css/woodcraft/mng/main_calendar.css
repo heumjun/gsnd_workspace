@@ -1,0 +1,80 @@
+@charset "utf-8";
+.calendar {
+	position: relative;
+	display: block;
+	margin: 0 auto;
+	padding: 0;
+	width: 980px;
+	overflow: hidden;
+	border-bottom: 1px solid #d6d6d6;
+	background: #f8f8f8;
+	*zoom: 1;
+	/*background: url(../images/main/bg_calendar.png) no-repeat 0 0;*/
+    -webkit-box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.06);
+    -moz-box-shadow:    0px 4px 10px 0px rgba(0, 0, 0, 0.06);
+    box-shadow:         0px 4px 10px 0px rgba(0, 0, 0, 0.06);
+}
+.calendar:after { display: block; clear: both; content: "";}
+.calendar ul {
+	position: relative;
+	display: block;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	*zoom: 1;
+}
+.calendar ul:after { display: block; clear: both; content: "";}
+.calendar ul li {
+	position: relative;
+	float: left;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+.calendar ul li a{
+	position: relative;
+	float: left;
+	margin: 0;
+	padding: 0;
+	width: 29px;
+	height: 29px;
+	line-height: 29px;
+	text-align: center;
+    font-weight: normal;
+    font-family: 'NanumBarunGothicBold' !important;
+	letter-spacing: -1px;
+	font-size: 12px;
+	color: #999;
+}
+
+.calendar ul li.on a{
+	background: url(../images/main/ico_calendar_on_circle.png) no-repeat center bottom;
+}
+.calendar ul li.on a{
+	color: #777;
+    font-family: 'NanumBarunGothicBold';
+}
+.calendar ul li .hide{
+    color: #f8f8f8;
+    visibility: hidden;
+}
+.calendar ul li .blind{
+    color: #f8f8f8;
+    font-family: 'NanumBarunGothicBold';
+}
+
+.calendar ul li.cal-btn {
+	background: #6b717a;
+}
+.calendar ul li.cal-btn a {
+	height: 29px;
+	line-height: 29px;
+}
+.calendar ul li.cal-btn.prev a{
+	width: 40px;
+}
+.calendar ul li.cal-btn a {
+	width: 41px;
+	color: #fff;
+	font-size: 13px;
+}
