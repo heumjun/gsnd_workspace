@@ -14,7 +14,7 @@ import egovframework.com.cmm.util.EgovUserDetailsHelper;
 import egovframework.com.utl.fcc.service.EgovStringUtil;
 import egovframework.rte.fdl.property.EgovPropertyService;
 import egovframework.rte.ptl.mvc.tags.ui.pagination.PaginationInfo;
-import kr.go.gyeongnam.human.constant.WoodCraftConstant;
+import kr.go.gyeongnam.human.constant.HumanConstant;
 import kr.go.gyeongnam.human.dto.mypage.BsktDto;
 import kr.go.gyeongnam.human.dto.wcrf.WcrfBuyDto;
 import kr.go.gyeongnam.human.dto.wcrf.WcrfDto;
@@ -196,7 +196,7 @@ public class WcrfController {
                 index++;
             }
 
-            req.getSession().setAttribute(WoodCraftConstant.SessionAttribute.BEFORE_LOGIN_URL, beforeURL);
+            req.getSession().setAttribute(HumanConstant.SessionAttribute.BEFORE_LOGIN_URL, beforeURL);
 
             mv.setViewName("redirect:/login.do");
             return mv;
