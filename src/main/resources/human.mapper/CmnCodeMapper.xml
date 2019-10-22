@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.go.gyeongnam.human.repository.cmm.CmnCodeRepository">
+
+    <resultMap id="codeMap" type="com.twogoms.woodcraft.dto.cmm.CmnCodeDto">
+        <id property="codeId" column="CODE_ID" javaType="java.lang.String"/>
+        <result property="code" column="CODE" javaType="java.lang.String" />
+        <result property="codeNm" column="CODE_NM" javaType="java.lang.String" />
+        <result property="useAt" column="USE_AT" javaType="java.lang.String" />
+    </resultMap>
+
+    <select id="selectListCmnCodeDetl" parameterType="HashMap" resultMap="codeMap">
+            SELECT  CODE_ID
+            ,       CODE
+            ,       CODE_NM
+            ,       USE_AT
+            FROM    COMTCCMMNDETAILCODE
+            WHERE   CODE_ID = #{codeId}
+            <if test="useAt != null">
+                AND  USE_AT = #{useAt}
+            </if>
+            ORDER  BY CODE
+    </select>
+
+</mapper>

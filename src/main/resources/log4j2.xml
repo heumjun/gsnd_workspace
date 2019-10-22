@@ -34,6 +34,10 @@
             <AppenderRef ref="console" />
             <AppenderRef ref="file"/>
         </Logger>
+        <Logger name="kr.go.gyeongnam.human" level="DEBUG" additivity="false">
+            <AppenderRef ref="console" />
+            <AppenderRef ref="file"/>
+        </Logger>
         <Root level="ERROR">
             <AppenderRef ref="console" />
             <AppenderRef ref="file"/>

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.go.gyeongnam.human.repository.artist.ArtistRepository">
+    <resultMap id="artistMap" type="com.twogoms.woodcraft.dto.artist.ArtistDto">
+        <id property="artistId" column="ARTIST_ID" javaType="java.lang.String"/>
+        <result property="artistNm" column="ARTIST_NM" javaType="java.lang.String" />
+        <result property="crfShopNm" column="CRF_SHOP_NM" javaType="java.lang.String" />
+        <result property="adres" column="ADRES" javaType="java.lang.String" />
+        <result property="roadAdres" column="ROAD_ADRES" javaType="java.lang.String" />
+        <result property="dtlAdres" column="DTL_ADRES" javaType="java.lang.String" />
+        <result property="telNo" column="TEL_NO" javaType="java.lang.String" />
+        <result property="hpNo" column="HP_NO" javaType="java.lang.String" />
+        <result property="hmpg" column="HMPG" javaType="java.lang.String" />
+        <result property="artistDesc" column="ARTIST_DESC" javaType="java.lang.String" />
+        <result property="supGoods" column="SUP_GOODS" javaType="java.lang.String" />
+        <result property="atchFileId" column="ATCH_FILE_ID" javaType="java.lang.String" />
+        <result property="email" column="EMAIL" javaType="java.lang.String" />
+        <result property="etcCn" column="ETC_CN" javaType="java.lang.String" />
+        <result property="atchFileId2" column="ATCH_FILE_ID2" javaType="java.lang.String" />
+    </resultMap>
+
+    <select id="getArtistList"  parameterType="kr.go.gyeongnam.human.dto.artist.criteria.ArtistCriteria" resultMap="artistMap">
+        SELECT A.ARTIST_ID
+        ,      A.ARTIST_NM
+        ,      A.CRF_SHOP_NM
+        ,      A.ADRES
+        ,      A.ROAD_ADRES
+        ,      A.DTL_ADRES
+        ,      A.TEL_NO
+        ,      A.HP_NO
+        ,      A.EMAIL
+        ,      A.HMPG
+        ,      A.ARTIST_DESC
+        ,      A.SUP_GOODS
+        ,      A.ETC_CN
+        ,      A.ATCH_FILE_ID
+        ,      A.RGSTR_ID
+        ,      A.RGST_DT
+        ,      A.UPDTR_ID
+        ,      A.UPDT_DT
+        ,      A.ATCH_FILE_ID2
+        FROM   TB_ARTIST A
+        WHERE  0 = 0
+        <if test="searchArtistNm != null and searchArtistNm != ''">
+            AND A.ARTIST_NM LIKE CONCAT('%',#{searchArtistNm},'%')
+        </if>
+        <if test="searchCrfShopNm != null and searchCrfShopNm != ''">
+            AND A.CRF_SHOP_NM LIKE CONCAT('%',#{searchCrfShopNm},'%')
+        </if>
+        <if test="searchOption == '01'">
+            AND A.ARTIST_NM LIKE CONCAT('%',#{searchKeyword},'%')
+        </if>
+        ORDER  BY
+        A.ARTIST_NM ASC
+        LIMIT  #{recordCountPerPage} OFFSET #{firstIndex}
+    </select>
+
+    <select id="getArtistAllList"  parameterType="kr.go.gyeongnam.human.dto.artist.criteria.ArtistCriteria" resultMap="artistMap">
+        SELECT A.ARTIST_ID
+        ,      A.ARTIST_NM
+        ,      A.CRF_SHOP_NM
+        ,      A.ADRES
+        ,      A.ROAD_ADRES
+        ,      A.DTL_ADRES
+        ,      A.TEL_NO
+        ,      A.HP_NO
+        ,      A.EMAIL
+        ,      A.HMPG
+        ,      A.ARTIST_DESC
+        ,      A.SUP_GOODS
+        ,      A.ETC_CN
+        ,      A.ATCH_FILE_ID
+        ,      A.RGSTR_ID
+        ,      A.RGST_DT
+        ,      A.UPDTR_ID
+        ,      A.UPDT_DT
+        ,      A.ATCH_FILE_ID2
+        FROM   TB_ARTIST A
+        WHERE  0 = 0
+        <if test="searchArtistNm != null and searchArtistNm != ''">
+            AND A.ARTIST_NM LIKE CONCAT('%',#{searchArtistNm},'%')
+        </if>
+        <if test="searchCrfShopNm != null and searchCrfShopNm != ''">
+            AND A.CRF_SHOP_NM LIKE CONCAT('%',#{searchCrfShopNm},'%')
+        </if>
+        <if test="searchOption == '01'">
+            AND A.ARTIST_NM LIKE CONCAT('%',#{searchKeyword},'%')
+        </if>
+        ORDER  BY
+        A.ARTIST_NM ASC
+
+    </select>
+
+    <select id="getArtistListCount" parameterType="kr.go.gyeongnam.human.dto.artist.criteria.ArtistCriteria" resultType="int">
+        SELECT COUNT(*) AS CNT
+        FROM   TB_ARTIST A
+        WHERE  0 = 0
+        <if test="searchArtistNm != null and searchArtistNm != ''">
+            AND A.ARTIST_NM LIKE CONCAT('%',#{searchArtistNm},'%')
+        </if>
+        <if test="searchCrfShopNm != null and searchCrfShopNm != ''">
+            AND A.CRF_SHOP_NM LIKE CONCAT('%',#{searchCrfShopNm},'%')
+        </if>
+        <if test="searchOption == '01'">
+            AND A.ARTIST_NM LIKE CONCAT('%',#{searchKeyword},'%')
+        </if>
+    </select>
+
+    <select id="getArtist" parameterType="kr.go.gyeongnam.human.dto.artist.ArtistDto" resultMap="artistMap">
+        SELECT A.ARTIST_ID
+        ,      A.ARTIST_NM
+        ,      A.CRF_SHOP_NM
+        ,      A.ADRES
+        ,      A.ROAD_ADRES
+        ,      A.DTL_ADRES
+        ,      A.TEL_NO
+        ,      A.HP_NO
+        ,      A.EMAIL
+        ,      A.HMPG
+        ,      A.ARTIST_DESC
+        ,      A.SUP_GOODS
+        ,      A.ETC_CN
+        ,      A.ATCH_FILE_ID
+        ,      A.RGSTR_ID
+        ,      A.RGST_DT
+        ,      A.UPDTR_ID
+        ,      A.UPDT_DT
+        ,      A.ATCH_FILE_ID2
+        FROM   TB_ARTIST A
+        WHERE  A.ARTIST_ID = #{artistId}
+    </select>
+
+    <insert id="insertArtist" parameterType="kr.go.gyeongnam.human.dto.artist.ArtistDto">
+      INSERT INTO TB_ARTIST (
+        ARTIST_ID
+      , ARTIST_NM
+      , CRF_SHOP_NM
+      , ADRES
+      , ROAD_ADRES
+      , DTL_ADRES
+      , TEL_NO
+      , HP_NO
+      , EMAIL
+      , HMPG
+      , ARTIST_DESC
+      , SUP_GOODS
+      , ETC_CN
+      , ATCH_FILE_ID
+      , RGSTR_ID
+      , RGST_DT
+      , UPDTR_ID
+      , UPDT_DT
+      , ATCH_FILE_ID2
+      ) VALUES (
+        #{artistId}
+      , #{artistNm}
+      , #{crfShopNm}
+      , #{adres}
+      , #{roadAdres}
+      , #{dtlAdres}
+      , #{telNo}
+      , #{hpNo}
+      , #{email}
+      , #{hmpg}
+      , #{artistDesc}
+      , #{supGoods}
+      , #{etcCn}
+      , #{atchFileId}
+      , #{rgstrId}
+      , now()
+      , #{updtrId}
+      , now()
+      , #{atchFileId2}
+      )
+    </insert>
+
+    <update id="updateArtist"  parameterType="kr.go.gyeongnam.human.dto.artist.ArtistDto">
+        UPDATE  TB_ARTIST SET
+                ARTIST_NM = #{artistNm}
+        ,       CRF_SHOP_NM = #{crfShopNm}
+        ,       ADRES= #{adres}
+        ,       ROAD_ADRES= #{roadAdres}
+        ,       DTL_ADRES= #{dtlAdres}
+        ,       TEL_NO= #{telNo}
+        ,       HP_NO= #{hpNo}
+        ,       EMAIL= #{email}
+        ,       HMPG= #{hmpg}
+        ,       ARTIST_DESC= #{artistDesc}
+        ,       SUP_GOODS= #{supGoods}
+        ,       ETC_CN= #{etcCn}
+        ,       ATCH_FILE_ID = #{atchFileId}
+        ,       ATCH_FILE_ID2 = #{atchFileId2}
+        WHERE   ARTIST_ID = #{artistId}
+    </update>
+
+    <delete id="deleteArtist" parameterType="kr.go.gyeongnam.human.dto.artist.ArtistDto">
+       DELETE FROM TB_ARTIST WHERE  ARTIST_ID = #{artistId}
+    </delete>
+
+</mapper>

@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.go.gyeongnam.human.repository.exprn.ReqRepository">
+    
+    <resultMap id="reqMap" type="kr.go.gyeongnam.human.dto.exprn.ReqDto">
+        <id property="exprnReqstId" column="EXPRN_REQST_ID" javaType="java.lang.String"/>
+        <result property="exprnId" column="EXPRN_ID" javaType="java.lang.String" />
+        <result property="mberId" column="MBER_ID" javaType="java.lang.String" />
+        <result property="exprnNmpr" column="EXPRN_NMPR" javaType="java.lang.String" />
+        <result property="exprnAmt" column="EXPRN_AMT" javaType="java.lang.String" />
+        <result property="reqSttus" column="REQ_STTUS" javaType="java.lang.String" />
+        <result property="reqDt" column="REQ_DT" javaType="java.lang.String" />
+        <result property="reqNm" column="REQ_NM" javaType="java.lang.String" />
+        <result property="reqEmail" column="REQ_EMAIL" javaType="java.lang.String" />
+        <result property="telNo" column="TEL_NO" javaType="java.lang.String" />
+        <result property="groupNm" column="GROUP_NM" javaType="java.lang.String" />
+        <result property="groupTelNo" column="GROUP_TEL_NO" javaType="java.lang.String" />
+        <result property="exprnDay" column="EXPRN_DAY" javaType="java.lang.String" />
+        <result property="exprnTime" column="EXPRN_TIME" javaType="java.lang.String" />
+        <result property="exprnSeNm" column="EXPRN_SE_NM" javaType="java.lang.String" />
+        <result property="exprnSttusNm" column="EXPRN_STTUS_NM" javaType="java.lang.String" />
+    </resultMap>
+
+    <resultMap id="wcrfBuyMap" type="kr.go.gyeongnam.human.dto.wcrf.WcrfBuyDto">
+        <id property="purchsLstId" column="PURCHS_LST_ID" javaType="java.lang.String"/>
+        <result property="setleSe" column="SETLE_SE" javaType="java.lang.String" />
+        <result property="purchsAllAmt" column="PURCHS_ALL_AMT" javaType="java.lang.String" />
+        <result property="storeDelngId" column="STORE_DELNG_ID" javaType="java.lang.String" />
+        <result property="wcrfNm" column="WCRF_NM" javaType="java.lang.String" />
+        <result property="purchsDesc" column="PURCHS_DESC" javaType="java.lang.String" />
+        <result property="byerNm" column="BYER_NM" javaType="java.lang.String" />
+        <result property="byerEmail" column="BYER_EMAIL" javaType="java.lang.String" />
+        <result property="byerTelNo" column="BYER_TEL_NO" javaType="java.lang.String" />
+        <result property="purchsProgrsSttus" column="PURCHS_PROGRS_STTUS" javaType="java.lang.String" />
+        <result property="purchsProgrsSttusNm" column="PURCHS_PROGRS_STTUS_NM" javaType="java.lang.String" />
+        <result property="setleSeNm" column="SETLE_SE_NM" javaType="java.lang.String" />
+        <result property="setleId" column="SETLE_ID" javaType="java.lang.String" />
+        <result property="qy" column="QY" javaType="java.lang.String" />
+        <result property="exprnSeNm" column="EXPRN_SE_NM" javaType="java.lang.String" />
+        <result property="bgnDe" column="BGN_DE" javaType="java.lang.String" />
+        <result property="endDe" column="END_DE" javaType="java.lang.String" />
+        <result property="setleAmt" column="SETLE_AMT" javaType="java.lang.String" />
+        <result property="purchsDt" column="PURCHS_DT" javaType="java.lang.String" />
+        <result property="rcpmnyAmt" column="RCPMNY_AMT" javaType="java.lang.String" />
+        <result property="rcpmnyNm" column="RCPMNY_NM" javaType="java.lang.String" />
+        <result property="cashReceiptsOptNm" column="CASH_RECEIPTS_OPT_NM" javaType="java.lang.String" />
+        <result property="exprnDay" column="EXPRN_DAY" javaType="java.lang.String" />
+        <result property="exprnTime" column="EXPRN_TIME" javaType="java.lang.String" />
+    </resultMap>
+
+    <select id="getReqList"  parameterType="kr.go.gyeongnam.human.dto.exprn.criteria.ReqCriteria" resultMap="reqMap">
+        SELECT A.EXPRN_REQST_ID
+        ,A.EXPRN_ID
+        ,A.MBER_ID
+        ,A.EXPRN_NMPR
+        ,A.EXPRN_AMT
+        ,A.REQ_STTUS
+        ,A.RGSTR_ID
+        ,A.REGIST_DT
+        ,A.UPDTR_ID
+        ,A.UPDT_DT
+        ,A.REQ_DT
+        ,A.REQ_NM
+        ,A.REQ_EMAIL
+        ,A.TEL_NO
+        ,A.GROUP_NM
+        ,A.GROUP_TEL_NO
+        ,A.EXPRN_DAY
+        ,A.EXPRN_TIME
+        ,GET_CODE_NM('WOD010',A.EXPRN_SE) AS EXPRN_SE_NM
+        ,GET_CODE_NM('WOD007',A.EXPRN_STTUS) AS EXPRN_STTUS_NM
+        FROM TB_EXPRN_REQ A
+        WHERE  0 = 0
+        ORDER  BY
+        A.REGIST_DT DESC
+        LIMIT  #{recordCountPerPage} OFFSET #{firstIndex}
+    </select>
+
+    <select id="getReqListCount" parameterType="kr.go.gyeongnam.human.dto.exprn.criteria.ReqCriteria" resultType="int">
+        SELECT COUNT(*) FROM TB_EXPRN_REQ A
+        WHERE  0 = 0
+
+    </select>
+
+    <select id="getReq" parameterType="kr.go.gyeongnam.human.dto.exprn.ReqDto" resultMap="reqMap">
+        SELECT A.EXPRN_REQST_ID
+        ,A.EXPRN_ID
+        ,A.MBER_ID
+        ,A.EXPRN_NMPR
+        ,A.EXPRN_AMT
+        ,A.REQ_STTUS
+        ,A.RGSTR_ID
+        ,A.REGIST_DT
+        ,A.UPDTR_ID
+        ,A.UPDT_DT
+        ,A.REQ_DT
+        ,A.REQ_NM
+        ,A.REQ_EMAIL
+        ,A.TEL_NO
+        ,A.GROUP_NM
+        ,A.GROUP_TEL_NO
+        ,A.EXPRN_DAY
+        ,A.EXPRN_TIME
+        FROM   TB_EXPRN_REQ A
+        WHERE  A.EXPRN_REQST_ID = #{exprnReqstId}
+    </select>
+
+    <insert id="insertReq" parameterType="kr.go.gyeongnam.human.dto.exprn.ReqDto">
+      INSERT INTO TB_EXPRN_REQ (
+        EXPRN_REQST_ID
+        ,EXPRN_ID
+        ,MBER_ID
+        ,EXPRN_NMPR
+        ,EXPRN_AMT
+        ,REQ_STTUS
+        ,RGSTR_ID
+        ,REGIST_DT
+        ,UPDTR_ID
+        ,UPDT_DT
+        ,REQ_DT
+        ,REQ_NM
+        ,REQ_EMAIL
+        ,TEL_NO
+        ,GROUP_NM
+        ,GROUP_TEL_NO
+        ,EXPRN_DAY
+        ,EXPRN_TIME
+      ) VALUES (
+        #{exprnReqstId}
+      , #{exprnId}
+      , #{mberId}
+      , #{exprnNmpr}
+      , #{exprnAmt}
+      , #{reqSttus}
+      , #{rgstrId}
+      , now()
+      , #{updtrId}
+      , now()
+      , now()
+      , #{reqNm}
+      , #{reqEmail}
+      , #{telNo}
+      , #{groupNm}
+      , #{groupTelNo}
+      , #{exprnDay}
+      , #{exprnTime}
+      )
+    </insert>
+
+    <update id="updateReq"  parameterType="kr.go.gyeongnam.human.dto.exprn.ReqDto">
+        UPDATE TB_EXPRN_REQ SET
+        REQ_STTUS = #{reqSttus}
+        ,       UPDTR_ID = #{updtrId}
+        ,       UPDT_DT = now()
+        WHERE   EXPRN_REQST_ID = #{exprnReqstId}
+    </update>
+
+    <delete id="deleteReq" parameterType="kr.go.gyeongnam.human.dto.exprn.ReqDto">
+       DELETE FROM TB_EXPRN_REQ WHERE EXPRN_REQST_ID = #{exprnReqstId}
+    </delete>
+
+    <select id="getReqPay" parameterType="kr.go.gyeongnam.human.dto.wcrf.WcrfBuyDto" resultMap="wcrfBuyMap">
+        select
+        B.EXPRN_REQST_ID AS PURCHS_LST_ID,
+        A.SETLE_SE,
+        B.EXPRN_AMT AS PURCHS_ALL_AMT,
+        A.STORE_DELNG_ID,
+        C.EXPRN_NM AS WCRF_NM,
+        CONCAT(B.EXPRN_DAY, ' ', B.EXPRN_TIME) AS PURCHS_DESC,
+        B.REQ_NM AS BYER_NM,
+        B.REQ_EMAIL AS BYER_EMAIL,
+        B.TEL_NO AS BYER_TEL_NO,
+        B.REQ_STTUS AS PURCHS_PROGRS_STTUS,
+        GET_CODE_NM('WOD008',B.REQ_STTUS) AS PURCHS_PROGRS_STTUS_NM,
+        GET_CODE_NM('WOD001',A.SETLE_SE) AS SETLE_SE_NM,
+        A.SETLE_ID,
+        A.SETLE_AMT,
+        B.EXPRN_NMPR AS QY,
+        GET_CODE_NM('WOD010',C.EXPRN_SE) AS EXPRN_SE_NM,
+        C.BGN_DE,
+        C.END_DE,
+        B.REQ_DT AS PURCHS_DT,
+        A.RCPMNY_AMT,
+        A.RCPMNY_NM,
+        GET_CODE_NM('WOD009',A.CASH_RECEIPTS_OPT) AS CASH_RECEIPTS_OPT_NM,
+        B.EXPRN_DAY,
+        B.EXPRN_TIME
+        from
+        TB_WCRF_PAY A,
+        TB_EXPRN_REQ B,
+        TB_EXPRN_INFO C
+        where 0=0
+        <if test="storeDelngId != null and storeDelngId != ''">
+            AND A.STORE_DELNG_ID = #{storeDelngId}
+        </if>
+        <if test="exprnReqstId != null and exprnReqstId != ''">
+            AND B.EXPRN_REQST_ID = #{exprnReqstId}
+        </if>
+
+        AND A.PURCHS_LST_ID = B.EXPRN_REQST_ID
+        AND B.EXPRN_ID = C.EXPRN_ID
+        order by A.RGST_DT desc
+        limit 1
+    </select>
+
+    <select id="getReqSumByDay" parameterType="kr.go.gyeongnam.human.dto.exprn.criteria.ReqCriteria" resultType="int">
+        SELECT ifnull(SUM(EXPRN_NMPR),0) FROM TB_EXPRN_REQ A
+        WHERE  0 = 0
+        AND EXPRN_ID = #{exprnId}
+        <if test="exprnTime != null and exprnTime != ''">
+            AND EXPRN_TIME = #{exprnTime}
+        </if>
+        <if test="mberId != null and mberId != ''">
+            AND MBER_ID = #{mberId}
+        </if>
+        <if test="exprnDay != null and exprnDay != ''">
+        AND EXPRN_DAY = #{exprnDay}
+        </if>
+        AND REQ_STTUS NOT IN ('01', '06')
+    </select>
+
+</mapper>

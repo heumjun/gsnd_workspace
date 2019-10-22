@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.go.gyeongnam.human.repository.wcrf.WcrfRepository">
+    
+    <resultMap id="wcrfMap" type="kr.go.gyeongnam.human.dto.wcrf.WcrfDto">
+        <id property="wcrfId" column="WCRF_ID" javaType="java.lang.String"/>
+        <result property="wcrfNm" column="WCRF_NM" javaType="java.lang.String" />
+        <result property="wcrfDesc" column="WCRF_DESC" javaType="java.lang.String" />
+        <result property="wcrfAmt" column="WCRF_AMT" javaType="java.lang.String" />
+        <result property="artistNm" column="ARTIST_NM" javaType="java.lang.String" />
+        <result property="wcrfCnt" column="WCRF_CNT" javaType="java.lang.String" />
+        <result property="atchFileId" column="ATCH_FILE_ID" javaType="java.lang.String" />
+    </resultMap>
+
+    <select id="getWcrfList"  parameterType="kr.go.gyeongnam.human.dto.wcrf.criteria.WcrfCriteria" resultMap="wcrfMap">
+        SELECT A.WCRF_ID
+        , A.WCRF_NM
+        , A.WCRF_DESC
+        , A.WCRF_AMT
+        , A.ARTIST_NM
+        , A.WCRF_CNT
+        , A.ATCH_FILE_ID
+        , A.RGSTR_ID
+        , A.RGST_DT
+        , A.UPDTR_ID
+        , A.UPDT_DT
+        FROM TB_WCRF_INFO A
+        WHERE  0 = 0
+        <if test="searchWcrfNm != null and searchWcrfNm != ''">
+            AND A.WCRF_NM LIKE CONCAT('%',#{searchWcrfNm},'%')
+        </if>
+        <if test="searchArtistNm != null and searchArtistNm != ''">
+            AND A.ARTIST_NM LIKE CONCAT('%',#{searchArtistNm},'%')
+        </if>
+        <if test="searchOption == '01'">
+            AND A.WCRF_NM LIKE CONCAT('%',#{searchKeyword},'%')
+        </if>
+        ORDER  BY
+        A.RGST_DT DESC
+        LIMIT  #{recordCountPerPage} OFFSET #{firstIndex}
+    </select>
+
+    <select id="getWcrfListCount" parameterType="kr.go.gyeongnam.human.dto.wcrf.criteria.WcrfCriteria" resultType="int">
+        SELECT COUNT(*) FROM TB_WCRF_INFO A
+        WHERE  0 = 0
+        <if test="searchWcrfNm != null and searchWcrfNm != ''">
+            AND A.WCRF_NM LIKE CONCAT('%',#{searchWcrfNm},'%')
+        </if>
+        <if test="searchArtistNm != null and searchArtistNm != ''">
+            AND A.ARTIST_NM LIKE CONCAT('%',#{searchArtistNm},'%')
+        </if>
+        <if test="searchOption == '01'">
+            AND A.WCRF_NM LIKE CONCAT('%',#{searchKeyword},'%')
+        </if>
+
+    </select>
+
+    <select id="getWcrf" parameterType="kr.go.gyeongnam.human.dto.wcrf.WcrfDto" resultMap="wcrfMap">
+        SELECT A.WCRF_ID
+        , A.WCRF_NM
+        , A.WCRF_DESC
+        , A.WCRF_AMT
+        , A.ARTIST_NM
+        , A.WCRF_CNT
+        , A.ATCH_FILE_ID
+        , A.RGSTR_ID
+        , A.RGST_DT
+        , A.UPDTR_ID
+        , A.UPDT_DT
+        FROM   TB_WCRF_INFO A
+        WHERE  A.WCRF_ID = #{wcrfId}
+    </select>
+
+    <insert id="insertWcrf" parameterType="kr.go.gyeongnam.human.dto.wcrf.WcrfDto">
+      INSERT INTO TB_WCRF_INFO (
+        WCRF_ID
+      , WCRF_NM
+      , WCRF_DESC
+      , WCRF_AMT
+      , ARTIST_NM
+      , WCRF_CNT
+      , ATCH_FILE_ID
+      , RGSTR_ID
+      , RGST_DT
+      , UPDTR_ID
+      , UPDT_DT
+      ) VALUES (
+        #{wcrfId}
+      , #{wcrfNm}
+      , #{wcrfDesc}
+      , #{wcrfAmt}
+      , #{artistNm}
+      , #{wcrfCnt}
+      , #{atchFileId}
+      , #{rgstrId}
+      , now()
+      , #{updtrId}
+      , now()
+      )
+    </insert>
+
+    <update id="updateWcrf"  parameterType="kr.go.gyeongnam.human.dto.wcrf.WcrfDto">
+        UPDATE TB_WCRF_INFO SET
+                WCRF_NM = #{wcrfNm}
+        ,       WCRF_DESC = #{wcrfDesc}
+        ,       WCRF_AMT= #{wcrfAmt}
+        ,       ARTIST_NM= #{artistNm}
+        ,       WCRF_CNT= #{wcrfCnt}
+        ,       ATCH_FILE_ID = #{atchFileId}
+        WHERE   WCRF_ID = #{wcrfId}
+    </update>
+
+    <delete id="deleteWcrf" parameterType="kr.go.gyeongnam.human.dto.wcrf.WcrfDto">
+       DELETE FROM TB_WCRF_INFO WHERE WCRF_ID = #{wcrfId}
+    </delete>
+
+</mapper>
